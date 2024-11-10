@@ -1,0 +1,4 @@
+如果报错缺少mfc140u.dll，请自行下载vc_redist.x64.exe（根据自己电脑决定）安装。
+下载地址：https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-160
+
+

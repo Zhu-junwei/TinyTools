@@ -1,0 +1,152 @@
+                ******  **      ** *******  ******** *******
+               ******** **      ** ******** *******  ********
+               **    ** **      ** **    ** **       **    **
+                *****   **      ** ******** *******  ********
+                  ***** **      ** *******  *******  *******
+               **    ** ***    *** **       **       **  **
+               ********<>********  **  ___  ______   **    **   __  ___
+        /\      /\****     ***/\   ** /   \ \_   //\ **   /\** /  \/   \
+       /  \    / /     /\    / _\    / -  /  /  //  \    / /  /        /
+      / _\ \  /  \/\  /  \  / _/ \  /     \ /  // _\ \  /  \/\\       <
+     /      \/      \/    \/     / /  -   //  //      \/      \\       \
+     \__/\__/\______/\____/\____/  \_____//__/ \______/\______/ \__/\__/
+ 
+       ########## ########## ########## ########## ########## ###  ###
+       ########## ########## ########## ########## ########## ### ###
+       ##      ##     ##         ##     ##      ## ##         ######
+       ##########     ##         ##     ########## ##         ######
+       ##########     ##         ##     ########## ##         ### ###
+       ##      ##     ##         ##     ##      ## ########## ###  ###
+       ##      ##     ##         ##     ##      ## ########## ###   ###
+
+
+                          Super ACiD Block Attack
+
+
+   Super ACiD Block Attack (C) Copyright 1997 Jason Pimble & Scott Emerle
+                     Program Code (C) 1997 Jason Pimble
+                   Program Graphics (C) 1997 Scott Emerle
+          "I See It Now", (C) 1997 Jon Dal "Mesonyx" Kristbjornsson
+               "Continuum", (C) 1997 Liam "The Lemming" Hesse
+            "Tearing Up SpaceTime", (C) 1997 Liam "Lemming" Hesse
+        "Inner Walls Released", (C) 1997 Bobby "Blackwolf" Tamburrino
+            "Costumed", (C) 1997 Christopher "Irrelevant" Emerle
+              "Simple Song", (C) 1997 Scott "Windsinger" Emerle
+
+
+
+                                    Credits
+                                    -------
+                         Programming:  Jason Pimble
+                            Graphics:  Scott Emerle
+                        Music System:  Jean-Paul Mikkers
+                               Music:  Liam Hesse
+                                       Bobby Tamburrino
+                                       Jon Dal Kristbjornsson
+                                       Chris Emerle
+                                       Scott Emerle
+
+
+ NOTICE: THIS PROGRAM IS DISTRIBUTED AS IS.  DISTRIBUTION IS ONLY ALLOWED BY
+ THE ORIGINAL SELF-EXTRACTING ZIP FILE.  THIS PROGRAM IS ABSOLUTELY FREE.  NO
+ PROFIT MAY BE GAINED BY THE DISTRIBUTION OR SELLING OF THIS SOFTWARE.  ANY
+ MODIFICATION MADE TO THE SELF EXTRACTION ZIP FILE, THIS DOCUMENT OR PROGRAM
+ CODE IS STRICTLY PROHIBITED.  WE ARE NOT RESPONSIBLE FOR ANY DAMAGE CAUSED TO
+ YOU, YOUR COMPUTER, OR ANYTHING BY THIS PROGRAM.
+
+------------------------------------------------------------------------------
+
+
+Installation Instructions:
+
+        Simply unzip the file SABA.ZIP resulting with the following files:
+
+        SABA.EXE     -  The main Super ACiD Block Attack executable
+        SABA.DAT     -  Program Datafile
+        SABA.TXT     -  This document file
+        SETUP.BAT    -  Setup BATCH file
+        FILE_ID.DIZ  -  BBS information text
+        SABA-W95.PIF -  Win95 game icon
+        STUP-W95.PIF -  Win95 setup icon
+
+        First time running the game, simply run the batch file "SETUP.BAT" by
+typing it at the DOS prompt, or by clicking on the MS-DOS shortcut "STUP-W95"
+from windows.  You will then be presented with a soundcard select screen.
+Choose the appropriate sound card for your system (or select "Autodetect" to
+have the program attempt at auto-detecting your soundcard).
+        Simply run SABA.EXE thereafter to play the game in DOS, or double
+click on the DOS shortcut "SABA-W95" from windows.
+
+
+
+
+System Requirements:
+
+        Super ACiD Block Attack has the ability to run on almost any system.  
+Due to the nature of the music/sound system, a faster computer is needed for 
+channel mixing.  If you experience sluggish response from your system, try 
+lowering the mixing rate at the sound-setup screen.  Turn off the music as a 
+last resort (it just makes the game a bit dull without the great music. :)
+
+        No Music:      With Music & Full Mixing Rates:
+        486/33mhz      Pentium 90
+
+(Note: Mixing rates vary from sound-card to sound-card.  These ratings apply
+to a Soundblaster 8-bit soundcard.  Some soundcards, such as the Gravis
+Ultrasound, do hardware mixing, and will achieve the same results if not
+better on a 486/33Mhz machine as compared to a Pentium 120 with a
+Soundblaster.)
+
+        A graphics card capable of displaying the screen resolution of
+320x240x256 is also required.  If your system has trouble achieving this mode,
+try using a vesa driver (such as UniVBE) to adjust videocard or monitor
+settings.
+
+        Super ACiD Block Attack will run under MS-DOS 3.1 or higher, and under
+Win95 as well.  Better performance can be achieved under DOS than Win95.
+Please use the shortcuts provided when running Super ACiD Block Attack under
+Win95.  Super ACiD Block Attack will NOT run with sound under Windows 3.1, it
+will crash the system if sound is enabled.  Also, sound will not work
+correctly with a "Windows 95 only" sound card, a DOS compatiable sound card
+is required.  Super ACiD Block Attack will not run correctly in Windows NT.
+
+
+Running The Game:
+        Super ACiD Block Attack is pretty self explanitory.  Simply follow the
+onscreen instructions at the main-selection screen by using the arrow keys and
+"ENTER" for choosing keyboard-setups, viewing high-scores, viewing credits,
+and changing music selection.  To change the music selection, simply move
+to the line that displays "Music:", and hit ENTER.  The game will then switch
+to the next song available.
+
+        The gameplay is simple, rotate and move the falling blocks to fill in
+entire rows of blocks.  When an entire row is filled, the row disappears, the
+board shifts downward, and you get points!  The more rows cleared at once, the
+more points!  The game will increase in speed as the level increases(for each
+10 lines), and the points per line will increase also. 
+
+        The default keys for gameplay are:
+
+          Rotate left:      'A' key
+          Rotate right:     'S' key 
+          Move piece left:  Left arrow
+          Move piece right: Right arrow
+          Quick drop:       Down arrow
+
+Thanks,Greets and Misc:
+
+        E-Mail: japi@dddgames.com
+                afox@dddgames.com
+
+        HTTP:   http://www.dddgames.com
+
+
+        Hellos to Paul Mason, Neil Bradley and all other emulator authors,
+everyone on #trax, #poetry.
+
+
+ ----------------------------------------------------------------------------
+
+
+ If you would like to include Super ACiD Block Attack in a CD-Rom collection, 
+file archive, public domain catalogue or any other, please contact us!

@@ -1,4 +1,5 @@
 @echo off
+echo ≥ı ºªØTinyTools≈‰÷√°≠°≠
 set "username=%USERNAME%"
 set "newdir=Data\%username%"
 if not exist "%newdir%" mkdir "%newdir%"

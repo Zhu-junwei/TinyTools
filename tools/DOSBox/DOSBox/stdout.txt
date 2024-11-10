@@ -1,0 +1,7 @@
+DOSBox version 0.74
+Copyright 2002-2010 DOSBox Team, published under GNU GPL.
+---
+CONFIG:Loading primary settings from config file ..\config\QuickBASIC.conf
+MIDI:Opened device:win32
+One joystick reported, initializing with 4axis
+Using joystick ISpeed Virtual HID Input Device with 5 axes, 16 buttons and 1 hat(s)

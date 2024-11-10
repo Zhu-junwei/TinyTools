@@ -1,0 +1,1 @@
+Microsoft QuickBASIC （也称为QB ）是Microsoft开发的BASIC编程语言的集成开发环境（或 IDE）和编译器。

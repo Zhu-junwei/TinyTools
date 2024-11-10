@@ -1,0 +1,8 @@
+下面的一些命令可以进入教师管理端，可以修改老师自己密码，删除学生等。。
+来自：https://blog.csdn.net/sln_1550/article/details/107526643
+
+MOUNT D: ..\software\tt
+D:
+tt hello
+
+
