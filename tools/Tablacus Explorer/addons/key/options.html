@@ -1,0 +1,71 @@
+<form name="E">
+    <table style="width: 100%; height: calc(100% - 2em)">
+    <tr>
+      <td width="9em" valign="top">
+        <select name="Key" style="width: 9em" onchange="SwitchX('Key', this, document.E)">
+        </select>
+        <br />
+        <select name="KeyAll" size="8" style="width: 9em; height: 33em; height: calc(100% - 2em)" onchange="EditXEx(EditX, 'Key', document.E)" ondblclick="EditX('Key', document.E)" oncontextmenu="CancelX('Key')" multiple>
+        </select>
+        <select name="KeyList" size="8" style="width: 9em; height: 33em; height: calc(100% - 2em); display: none" onchange="EditXEx(EditX, 'Key', document.E)" ondblclick="EditX('Key', document.E)" oncontextmenu="CancelX('Key')" multiple>
+        </select>
+        <select name="KeyTree" size="8" style="width: 9em; height: 33em; height: calc(100% - 2em); display: none" onchange="EditXEx(EditX, 'Key', document.E)" ondblclick="EditX('Key', document.E)" oncontextmenu="CancelX('Key')" multiple>
+        </select>
+        <select name="KeyBrowser" size="8" style="width: 9em; height: 33em; height: calc(100% - 2em); display: none" onchange="EditXEx(EditX, 'Key', document.E)" ondblclick="EditX('Key', document.E)" oncontextmenu="CancelX('Key')" multiple>
+        </select>
+        <select name="KeyEdit" size="8" style="width: 9em; height: 33em; height: calc(100% - 2em); display: none" onchange="EditXEx(EditX, 'Key', document.E)" ondblclick="EditX('Key', document.E)" oncontextmenu="CancelX('Key')" multiple>
+        </select>
+        <select name="KeyMenus" size="8" style="width: 9em; height: 33em; height: calc(100% - 2em); display: none" onchange="EditXEx(EditX, 'Key', document.E)" ondblclick="EditX('Key', document.E)" oncontextmenu="CancelX('Key')" multiple>
+        </select>
+       </td>
+      <td valign="top">
+        <label>Key</label>
+        <input type="text" name="KeyKey" style="width: 100%" onchange="ChangeX('Key');SetKeyShift();" />
+        <div id="_KeyState" style="white-space: nowrap">
+          <select id="_KeySelect" onchange="KeySelect(this)"></select>
+          <input type="button" value="Input" onclick="InputKey();ChangeX('Key');" />
+        </div>
+        <label>Type</label>
+        <br />
+        <select name="KeyType" onchange="ChangeX('Key')">
+        </select>
+        <table class="layout">
+          <tr>
+            <td style="width: 100%; vertical-align: bottom">
+              <label>Options</label>
+            </td>
+            <td class="buttons">
+              <input type="button" value="Portable" onclick="PortableX('KeyPath')" title="Options" />
+            </td>
+            <td>
+              <input type="button" value="Browse..." onclick="RefX('KeyPath', true, this)" title="Options" />
+            </td>
+          </tr>
+        </table>
+        <textarea name="KeyPath" style="width: 100%; height: 23em; height: calc(100% - 11em); min-height: 2em" onchange="ChangeX('Key')"></textarea>
+      </td>
+    </tr>
+  </table>
+  <table width="100%">
+    <tr>
+      <td class="buttons">
+        <input type="button" value="Remove" onclick="RemoveX('Key')" />
+      </td>
+      <td class="buttons">
+        <input type="button" value="Up" onclick="MoveX('Key', -1)" />
+      </td>
+      <td class="buttons">
+        <input type="button" value="Down" onclick="MoveX('Key', 1)" />
+      </td>
+      <td style="width: 100%; vertical-align: middle">
+        <input type="checkbox" id="_EDIT" checked /><label for="_EDIT">Edit</label>
+      </td>
+      <td class="buttons">
+        <input type="button" value="Add" onclick="AddX('Key', null, document.E)" />
+      </td>
+      <td>
+        <input type="button" value="Replace" onclick="ReplaceX('Key', document.E)" />
+      </td>
+    </tr>
+  </table>
+</form>

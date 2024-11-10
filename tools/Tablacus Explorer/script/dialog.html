@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="MSThemeCompatible" content="Yes">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tablacus Explorer</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <script type="text/javascript" charset="utf-8" src="./consts.js"></script>
+  </head>
+  <body>
+    <form name="F" onsubmit="return false">
+      <div class="panel" id="panel0" style="overflow-y: auto;">
+      <div id="Content" style="height: 100%"><label>Please wait.</label></div>
+      <!-- - - - - - - - - - - -->
+      </div>
+      <!--panel_end-->
+      <table id="buttons" class="footer">
+        <tr>
+          <td style="padding: 0 2px;">
+            <button id="ButtonSearch" class="hide" onclick="SearchIcon(document.getElementById('Content'))" disabled="true">Search</button>
+          </td>
+          <td id="footnote" class="nowrap"></td>
+          <td id="Selected" class="nowrap full right"></td>
+          <td class="buttons">
+            <button id="ButtonOk" class="ok" onclick="SetResult(1)" disabled="true">OK</button>
+          </td>
+          <td class="buttons">
+            <button id="buttonCancel" class="cancel" onclick="returnValue=null;SetResult(2);">Cancel</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script type="text/javascript">
+      document.F.style.display = "none";
+      ScriptBase = "..";
+      LoadScript(["script/ui.js", "script/common.js"], function () {
+        LoadScripts(["script/sync.js"], ["script/options.js"], function () {
+          InitDialog();
+        });
+      });
+    </script>
+  </body>
+</html>

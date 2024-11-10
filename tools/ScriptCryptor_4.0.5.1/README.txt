@@ -1,0 +1,1 @@
+将 VBScript 文件（*.vbs)或者JScript 文件(*.js)文件通过强劲的 Blowfish 加密算法编译成EXE形式的可执行文件的工具

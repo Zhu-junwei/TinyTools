@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="MSThemeCompatible" content="Yes">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Options</title>
+    <link rel="stylesheet" type="text/css" href="./options.css">
+    <script type="text/javascript" charset="utf-8" src="./consts.js"></script>
+  </head>
+  <body>
+    <form name="F" onsubmit="return false">
+      <table class="layout" class="full">
+        <tr>
+          <td class="top">
+            <div id="tab_" class="pane nowrap" style="width: 12em; overflow-x: hidden; overflow-y: auto;">
+              <a id="tabbtn0" class="treebutton" onclick="ClickButton(0);"></a>
+              <label id="tab0" class="button" style="width: 91%" onmousedown="ClickTree(this);">General</label>
+              <br>
+              <div id="tab0_" style="margin-left: 1.667em; display: none">
+                <label id="tab0_1" class="button" style="width: 100%" onmousedown="ClickTree(this);">Mouse</label>
+                <br>
+              </div>
+              <a id="tabbtn1" class="treebutton" onclick="ClickButton(1);"></a>
+              <label id="tab1" class="button" style="width: 91%" onmousedown="ClickTree(this);">Add-ons</label>
+              <br>
+              <div id="tab1_" style="margin-left: 1.667em; display: none">
+                <label id="tab1_1" class="button" style="width: 100%" onmousedown="ClickTree(this);">Get Add-ons</label><br>
+                <label id="tab1_3" class="button" style="width: 100%" onmousedown="ClickTree(this);">Get Icons</label><br>
+                <label id="tab1_4" class="button" style="width: 100%" onmousedown="ClickTree(this);">Get Lang</label><br>
+              </div>
+              <a id="tabbtn2" class="treebutton" onclick="ClickButton(2);"></a>
+              <label id="tab2" class="button" style="width: 91%" onmousedown="ClickButton(2, true);ClickTree(document.getElementById('tab2_0'), null, 'Menus');">Menus</label>
+              <br>
+              <div id="tab2_" style="margin-left: 1.667em; display: none">
+              </div>
+              <a id="tabbtn4" class="treebutton" onclick="ClickButton(4);"></a>
+              <label id="tab4" class="button" style="width: 91%" onmousedown="ClickTree(this, null, 'Tree');">Tree</label>
+              <br>
+              <div id="tab4_" style="margin-left: 1.667em; display: none">
+                <label id="tab4_1" class="button" style="width: 100%" onmousedown="ClickTree(this, null, 'Tree');">Root</label>
+                <br>
+              </div>
+              <a id="tabbtn5" class="treebutton" onclick="ClickButton(5);"></a>
+              <label id="tab5" class="button" style="width: 91%" onmousedown="ClickTree(this, null, 'View');">List</label>
+              <br>
+              <div id="tab5_" style="margin-left: 1.667em; display: none">
+                <label id="tab5_1" class="button" style="width: 100%" onmousedown="ClickTree(this, null, 'List');">Style</label>
+                <br>
+                <label id="tab5_2" class="button" style="width: 100%" onmousedown="ClickTree(this, null, 'List');">Filter</label>
+                <br>
+              </div>
+              <a id="tabbtn3" class="treebutton" onclick="ClickButton(3);"></a>
+              <label id="tab3" class="button" style="width: 91%" onmousedown="ClickTree(this, null, 'Tab');">Tabs</label>
+              <br>
+              <div id="tab3_" style="margin-left: 1.667em; display: none">
+                <label id="tab3_1" class="button" style="width: 100%" onmousedown="ClickTree(this, null, 'Tab');">Advanced</label>
+                <br>
+              </div>
+            </div>
+          </td>
+          <td class="full">
+            <!--panel_start-->
+            <div class="panel hide" id="panel0">
+              <label>@docprop.dll,-107</label><br>
+              <input type="text" name="Conf_Lang" style="width: 50%; min-width: 20em"><button onclick="SelectLangID(this)">Browse...</button>
+              <br>
+              <label>Default</label>:
+              <span id="DefaultLangID"></span>&nbsp;<button onclick="SetDefaultLangID()">Default</button>
+              <button onclick="MainWindow.Navigate(BuildPath(ui_.Installed, 'lang'), SBSP_NEWBROWSER)">Open</button>
+              <button id="AddLang" onclick="ClickTree('tab1_4')">Get Lang</button>
+              <br>
+              <br>
+              <label>Left bar<i> </i>Width</label><br>
+              <input type="text" id="Conf_LeftBarWidth" class="number"><label>@mspaint.exe,-50047[px]</label><br><br>
+              <label>Right bar<i> </i>Width</label><br>
+              <input type="text" id="Conf_RightBarWidth" class="number"><label>@mspaint.exe,-50047[px]</label><br><br>
+              <label alt="Tool bar icon">Tool bar<i> </i>Icon</label><br>
+              <input type="search" id="Conf_IconSize" class="number"><label>@mspaint.exe,-50047[px]</label>
+              <button onclick="SetDefault(document.F.Conf_IconSize, '');">Default</button><br><br>
+              <label alt="Internal Tool bar icon">@ifmon.dll,-9010<i> </i>Tool bar<i> </i>Icon</label><br>
+              <input type="search" id="Conf_InnerIconSize" class="number"><label>@mspaint.exe,-50047[px]</label>
+              <button onclick="SetDefault(document.F.Conf_InnerIconSize, '');">Default</button><br><br>
+              <label>Menus</label><br>
+              <label><input type="checkbox" id="Conf_MenuHidden">Include hidden items</label><br>
+              <label><input type="checkbox" id="Conf_MenuIcon">Icon</label>
+              <br><br>
+              <label>Input</label><br>
+              <label><input type="checkbox" id="!Conf_NoAutocomplete">@ieframe.dll,-12806[Autocomplete]</label>
+              <br><br>
+              <div class="block">
+                <button name="ButtonInitConfig" onclick="InitConfig(this);">Initialize config folder</button>
+                <br>
+                <label>If you installed Tablacus Explorer to the Program Files directory, please press this button.</label>
+              </div>
+            </div>
+            <!--panel_end-->
+
+            <!--panel_start-->
+            <div class="panel hide" id="panel0_1">
+              <label>Gestures</label><br>
+              <input type="text" name="Conf_Gestures" style="display: none">
+              <label><input type="radio" name="Conf_Gestures_" id="Conf_Gestures=0" onclick="SetRadio(this)">None</label><br>
+              <label><input type="radio" name="Conf_Gestures_" id="Conf_Gestures=1" onclick="SetRadio(this)">Wheel</label><br>
+              <label><input type="radio" name="Conf_Gestures_" id="Conf_Gestures=2" onclick="SetRadio(this)">Normal</label><br>
+              <label><input type="radio" name="Conf_Gestures_" id="Conf_Gestures=3" onclick="SetRadio(this)">Priority</label><br>
+              <br>
+              <label>@comres.dll,-1953</label><br>
+              <input type="search" id="Conf_GestureTimeout" class="number" placeholder="3000"><label>@powrprof.dll,-82[ms]</label>
+              <button onclick="SetDefault(document.F.Conf_GestureTimeout, '');">Default</button>
+              <br><br>
+              <label>Trails</label><br>
+              <input type="text" id="Conf_TrailColor" title="Color" placeholder="#00ff00" style="width: 9em" onchange="ChangeColor1(this)">
+              <button id="Color_Conf_TrailColor" class="color" onclick="ChooseColor2(this)">&ensp;</button><br>
+              <input type="number" name="Conf_TrailSize" title="Size" class="number" placeholder="2"><label>@mspaint.exe,-50047[px]</label>
+              <button onclick="AddValue('Conf_TrailSize', -1, 0, 16)">-</button>
+              <button onclick="AddValue('Conf_TrailSize', 1, 0, 16)">+</button>
+              <br><br>
+              <label><input type="checkbox" id="!Conf_NoInfotip">Tooltips</label><br><br>
+              <label>Drag-and-Drop</label><br>
+              <label><input type="checkbox" id="!Conf_NoDragIcon">Icon</label>
+            </div>
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel1">
+              <div id="bar">
+                <table>
+                  <tr>
+                    <td class="full">
+                      <input type="text" name="_AddonsQ" id="_AddonsQ" class="full" onkeydown="return KeyDownEvent(event, AddonsSearch)">
+                    </td>
+                    <td>
+                      <button onclick="AddonsSearch()" oncontextmenu="ClearSearch(this, '_AddonsQ'); return false">Search</button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="panel1_" class="full">
+                <table id="Addons" class="full">
+                  <tr>
+                    <th>
+                      <label>Please wait.</label>
+                    </th>
+                  </tr>
+                </table>
+                <table id="SortedAddons" class="full">
+                </table>
+              </div>
+            </div>
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel1_1">
+              <div id="bar">
+                <table>
+                  <tr>
+                    <td class="full">
+                      <input type="text" name="_GetAddonsQ" id="_GetAddonsQ" class="full" onkeydown="return KeyDownEvent(event, AddonsSearch)">
+                    </td>
+                    <td>
+                      <button onclick="AddonsSearch()" oncontextmenu="ClearSearch(this, '_GetAddonsQ'); return false">Search</button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="panel1_1_1" class="full">
+                <table id="Addons1" class="full">
+                  <tr>
+                    <td>
+                      <label>Please wait.</label>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel1_2" style="padding: 0">
+            </div>
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel1_3">
+              <div>
+                <table>
+                  <tr>
+                    <td class="full">
+                      <input type="text" id="_GetIconsQ" class="full" onkeydown="return KeyDownEvent(event, IconPacksList)">
+                    </td>
+                    <td>
+                      <button onclick="IconPacksList()" oncontextmenu="ClearSearch(this, '_GetIconsQ'); return false">Search</button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="panel1_3_1" class="full">
+                <table id="IconPacks1" class="full">
+                  <tr>
+                    <td>
+                      <label>Please wait.</label>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel1_4">
+              <div>
+                <table>
+                  <tr>
+                    <td class="full">
+                      <input type="text" id="_GetLangQ" class="full" onkeydown="return KeyDownEvent(event, LangPacksList)">
+                    </td>
+                    <td>
+                      <button onclick="LangPacksList()" oncontextmenu="ClearSearch(this, '_GetLangQ'); return false">Search</button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="panel1_4_1" class="full">
+                <table id="LangPacks1" class="full">
+                  <tr>
+                    <td>
+                      <label>Please wait.</label>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel2">
+              <table class="full">
+                <tr>
+                  <td class="top" style="width: 12em">
+                    <select name="Menus" style="display: none">
+                    </select>
+                    <div id="Menus_List">
+                    </div>
+                  </td>
+                  <td valign="top" style="padding-left: 2pt">
+                    <table class="full">
+                      <tr>
+                        <td class="nowrap bottom">
+                          <label>Name</label>
+                        </td>
+                        <td align="right" class="bottom">
+                          <label>Base</label>
+                          <select name="Menus_Base" onchange="SwitchMenus();" class="translate">
+                            <option value="Normal">Normal
+                            <option value="Exec">Exec
+                            <option value="Context">Context
+                            <option value="Background">Background
+                            <option value="File">File
+                            <option value="Edit">Edit
+                            <option value="View">View
+                            <option value="Help">Help
+                            <option value="Favorites">Favorites
+                          </select>
+                        </td>
+                      </tr>
+                    </table>
+                    <table class="layout">
+                      <tr>
+                        <td>
+                          <input type="text" name="Menus_Name" class="full" onchange="ChangeX('Menus')">
+                        </td>
+                        <td style="width: 6.667em">
+                          <input type="text" name="Menus_Key" placeholder="Key" title="Key" class="full" onchange="ChangeX('Menus')">
+                        </td>
+                        <td style="width: 1.667em">
+                          <button style="line-height: 1.1em" onclick="InputKey(document.F['Menus_Key']);">...</button>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <table class="full">
+                      <tr>
+                        <td class="full nowrap bottom">
+                          <label>Filter</label>
+                        </td>
+                        <td class="buttons bottom">
+                          <label>Position</label>
+                        </td>
+                        <td class="buttons">
+                          <input type="text" name="Menus_Pos" class="number" onchange="SwitchMenus();">
+                        </td>
+                        <td>
+                          <select onchange="SelectPos(this, 'Menus_Pos');SwitchMenus();" title="Position" class="translate">
+                            <option value="">Select
+                            <option value="0">Add before
+                            <option value="-1">Add after
+                          </select>
+                        </td>
+                      </tr>
+                    </table>
+                    <input type="text" name="Menus_Filter" class="full" onchange="ChangeX('Menus')">
+                    <label>Type</label>
+                    <br>
+                    <select name="Menus_Type" onchange="ChangeX('Menus')">
+                    </select>
+                    <table class="layout">
+                      <tr>
+                        <td class="full bottom">
+                          <label>Options</label>
+                        </td>
+                        <td class="buttons">
+                          <button onclick="PortableX('Menus_Path')">Portable</button>
+                        </td>
+                        <td>
+                          <button onclick="RefX('Menus_Path', true, this)">Browse...</button>
+                        </td>
+                      </tr>
+                    </table>
+                    <textarea name="Menus_Path" style="width: 100%; height: 16em; height: calc(100vh - 24em); min-height: 2em" onchange="ChangeX('Menus')"></textarea>
+                    <table class="layout">
+                      <tr>
+                        <td class="bottom nowrap">
+                          <label>Icon</label><input type="hidden" name="Height" value="16">&nbsp;
+                        </td>
+                        <td id="_Icon" class="middle full" style="width: 15pt; height: 15pt; overflow: hidden;" align="left">
+                        </td>
+                        <td class="full"></td>
+                        <td class="bottom nowrap buttons">
+                          <label>Height</label>
+                          <input type="text" name="IconSize" class="number" onchange="ChangeX('Menus'); SetImage();">
+                        </td>
+                        <td class="bottom nowrap">
+                          <button onclick="PortableX('Icon')">Portable</button>
+                          <button onclick="ShowIcon();">Select</button>
+                          <button onclick="RefX('Icon',0,0,1)">Browse...</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="full" colspan="5">
+                          <input type="text" name="Icon" onchange="ChangeX('Menus');SetImage();" class="full">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <table class="full">
+                <tr>
+                  <td>
+                    <button onclick="RemoveX('Menus')">Remove</button>
+                    <button onclick="CreateMenuX('Menus')">Menus</button>
+                    <label><input type="checkbox" id="_EDIT">Edit</label>&nbsp;
+                    <button onclick="TestX('Menus_')">Test</button>
+                  </td>
+                  <td align="right">
+                    <button onclick="AddX('Menus',ReplaceMenus)">Add</button>
+                    <button onclick="ReplaceMenus()">Replace</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!--panel_end-->
+            <div class="panel hide" id="panel3">
+              <input type="hidden" name="Tab_Style">
+              <input type="hidden" name="Tab_Align">
+              <input type="hidden" name="Tab_TabWidth">
+              <input type="hidden" name="Tab_TabHeight">
+              <div>
+                <label>New Tab</label>
+              </div>
+              <table class="full">
+                <tr>
+                  <td class="full">
+                    <input type="search" name="Conf_NewTab" class="full">
+                  </td>
+                  <td>
+                    <button onclick="ChooseFolder1(document.F.Conf_NewTab)">Browse...</button>
+                  </td>
+                  <td>
+                    <button onclick="SetDefault(document.F.Conf_NewTab, '');">Default</button>
+                  </td>
+                </tr>
+              </table>
+              <br>
+              <label><input type="checkbox" id="Conf_OpenMode" value="2">Open in New Tab</label>
+              <input type="checkbox" id="Conf_TabDefault" style="display: none">
+            </div>
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel3_1">
+              <label>Position</label> (<label>@explorerframe.dll,-49936[Panes]</label>)
+              <br>
+              <label>Left</label>
+              <input type="text" name="Tab_Left" size="4">
+              <label>Top</label>
+              <input type="text" name="Tab_Top" size="4">
+              <label>Width</label>
+              <input type="text" name="Tab_Width" size="4">
+              <label>Height</label>
+              <input type="text" name="Tab_Height" size="4">
+              <br>
+              <button onclick="GetTabControl();">Get</button>
+              <button onclick="MoveTabControl();">Move</button>
+              <button onclick="AddTabControl();">Add</button>
+              <button onclick="DelTabControl();">Remove</button>
+              <button onclick="SwapTabControl();">Swap</button>
+            </div>
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel4">
+              <label>General</label>
+              <br>
+              <input type="hidden" name="Tree_Align">
+              <label><input type="radio" name="Tree_Align_" id="Tree_Align=3" onclick="SetRadio(this)">Visible</label>
+              <label><input type="radio" name="Tree_Align_" id="Tree_Align=1" onclick="SetRadio(this)">Hidden</label>
+              <br><br>
+              <label>Width</label>
+              <br>
+              <input type="text" name="Tree_Width" class="number"><label>@mspaint.exe,-50047[px]</label>
+              <br>
+              <br>
+              <label>Enumeration</label><br>
+              <input type="hidden" name="Tree_EnumFlags">
+              <label><input type="checkbox" id="Tree_EnumFlags:0x20" onclick="SetCheckbox(this)">@mmcndmgr.dll,-30048</label><br>
+              <label><input type="checkbox" id="Tree_EnumFlags:0x40" onclick="SetCheckbox(this)">Not folders</label><br>
+              <label><input type="checkbox" id="Tree_EnumFlags:0x80" onclick="SetCheckbox(this)">Include hidden items</label><br>
+              <label><input type="checkbox" id="Tree_EnumFlags:!0x10000" onclick="SetCheckbox(this)">@shell32.dll,-30508[Hide protected operating system files]</label>(*7)<br>
+              <div>
+                <button class="groupbutton" onclick='OpenGroup("_Advanced_Tree_EnumFlags")'>Advanced</button>
+              </div>
+              <div class="group" id="_Advanced_Tree_EnumFlags">
+                <label><input type="checkbox" id="Conf_ShowInternet">@shell32.dll,-4262</label><br>
+                <label><input type="checkbox" id="Tree_EnumFlags:0x200" onclick="SetCheckbox(this)">@printui.dll,-12021[Net printer search]</label><br>
+                <label><input type="checkbox" id="Tree_EnumFlags:0x400" onclick="SetCheckbox(this)">@pmcsnap.dll,-881[Shareable]</label><br>
+                <label><input type="checkbox" id="Tree_EnumFlags:0x800" onclick="SetCheckbox(this)">@mycomput.dll,-192</label><br>
+                <label alt="Navigation enumeration"><input type="checkbox" id="Tree_EnumFlags:0x1000" onclick="SetCheckbox(this)">@mmcbase.dll,-14157[Navigation]<i> </i>enumeration</label>(*7)<br>
+                <label alt="Fast items"><input type="checkbox" id="Tree_EnumFlags:0x2000" onclick="SetCheckbox(this)">@accessibilitycpl.dll,-1228[Fast]<i> </i>@SRH.dll,-3904[items]</label>(*)<br>
+                <label><input type="checkbox" id="Tree_EnumFlags:0x4000" onclick="SetCheckbox(this)">Flat</label>(*)<br>
+                <label alt="Checking for children"><input type="checkbox" id="Tree_EnumFlags:0x10" onclick="SetCheckbox(this)">{D5CDD502-2E9C-101B-9397-08002B2CF9AE} 27[Checking for children]</label>(*7)<br>
+              </div>
+              <br>
+              <label>Style</label>
+              <br>
+              <input type="hidden" name="Tree_Style">
+              <label><input type="checkbox" id="Tree_Style:1" onclick="SetCheckbox(this)">Buttons</label><br>
+              <label><input type="checkbox" id="Tree_Style:2" onclick="SetCheckbox(this)">Lines</label><br>
+              <label><input type="checkbox" id="Tree_Style:0x10000" onclick="SetCheckbox(this)">No edit labels</label><br>
+              <label><input type="checkbox" id="Tree_Style:0x1000" onclick="SetCheckbox(this)">Disable Drag-and-Drop</label><br>
+              <label><input type="checkbox" id="Tree_Style:!0x200" onclick="SetCheckbox(this)">Tooltips</label><br>
+              <label><input type="checkbox" id="Tree_Style:4" onclick="SetCheckbox(this)">Single click expand</label><br>
+              <label><input type="checkbox" id="Tree_Style:0x10" onclick="SetCheckbox(this)">Spring expand</label><br>
+              <label><input type="checkbox" id="Tree_Style:8" onclick="SetCheckbox(this)">Full row select</label><br>
+              <label><input type="checkbox" id="Tree_Style:0x80" onclick="SetCheckbox(this)">Show selection always</label><br>
+              <label><input type="checkbox" id="Tree_Style:0x20" onclick="SetCheckbox(this)">Horizontal scroll</label><br>
+              <label><input type="checkbox" id="Tree_Style:0x8000" onclick="SetCheckbox(this)">Border</label><br>
+              <label alt="Root has expando"><input type="checkbox" id="Tree_Style:0x40" onclick="SetCheckbox(this)">Root<i> </i>@mmcndmgr.dll,-30013</label>(*)<br>
+              <div>
+                <button class="groupbutton" onclick='OpenGroup("_Advanced_Tree_Style")'>Advanced</button>
+              </div>
+              <div class="group" id="_Advanced_Tree_Style">
+                <label alt="Auto horizontal scroll"><input type="checkbox" id="Tree_Style:0x100000" onclick="SetCheckbox(this)">Auto<i> </i>Horizontal scroll</label><br>
+                <label alt="Fade in out expandos"><input type="checkbox" id="Tree_Style:0x200000" onclick="SetCheckbox(this)">@msctfuimanager.dll,-16202<span> (</span>Buttons<span>)</span></label>(*)<br>
+                <label><input type="checkbox" id="Tree_Style:0x10000000" onclick="SetCheckbox(this)">Allow junctions</label>(*)<br>
+                <label alt="Empty text"><input type="checkbox" id="Tree_Style:0x400000" onclick="SetCheckbox(this)">@iscsicli.exe,-1148[Empty]<i> </i>@docprop.dll,-21</label>(*)<br>
+                <label><input type="checkbox" id="Tree_Style:0x40000" onclick="SetCheckbox(this)">Favorites</label><br>
+                <label><input type="checkbox" id="Tree_Style:0x2000" onclick="SetCheckbox(this)">No order stream</label>(*)<br>
+                <label><input type="checkbox" id="Tree_Style:0x4000" onclick="SetCheckbox(this)">Rich tooltip</label>(*)<br>
+                <label alt="Even height"><input type="checkbox" id="Tree_Style:0x400" onclick="SetCheckbox(this)">Height<span> (</span>@serialui.dll,-250<span>)</span></label><br><br>
+                <label>Buttons</label>(*)<br>
+                <label><input type="checkbox" id="Tree_Style:0x20000000" onclick="SetCheckbox(this)">Tabs</label><br>
+                <label><input type="checkbox" id="Tree_Style:0x40000000" onclick="SetCheckbox(this)">Delete</label><br>
+                <label><input type="checkbox" id="Tree_Style:0x80000000" onclick="SetCheckbox(this)">Refresh</label><br>
+              </div>
+              <br>
+              <div>
+                <label><input type="checkbox" id="Conf_TreeDefault">Default</label>
+              </div>
+              <div>
+                (*)Windows Vista <label>or higher.</label>
+                (*7)Windows 7 <label>or higher.</label>
+              </div>
+            </div>
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel4_1">
+              <table class="full">
+                <tr>
+                  <td class="full"><label>Root</label>
+                  </td>
+                  <td>
+                    <button onclick="ChooseFolder1(document.F.Tree_Root)">Browse...</button>
+                  </td>
+                  <td>
+                    <button onclick="SetDefault(document.F.Tree_Root, '::{679F85CB-0220-4080-B29B-5540CC05AAB6}\n0');">Default</button>
+                  </td>
+                </tr>
+              </table>
+              <textarea name="Tree_Root" style="width: 100%; height: 16em"></textarea><br><br>
+              <label>Style</label><br>
+              <input type="hidden" name="Tree_RootStyle">
+              <label><input type="radio" name="Tree_RootStyle_" id="Tree_RootStyle=0" onclick="SetRadio(this)">Visible</label><br>
+              <label><input type="radio" name="Tree_RootStyle_" id="Tree_RootStyle=1" onclick="SetRadio(this)">Hidden</label><br>
+              <label><input type="radio" name="Tree_RootStyle_" id="Tree_RootStyle=2" onclick="SetRadio(this)">Expanded</label><br><br>
+            </div>
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel5">
+              <label>General</label><br>
+              <input type="hidden" name="View_ViewFlags">
+              <label><input type="checkbox" id="View_ViewFlags:0x1" onclick="SetCheckbox(this)">Show all files</label> (<label>Include hidden items</label>)<br>
+              <input type="hidden" name="View_Type">
+              <label><input type="checkbox" id="View_Type=2" onchange="document.F.View_Type.value=this.checked ? 2 : 1">Show frames</label>(*)
+              <br><br>
+              <label>View</label><br>
+              <input type="hidden" name="View_ViewMode">
+              <label><input type="radio" name="View_ViewMode_" id="View_ViewMode=1" onclick="SetRadio(this)">Icon</label>
+              <label><input type="radio" name="View_ViewMode_" id="View_ViewMode=2" onclick="SetRadio(this)">@shell32.dll,-33578</label>
+              <label><input type="radio" name="View_ViewMode_" id="View_ViewMode=3" onclick="SetRadio(this)">@shell32.dll,-33579</label>
+              <label><input type="radio" name="View_ViewMode_" id="View_ViewMode=4" onclick="SetRadio(this)">@shell32.dll,-33580</label>
+              <label><input type="radio" name="View_ViewMode_" id="View_ViewMode=5" onclick="SetRadio(this)">Thumbnail</label>
+              <br>
+              <label><input type="radio" name="View_ViewMode_" id="View_ViewMode=6" onclick="SetRadio(this)">Tile</label>
+              <label><input type="radio" name="View_ViewMode_" id="View_ViewMode=7" onclick="SetRadio(this)">Thumbstrip</label>
+              <label><input type="radio" name="View_ViewMode_" id="View_ViewMode=8" onclick="SetRadio(this)">Content</label>(*7)
+              <br>
+              <label><input type="checkbox" id="Conf_Layout:0x10000" onclick="SetCheckbox(this)">Auto</label>(*)
+              <br><br>
+              <label>Size</label><br>
+              <label><input type="radio" name="Conf_SizeFormat_" id="Conf_SizeFormat=0" onclick="SetRadio(this)">Default</label>
+              <label><input type="radio" name="Conf_SizeFormat_" id="Conf_SizeFormat=2" onclick="SetRadio(this)">Auto</label>
+              <label><input type="radio" name="Conf_SizeFormat_" id="Conf_SizeFormat=3" onclick="SetRadio(this)">@docprop.dll,-5</label>
+              <label><input type="radio" name="Conf_SizeFormat_" id="Conf_SizeFormat=1" onclick="SetRadio(this)">@docprop.dll,-6</label>
+              <label><input type="radio" name="Conf_SizeFormat_" id="Conf_SizeFormat=22" onclick="SetRadio(this)">@docprop.dll,-7</label>
+              <label><input type="radio" name="Conf_SizeFormat_" id="Conf_SizeFormat=32" onclick="SetRadio(this)">@docprop.dll,-8</label>
+              <div>
+                <button class="groupbutton" onclick='OpenGroup("_Advanced_Conf_SizeFormat")'>Advanced</button>
+              </div>
+              <div class="group" id="_Advanced_Conf_SizeFormat">
+                <input type="text" name="Conf_SizeFormat" class="full">
+              </div>
+              <br>
+              <label>{F7DB74B4-4287-4103-AFBA-F1B13DCD75CF} 100|@shell32.dll,-32522</label><br>
+              <input type="text" id="Conf_DateTimeFormat" class="full">
+              <br><br>
+              <label>@comres.dll,-1953</label><br>
+              <input type="search" id="Conf_NetworkTimeout" class="number" placeholder="2000"><label>@powrprof.dll,-82[ms]</label>
+              <button onclick="SetDefault(document.F.Conf_NetworkTimeout, '');">Default</button>
+              <br><br>
+              <div>
+                <label><input type="checkbox" id="Conf_ListDefault">Default</label>
+              </div>
+              <div>
+                (*)Windows Vista <label>or higher.</label>
+                (*7)Windows 7 <label>or higher.</label>
+              </div>
+            </div>
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel5_1">
+              <label>Style</label><br>
+              <input type="hidden" name="View_fFlags">
+              <label><input type="checkbox" id="View_fFlags:0x1" onclick="SetCheckbox(this)">@shell32.dll,-31157[-4433]</label><br>
+              <label><input type="checkbox" id="View_fFlags:0x40" onclick="SetCheckbox(this)">Single selection</label><br>
+              <label><input type="checkbox" id="View_fFlags:!0x200" onclick="SetCheckbox(this)">Border</label><br>
+              <label><input type="checkbox" id="View_fFlags:0x2000" onclick="SetCheckbox(this)">Show selection always</label><br>
+              <label><input type="checkbox" id="View_fFlags:0x8000" onclick="SetCheckbox(this)">Single click activate</label><br>
+              <label><input type="checkbox" id="View_fFlags:0x200000" onclick="SetCheckbox(this)">Full row select</label><br>
+              <label alt="Select by middle button"><input type="checkbox" id="Conf_WheelSelect">Wheel<i> </i>@oleaccrc.dll,-266<i> </i>Select</label><br>
+              <label alt="Process selected items in view sequence"><input type="checkbox" id="Conf_ViewOrder">@shell32.dll,-50690[Arrange by:]<i> </i>View<span> (</span>Selected items<span>)</span></label><br>
+              <label alt="Apply Filter to Libraries"><input type="checkbox" id="Conf_LibraryFilter">@shell32.dll,-23349[Library]<i> </i>Filter</label>(*)<br>
+              <input type="text" name="Conf_AutoArrange" style="display: none">
+              <label alt="Auto arrange upon refresh"><input type="checkbox" id="Conf_AutoArrange:0x1" onclick="SetCheckbox(this)">Auto arrange<span> (</span>Refresh<span>)</span></label><br>
+              <label><input type="checkbox" id="Conf_AutoArrange:0x2" onclick="SetCheckbox(this)">@clusapi.dll,-14338[Cloud Witness]</span></label><br>
+              <label><input type="checkbox" id="View_fFlags:0x8000000" onclick="SetCheckbox(this)">@shell32.dll,-30522[Item check boxes]</label>(*)<br>
+              <label alt="Group"><input type="checkbox" id="View_fFlags:!0x100000" onclick="SetCheckbox(this)">@fde.dll,-22</label>(*)<br>
+              <label alt="Subset groups"><input type="checkbox" id="View_fFlags:0x20000000" onclick="SetCheckbox(this)">Number of items<span> (</span>@fde.dll,-22<span>)</span></label>(*)<br>
+              <label><input type="checkbox" id="View_fFlags:!0x800000" onclick="SetCheckbox(this)">@taskmgr.exe,-37223[Column header]</label>(*)<br>
+              <label alt="Column header details only"><input type="checkbox" id="View_fFlags:0x1000000" onclick="SetCheckbox(this)">@taskmgr.exe,-37223[Column header]<span> (</span>@certutil.exe,-2922[Only Allow]<span>: </span>@shell32.dll,-33580<span>)</span></label>(*)<br>
+              <label><input type="checkbox" id="View_fFlags:!0x10000000" onclick="SetCheckbox(this)">@shell32.dll,-30272[File Explorer Options]</label>(*)<br>
+              <div>
+                <button class="groupbutton" onclick='OpenGroup("_Advanced_FWF")'>Advanced</button>
+              </div>
+              <div class="group" id="_Advanced_FWF">
+                <label alt="Background color on sorted column"><input type="checkbox" id="Conf_ColumnEmphasis">@UIAutomationCore.dll,-283[Emphasis]<span> (</span>@sqlsrv32.rll,-40033<span>)</span></label><br>
+                <label><input type="checkbox" id="View_fFlags:0x800" onclick="SetCheckbox(this)">@inetres.dll,-5232[Align Left]</label><br>
+                <label><input type="checkbox" id="View_fFlags:0x2000000" onclick="SetCheckbox(this)">@shell32.dll,-32770[Extended Tiles]</label>(*)<br>
+                <label><input type="checkbox" id="View_fFlags:0x80" onclick="SetCheckbox(this)">@comdlg32.dll,-780[Hide Folders]</label><br>
+                <label><input type="checkbox" id="View_fFlags:!0x20000" onclick="SetCheckbox(this)">{41CF5AE0-F75A-4806-BD87-59C7D9248EB9} 100[File name]</label><br>
+                <label><input type="checkbox" id="View_fFlags:0x80000000" onclick="SetCheckbox(this)">@oleaccrc.dll,-4045</label>(*)<br>
+                <label><input type="checkbox" id="View_fFlags:0x40000" onclick="SetCheckbox(this)">@shell32.dll,-37588[Check boxes]<i> </i>(XP)</label><br>
+              </div>
+              <label>Explorer Browser</label>(*7)<br>
+              <input type="text" name="Conf_Layout" style="display: none">
+              <label><input type="checkbox" id="Conf_Layout:0x1" onclick="SetCheckbox(this)">Icon</label><br>
+              <label><input type="checkbox" id="Conf_Layout:0x2" onclick="SetCheckbox(this)">@shell32.dll,-33578</label><br>
+              <label><input type="checkbox" id="Conf_Layout:0x4" onclick="SetCheckbox(this)">@shell32.dll,-33579</label><br>
+              <label><input type="checkbox" id="Conf_Layout:0x8" onclick="SetCheckbox(this)">@shell32.dll,-33580</label><br>
+              <label><input type="checkbox" id="Conf_Layout:0x20" onclick="SetCheckbox(this)">Tile</label><br>
+              <label><input type="checkbox" id="Conf_Layout:0x40" onclick="SetCheckbox(this)">Thumbstrip</label><br>
+              <label><input type="checkbox" id="Conf_Layout:0x80" onclick="SetCheckbox(this)">Content</label><br>
+              <br>
+              <div>
+                (*)Windows Vista <label>or higher.</label>
+                (*7)Windows 7 <label>or higher.</label>
+              </div>
+            </div>
+            <input type="hidden" name="View_Options">
+            <!--panel_end-->
+
+            <div class="panel hide" id="panel5_2">
+              <label>Hidden</label>
+              <textarea name="Conf_HiddenFilter" style="width: 100%; height: 90%; height: calc(100% - 2em)"></textarea>
+            </div>
+            <!-- - - - - - - - - - -  -->
+          </td>
+        </tr>
+      </table>
+      <table class="footer">
+        <tr>
+          <td style="width: 12em">
+            <button style="width: 100%; padding-right: 12pt" onclick="FindText()">Search</button>
+          </td>
+          <td id="SortButton" align="left" style="display: none; padding-left: 8pt">
+          </td>
+          <td id="MoveButton" align="left" style="display: none; height: 18pt; padding-left: 3pt">
+            <button onclick="OptionMove(-1)">Up</button>
+            <button onclick="OptionMove(1)">Down</button>
+          </td>
+          <td id="STATUS" align="center"></td>
+          <td align="right">
+            <table>
+              <tr>
+                <td class="buttons">
+                  <button class="ok" onclick="SetResult(1)" autofocus>OK</button>
+                  <button class="cancel" onclick="SetResult(2)">Cancel</button>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script type="text/javascript">
+      document.F.style.display = "none";
+      ScriptBase = "..";
+      LoadScript(["script/ui.js", "script/common.js"], function () {
+        LoadScripts(["script/sync.js"], ["script/options.js"], function () {
+          InitOptions();
+        });
+      });
+    </script>
+  </body>
+</html>

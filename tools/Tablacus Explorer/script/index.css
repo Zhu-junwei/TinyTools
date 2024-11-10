@@ -1,0 +1,382 @@
+* {
+	box-sizing: border-box;
+	font-size: 12px;
+	font-size: inherit;
+	font: inherit;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	border: none;
+	color: #000;
+	background-color: #f0f0f0;
+	height: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+td, tr {
+	vertical-align: top;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	vertical-align: middle;
+	border: none;
+}
+
+img.button, img.button1, img.hoverbutton, img.activebutton {
+	box-sizing: content-box;
+}
+
+svg {
+  fill: currentColor;
+}
+
+form {
+	display: inline;
+	margin: 0;
+}
+
+button {
+	white-space: nowrap;
+}
+
+.button, .button1 {
+	display: inline-block; *display: inline; *zoom: 1;
+	padding: 1px 1px;
+	text-decoration: none;
+	cursor: default;
+	outline: 0;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+.hoverbutton, .activebutton {
+	display: inline-block; *display: inline; *zoom: 1;
+	text-decoration: none;
+	color: #000;
+	cursor: default;
+	background-color: #e3e3e3;
+	border: 1px solid #a0a0a0;
+	padding: 0;
+	outline: 0;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+.menu {
+	display: inline-block; *display: inline; *zoom: 1;
+	margin: 1px 5px;
+	text-decoration: none;
+	color: #000;
+	cursor: default;
+	white-space: nowrap;
+}
+
+.hovermenu, .activemenu {
+	display: inline-block; *display: inline; *zoom: 1;
+	cursor: default;
+	text-decoration: none;
+	white-space: nowrap;
+	color: #000;
+	background-color: #e3e3e3;
+	border: 1px solid #a0a0a0;
+	padding: 0 4px;
+	margin: 0;
+}
+
+.toolbar1, .toolbar2, .toolbar3 {
+	display: none;
+	margin: 1px 1px 1px 0;
+	padding: 1px 1px 1px 0;
+	vertical-align: middle;
+}
+
+.toolbar1 {
+	white-space: nowrap;
+}
+
+.toolbar2 {
+	width: 100%
+}
+
+.toolbar3 {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.layout {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	border-collapse: collapse;
+	overflow: hidden;
+}
+.sidebar {
+	margin: 0;
+	padding: 0;
+	border: none;
+	height: 100%;
+	overflow: hidden;
+}
+
+.sidebar1, .sidebar2, .sidebar3 {
+	display: none;
+	word-break: break-all;
+	word-wrap: break-word;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar2 {
+	min-height: 5.5em;
+}
+
+.sidebar3 {
+	vertical-align: bottom;
+}
+
+.tab0, .button0, .menu0 {
+	list-style: none;
+	margin: 0;
+	padding: 0 1px;
+	cursor: default;
+	position: relative;
+}
+
+.tab0 li {
+	display: inline-block; *display: inline; *zoom: 1;
+	line-height: 2em;
+	position: relative;
+	white-space: nowrap;
+}
+
+.tab, .tab2, .tab3 {
+	border: 1px solid #a0a0a0;
+	margin: 0;
+	padding: 0 8px;
+	color: #000;
+	height: 2em;
+	outline: 0;
+	background: #eee;
+	vertical-align: bottom;
+	opacity: 0.85;
+}
+
+.tab div, .tab2 div, .tab3 div, .activetab div {
+	text-overflow: ellipsis;
+}
+
+.tab:hover, .tab2:hover, .tab3:hover {
+	box-shadow: 0 0 0 9em rgba(51,204,255,0.2) inset;
+	opacity: 1;
+	filter: alpha(style=0,opacity=100);
+}
+
+.activetab {
+	border: 1px solid #a0a0a0;
+	border-bottom: 0;
+	margin: 0 -1px;
+	padding: 0 9px;
+	color: #000;
+	background-color: #fff;
+	height: 2.167em;
+	outline: 0;
+	z-index: 9999;
+	vertical-align: bottom;
+}
+
+.treebutton, .treespace {
+	color: dimgray;
+	font-family: monospace;
+	margin: 0 2px 0 1px;
+	text-decoration: none;
+	cursor: default;
+	vertical-align: middle;
+}
+
+.treespace {
+	visibility: hidden;
+}
+
+a.treebutton:hover {
+	color: #0078d7;
+	text-shadow: 0 0 2px #0078d7;
+}
+
+.ok, .apply, .cancel {
+	min-width: 8em;
+}
+
+.buttons {
+	padding-right: 3px;
+	white-space: nowrap;
+}
+
+.breadcrumb {
+	color: #000;
+	background-color: #fff;
+	white-space: nowrap;
+}
+
+.separator {
+	border-left: 1px solid #888;
+	margin: 0 2px;
+	display: inline-block;
+	vertical-align: middle;
+	color: transparent !important;
+	height: 100%;
+	opacity: .7;
+	filter: alpha(style=0,opacity=70);
+}
+
+.splitter {
+	padding: 1px;
+	margin: 0;
+	border: none;
+	width: 0;
+	height: 100%;
+	cursor: e-resize;
+}
+
+.favicon {
+	height: 12pt;
+	font-size: 12pt !important;
+}
+
+.fonticon {
+	cursor: default;
+	vertical-align: middle;
+}
+
+.fonticonbutton, .svgiconbutton {
+	font-size: 150%;
+}
+
+.addonbutton {
+	padding: 1px
+}
+
+.drive {
+	position: absolute;
+	color: #000;
+	font-weight: bold;
+	font-size: 75%;
+	text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+	filter: glow(color=#fff,strength=1);
+}
+
+.pane {
+	width: 100%;
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #646464;
+}
+
+.danger {
+	color: red;
+}
+
+.panel {
+	border: 1px solid #a0a0a0;
+	padding: 4px;
+	width: 100%;
+	line-height: 1.5em;
+	overflow-y: auto;
+	clear: both;
+}
+
+.color {
+	border: 1px solid #a0a0a0;
+	width: 2em;
+}
+
+.block {
+	padding: 8px;
+	border: 1px solid #a0a0a0;
+	margin-bottom: 8px;
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.full, .groupbutton {
+	width: 100%;
+}
+
+.group {
+	padding: 8px;
+	border-left: 1px solid #a0a0a0;
+	border-right: 1px solid #a0a0a0;
+	border-bottom: 1px solid #a0a0a0;
+	margin-bottom: 8px;
+	display: none;
+}
+
+.disabled {
+	color: gray;
+}
+
+.activecaption {
+	color: #000;
+	background-color: #99b4d1;
+}
+
+.fixed {
+	table-layout: fixed;
+}
+
+.top {
+	vertical-align: top;
+}
+
+.middle {
+	vertical-align: middle;
+}
+
+.bottom {
+	vertical-align: bottom;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.number {
+	width: 6em; text-align: right
+}
+
+.lightbg {
+  color: #000
+}
+
+.darkbg {
+  color: #fff
+}

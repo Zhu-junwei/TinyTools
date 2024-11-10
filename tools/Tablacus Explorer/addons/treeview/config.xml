@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TablacusExplorer>
+  <General>
+    <Version>1.47</Version>
+    <MinVersion>2024.2.27</MinVersion>
+    <pubDate>Thu, 29 Feb 2024 00:00:00 GMT</pubDate>
+    <Options>Common:0,5,6,7,8,9:0</Options>
+    <Level>2</Level>
+    <Creator>Gaku</Creator>
+    <URL>https://tablacus.github.io/TablacusExplorerAddons/</URL>
+    <License>MIT License</License>
+  </General>
+  <en>
+    <Name>Tree view</Name>
+    <Description>Tree view</Description>
+  </en>
+  <fr>
+    <Name>Arborescence</Name>
+    <Description>Définition de la vue arborescente</Description>
+  </fr>
+  <ja>
+    <Name>ツリー</Name>
+  </ja>
+  <zh>
+    <Name>樹狀目錄</Name>
+  </zh>
+</TablacusExplorer>

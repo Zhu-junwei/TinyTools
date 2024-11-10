@@ -1,0 +1,35 @@
+<div class="panel" style="display: block;">
+  <textarea type="text" id="Path" style="width: 100%; height: 9em"></textarea>
+  <table>
+    <tr>
+      <td>
+        <button onclick="RefX('Path', false, this)">Browse...</button>
+      </td>
+      <td>
+        <button onclick="PortableX('Path')">Portable</button>
+      </td>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        <button title='powershell Invoke-WebRequest -Uri "%url%" -OutFile "%file%"' onclick="SetDL(this)">PowerShell</button>
+      </td>
+      <td>
+        <button title='powershell [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri "%url%" -OutFile "%file%"'
+          onclick="SetDL(this)">PowerShell (TLS1.2)</button>
+      </td>
+      <td>
+        <button title='cURL "%url%" -o "%file%" -L' onclick="SetDL(this)">cURL</button>
+      </td>
+      <td>
+        <button title='wget "%url%" -O "%file%"' onclick="SetDL(this)">Wget</button>
+      </td>
+      <td>
+        <button title='bitsadmin.exe /TRANSFER dl "%url%" "%file%"' onclick="SetDL(this)">BITSAdmin</button>
+      </td>
+    </tr>
+  </table>
+  <label><input type="checkbox" name="Visible">Visible</label>
+</div>
+<button id="_curl" title="https://curl.haxx.se/" onclick="wsh.Run(this.title)">Get cURL...</button>
+<button title="http://www.gnu.org/software/wget/" onclick="wsh.Run(this.title)">Get Wget...</button>

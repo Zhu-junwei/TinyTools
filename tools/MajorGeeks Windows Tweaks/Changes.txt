@@ -1,0 +1,34 @@
+*** MAJORGEEKS SOFTWARE UPDATES AND NEWS CHANGE LOG ***
+
+
+===== v2.97 (22 Apr 2024) =====
+
+Tweaks:
+- Added Batch File to Repair Outlook This Operation Has Been Canceled Due to Restrictions Error
+- Added Change Scroll Bar Width and Height Tweak
+
+Major new addition: Favorite tweaks! Now you can click a "heart" icon for a tweak so that it becomes available in the system tray for applying.
+
+Enhancements: 
+- The app now has a system tray icon that you can right-click to apply your favorite tweaks.
+- Tweaks that require a different version of Windows will be shown in red color to indicate they're unavailable.
+- Trying to apply an OS-specific tweak without that OS will not be permitted (Win 11 tweaks can't be applied if your PC is Win 10, etc).
+- Tweaks that require admin rights, when you haven't run the app as admin, will be shown in light gray color to indicate they're unavailable.
+- Trying to apply an admin tweak without being admin will not be permitted (you'll need to launch the app with admin rights).
+- The F11 key now toggles maximizing of the app's window.
+-All messages are now shown centered on the app's window.
+
+Bug fix: 
+Messages no longer stay on top when you switch to another app.
+
+
+
+===== v2.96 (16 Oct 2023) =====
+
+First release by AlomWare.com with an interface for browsing and applying tweaks.
+
+
+
+===== v2.95 and lower =====
+
+These versions did not have a frontend interface.

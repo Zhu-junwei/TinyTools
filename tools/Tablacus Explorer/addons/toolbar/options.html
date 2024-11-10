@@ -1,0 +1,80 @@
+<label><input type="checkbox" id="!NoDD" value="2">Buttons</label><br>
+<!--panel-->
+<form name="E" style="display: inline;">
+  <table width="100%">
+    <tr>
+      <td width="12.5em" valign="top">
+        <select name="List" size="19"
+          style="width: 12.5em; height: 34em; height: calc(100vh - 9em); min-height: 17em"
+          onchange="EditXEx(EditTB)" ondblclick="EditTB()" oncontextmenu="CancelX('List')" multiple>
+        </select>
+      </td>
+      <td valign="top">
+        <label>Name</label>
+        <br>
+        <input type="text" name="Name" style="width: 100%" onchange="ChangeX('List')">
+        <label>Type</label>
+        <br>
+        <select name="Type" onchange="ChangeX('List')">
+        </select>
+        <table class="layout">
+          <tr>
+            <td style="width: 100%; vertical-align: bottom">
+              <label>Options</label>
+            </td>
+            <td class="buttons">
+              <input type="button" value="Portable" onclick="PortableX('Path')" title="Options">
+            </td>
+            <td>
+              <input type="button" value="Browse..." onclick="RefX('Path', true, this, false, null, document.E)" title="Options">
+            </td>
+          </tr>
+        </table>
+        <textarea name="Path" style="width: 100%; height: 20em; height: calc(100vh - 22em); min-height: 2em"
+          onchange="ChangeX('List')"></textarea>
+        <table class="layout">
+          <tr>
+            <td class="buttons">
+              <label style="white-space:nowrap">Icon</label>
+            </td>
+            <td style="width: 100%">
+              <div id="_IconE" style="height: 40px; overflow: auto"></div>
+            </td>
+            <td class="buttons">
+              <label>Height</label>
+            </td>
+            <td class="buttons">
+              <input type="text" name="Height" style="width: 64px" onchange="ChangeX('List');">
+            </td>
+            <td class="buttons">
+              <input type="button" value="Select" onclick="ShowIcon(document.E.Icon, 'List');">
+            </td>
+            <td>
+              <input type="button" value="Browse..."
+                onclick="RefX('Icon', false, this, true, null, document.E);">
+            </td>
+          </tr>
+        </table>
+        <input type="text" name="Icon" style="width: 100%" onchange="ChangeX('List'); SetImage(document.E, '_IconE');">
+      </td>
+    </tr>
+  </table>
+  <table width="100%">
+    <tr>
+      <td style="width: 100%; white-space: nowrap">
+        <input type="button" value="Remove" onclick="RemoveX('List')">
+        <input type="button" value="Up" onclick="MoveX('List',-1)">
+        <input type="button" value="Down" onclick="MoveX('List',1)">
+        <input type="checkbox" id="_EDIT" checked><label for="_EDIT">Edit</label>&nbsp;
+        <input type="button" value="Test" onclick="TestX('', document.E)">
+      </td>
+      <td class="buttons">
+        <input type="button" value="Add" onclick="AddX('List', ReplaceTB)">
+      </td>
+      <td style="white-space: nowrap">
+        <input type="button" value="Replace" onclick="ReplaceTB('List')">
+      </td>
+    </tr>
+  </table>
+  <!--panel_end-->
+</form>

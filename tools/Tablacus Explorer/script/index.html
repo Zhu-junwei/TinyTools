@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="MSThemeCompatible" content="Yes">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tablacus Explorer</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <script type="text/javascript" charset="utf-8" src="./consts.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <label>This page uses JavaScript.</label><br>
+    </noscript>
+    <form name="F" onsubmit="return false">
+      <div id="toolbar">
+        <table class="layout" onresize="Resize()">
+          <tr>
+            <td id="ToolBar1Left" class="toolbar1"></td>
+            <td id="ToolBar1Center" class="toolbar2"></td>
+            <td id="ToolBar1Right" class="toolbar3"></td>
+          </tr>
+        </table>
+        <table class="layout" onresize="Resize()">
+          <tr>
+            <td id="ToolBar2Left" class="toolbar1"></td>
+            <td id="ToolBar2Center" class="toolbar2"></td>
+            <td id="ToolBar2Right" class="toolbar3"></td>
+          </tr>
+        </table>
+        <table class="layout" onresize="Resize()">
+          <tr>
+            <td id="ToolBar3Left" class="toolbar1"></td>
+            <td id="ToolBar3Center" class="toolbar2"></td>
+            <td id="ToolBar3Right" class="toolbar3"></td>
+          </tr>
+        </table>
+        <table class="layout" onresize="Resize()">
+          <tr>
+            <td id="ToolBar4Left" class="toolbar1"></td>
+            <td id="ToolBar4Center" class="toolbar2"></td>
+            <td id="ToolBar4Right" class="toolbar3"></td>
+          </tr>
+        </table>
+        <table class="layout" onresize="Resize()">
+          <tr>
+            <td id="ToolBar5Left" class="toolbar1"></td>
+            <td id="ToolBar5Center" class="toolbar2"></td>
+            <td id="ToolBar5Right" class="toolbar3"></td>
+          </tr>
+        </table>
+      </div>
+      <div id="client">
+        <table class="layout" onresize="Resize()">
+          <tr>
+            <td id="leftbar" class="sidebar">
+              <div id="leftbarT"  class="layout" onresize="Resize()">
+                <div id="LeftBar1" class="sidebar1" onchange="Resize()"></div>
+                <div id="LeftBar2" class="sidebar2"></div>
+                <div id="LeftBar3" class="sidebar3" onchange="Resize()"></div>
+              </div>
+            </td>
+            <td id="leftsplitter" class="splitter" onmousedown="RunSplitter(event, 1)"><br></td>
+            <td id="Background" class="sidebar" style="width: 100%"></td>
+            <td id="rightsplitter" class="splitter" onmousedown="RunSplitter(event, 2)"><br></td>
+            <td id="rightbar" class="sidebar">
+              <div id="rightbarT"  class="layout" onresize="Resize()">
+                <div id="RightBar1" class="sidebar1" onchange="Resize()"></div>
+                <div id="RightBar2" class="sidebar2"></div>
+                <div id="RightBar3" class="sidebar3" onchange="Resize()"></div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="bottombar">
+        <table class="layout" onresize="Resize()">
+          <tr>
+            <td id="BottomBar1Left" class="toolbar1"></td>
+            <td id="BottomBar1Center" class="toolbar2"></td>
+            <td id="BottomBar1Right" class="toolbar3"></td>
+          </tr>
+        </table>
+        <table class="layout" onresize="Resize()">
+          <tr>
+            <td id="BottomBar2Left" class="toolbar1"></td>
+            <td id="BottomBar2Center" class="toolbar2"></td>
+            <td id="BottomBar2Right" class="toolbar3"></td>
+          </tr>
+        </table>
+        <table class="layout" onresize="Resize()">
+          <tr>
+            <td id="BottomBar3Left" class="toolbar1"></td>
+            <td id="BottomBar3Center" class="toolbar2"></td>
+            <td id="BottomBar3Right" class="toolbar3"></td>
+          </tr>
+        </table>
+      </div>
+      <div id="Panel" style="position: absolute; left: 0; top: 0"></div>
+      <div style="display: none">
+        <div id="None"></div>
+        <datalist id="AddressList"></datalist>
+      </div>
+      <span id="Size" class="nowrap"></span>
+    </form>
+    <script type="text/javascript">
+      Addon = 1;
+      ScriptBase = "..";
+      LoadScript(["script/ui.js", "script/common.js"], function () {
+        LoadScripts(["script/sync.js", "script/sync1.js"], ["script/index.js"], function () {
+          Init();
+        });
+      });
+    </script>
+  </body>
+</html>

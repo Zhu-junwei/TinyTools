@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; MajorGeeks.Com
+; How to Change Text Size for Title Bars in Windows 10
+; https://www.majorgeeks.com/content/page/how_to_change_text_size_for_title_bars_in_windows_10.html
+
+[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
+"CaptionFont"=hex:e0,ff,ff,ff,00,00,00,00,00,00,00,00,00,00,00,00,90,01,00,00,00,\
+  00,00,01,00,00,00,00,53,00,65,00,67,00,6f,00,65,00,20,00,55,00,49,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+"CaptionHeight"="-705"
+"CaptionWidth"="-705"

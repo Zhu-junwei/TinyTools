@@ -1,0 +1,55 @@
+@import url("index.css");
+
+select {
+	min-height: 1.7em;
+}
+
+input[type="text"], input[type="number"], input[type="search"] {
+	min-height: 1.4em;
+}
+
+input[type="button"], button {
+	vertical-align: top;
+}
+
+textarea {
+  min-height: 2em
+}
+
+.oddline {
+	color: #000;
+	background-color: #ffffe1;
+}
+
+.box {
+  border-top: 1px solid #888;
+}
+
+.color {
+	border-radius: 2px;
+}
+
+.window {
+	border: 1px solid #a0a0a0;
+}
+
+.window td {
+	border: 1px solid #a0a0a0;
+}
+
+.footer {
+  width: 100%;
+  line-height: 1.5em
+}
+
+.text1 {
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #a0a0a0;
+	white-space: nowrap;
+}
+
+.location {
+	width: calc(100vh / 3);
+}
+

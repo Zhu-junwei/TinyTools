@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TablacusExplorer>
+  <General>
+    <Version>1.09</Version>
+    <MinVersion>2021.3.27</MinVersion>
+    <pubDate>Tue, 17 Aug 2021 00:00:00 GMT</pubDate>
+    <Level>2</Level>
+    <Creator>Gaku</Creator>
+    <URL>https://tablacus.github.io/TablacusExplorerAddons/</URL>
+    <License>MIT License</License>
+  </General>
+  <en>
+    <Name>Title bar</Name>
+    <Description>Title bar</Description>
+  </en>
+  <fr>
+    <Name>Barre de titre</Name>
+    <Description>Affichage de la barre de titre</Description>
+  </fr>
+  <ja>
+    <Name>タイトルバー</Name>
+  </ja>
+  <zh>
+    <Name>標題列</Name>
+  </zh>
+</TablacusExplorer>

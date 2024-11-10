@@ -1,0 +1,232 @@
+Welcome to the Typing Tutor 5 keyboard instruction program!  This
+program will tailor a course that matches your goals, experience, and
+available practice time, to help you gain mastery of the keyboard. @
+This introduction will explain the usage of the Typing Tutor 5
+program.  If you are new to computers, you should read the
+Typing Tutor 5 user's manual before proceeding. @
+Experienced computer users may want to get right into the program and read
+the introduction later.  As
+the bottom line of this screen tells you, pressing the
+Esc (Escape) key will get you past the introduction. @
+The Esc key is used
+throughout the program to get out of what you are doing and do something else. 
+You can always look to the bottom line to find out where Esc will take you. @
+The top line of each screen lets you know where you are in the program.  In the
+upper left corner is the name of the current screen, and your name is in
+the upper right corner. @
+Selections of Typing Tutor 5 features are made from menus.  Each menu
+gives a list of program features to select from.  One feature of every menu
+is called Help.  Selecting Help will get you information about the other
+features of that menu. @
+The Main Menu is the starting point for the selection of all the features
+of the program.  The selections available on the Main Menu are: Lessons,
+Tests, Reports, Options, Game, Help, and Quit.  Selecting any of these except
+Help or Quit will lead you to a secondary menu with more choices.  Selecting
+Help will give you a fuller description of all the choices on the current
+menu. @
+Help is available as an option on every menu.  Selecting each of the menus
+and reading Help is a good way to familiarize yourself with all of the
+features of the program. @
+After reading this introduction you will be asked some questions about your
+goals in using this program, and your current skill level at the
+keyboard.  This information will be used to help create customized lessons
+and tests for you, and to give you meaningful feedback on your progress.
+If you wish to revise your goals later, you can do so by selecting Options
+from the Main Menu. @
+The area where you will probably want to spend most of your time is in
+Practice Lessons.  To get to Practice Lessons, you should select Lessons from
+the Main Menu, and then Practice from the Lessons Menu. @
+A lesson consists
+of a series of one-line drills.  Each drill appears in a box at the top of
+the screen with an arrow pointing up at the first character to be
+typed.  As you type the line, the arrow will move along the line pointing
+to the next character to be typed.  If you make a mistake, an arrow will
+appear above the line pointing down to the error.  At the end of a line
+type either space bar or Enter to complete the drill. @
+To monitor your progress with lessons, you will want to take Practice
+Tests.  The results of a Practice Test are recorded in your history file,
+and will appear on your personal Progress Report.  To get to Practice Test,
+select Tests from the Main Menu, and then Practice from the Tests Menu. @
+Tests are taken in the same way as lessons, except that there are multiple
+lines instead of just one.  Type the character above the pointer, and space
+bar or Enter at the end of each line. @
+The Lessons Menu and the Tests Menu have a Book option which allows
+you to select your
+drill material from an interesting and informative book.  Students who are
+still learning the keyboard are advised to use the Book features only after
+they have learned the alphabetic and basic punctuation keys. @
+You will see your Progress Report when you exit from the program, but you can
+also select it by choosing Reports from the Main Menu, and then Progress.  Also
+from the Reports Menu, you can view your Speed and Accuracy Graphs.  These
+graphs show how you are doing on each key, and compare the current session's
+data with your history. @
+You can take a break from lessons and tests and play the Letter Invaders
+game.  It is fast-paced, fun, and when you get back to lessons you will find
+that it sharpens your typing skills too!  Letter Invaders allows you to
+play with just the keys you have learned in your lessons (it does assume
+you have learned the home row keys '*' and '#'), so you get a game
+matched to your current skill level.  You get to Letter Invaders by selecting
+Game from the Main Menu, and Play from the Game Menu. @
+If your aim is to gain proficiency on the numeric keypad, then instead of
+Practice Lessons and Practice Tests, you will want to select Keypad Lessons
+and Keypad Tests.  You do this by choosing Keypad from either the Lessons
+Menu or the Tests Menu.  The results of Keypad Tests will be saved to your
+history and appear on the Progress Report. @
+This introduction covers the main features of Typing Tutor 5.  There
+are other features that you will want to learn by touring the menus or by
+reading the manual.  Good luck!  Enjoy! ^
+The features of the Lessons Menu are: @
+Practice - is a sequence of one line drills on the keyboard.  For all but the
+most experienced users, practice lessons will start with simple drills using
+the home keys of the left hand, '*'.  As you progress, new keys will be
+introduced starting with the home keys of the right hand,
+'#'.  When keys beyond the home row are introduced there are home
+key drills to reinforce the use of the correct finger for each new key.  A
+fingering chart is shown whenever a new key is introduced.  The use of the 
+shift key is taught after the home keys are learned. @
+Except for home key lessons, there are three boxes on each practice screen. 
+The top box contains the current lesson with an arrow pointing up to the
+next key to be typed.  Arrows above the keys indicate mistakes.
+If you make a mistake, you can use the backspace key to correct it.  At
+the end of a line press Enter or the space bar to continue.  The middle
+box displays the focus keys for each new drill.  These are keys that need the
+most improvement.  The bottom box shows the speed and accuracy for the drill
+just taken.  At the end of each sequence of drills (normally 10 drills,
+but you can change this from the Options Menu) there is a summary for that
+lesson. @
+Hands - allows you to take a lesson emphasizing the keys of either the right
+or left hand. @
+Rows -  allows you to take a lesson emphasizing the keys of a particular row
+(top, third, home, bottom). @
+Advanced - allows you to take a lesson utilizing all the keys in a particular
+"category": Alphabet Only uses all letter and basic punctuation keys, Alphabet
+and Numeric Only uses all letter, basic punctuation, and numeral keys, All-Keys
+uses all the keys and symbols of the keyboard. @
+Book - gives lessons on selected passages from interesting and informative
+book material.  Since this material may contain any keys, students learning
+the keyboard are advised to use the Book feature after learning the
+alphabetic and basic punctuation keys. @
+Disk - is a lesson using files stored on the disk.
+These files contain material similar to the
+speed tests that you might receive if you were being tested
+on your typing skills at a place of employment.  In addition to the sample
+material provided with Typing Tutor 5, you can create your own material
+and store it on the disk (refer to the users manual for further
+instructions). @
+Fingering - allows you to take a home key lesson on any key.  A fingering
+chart is displayed highlighting the selected key and its home key, and drills
+are given for all keys other then the home row. @
+Keypad - gives drills and home key lessons for the numeric keypad similar
+to practice lessons on
+the regular keyboard.  Each drill is three lines instead of one, and the Enter
+key on the keypad is used to end a line.  This is similar to the way you would
+tally a column of numbers.  Keypad lessons start with the keys
+'456' as the home keys, and new keys are introduced as you progress. @
+Help - displays this screen. ^
+Tests give you the chance to type a screen of text at a time.  Each test is
+followed by scoring information which is also recorded in your personal
+Progress Report.  Taking tests at regular intervals, or at the end of each
+session allows you to measure your progress.  Tests work the same way as
+lessons: an arrow points up to the next key to be typed, and errors are 
+marked with a down arrow.  The space bar or the Enter key terminates
+a line, and backspace can be used to
+correct errors. @
+The features of the Tests Menu are: @
+Practice - is a test that includes only the keys that have been introduced
+in your lessons.  If you have not taken any lessons, a practice test will
+include just the '*' keys.  If you are a very experienced typist, a
+test will include at least all of the alphabet. @
+Advanced - allows you to take a test utilizing all the keys in a particular
+"category": Alphabet Only uses all letter and basic punctuation keys, Alphabet
+and Numeric Only uses all letter, basic punctuation, and numeral keys, All-Keys
+uses all the keys and symbols of the keyboard. @
+Book - gives tests on selected passages from interesting and informative
+book material.  Since this material may contain any keys, students learning
+the keyboard are advised to use the Book feature after learning the
+alphabetic and basic punctuation keys. @
+Disk - is a test using a file stored on the disk. 
+These are standard
+speed tests similar to the ones you might receive if you were being tested
+on your typing skills at a place of employment.  In addition to the sample
+disk tests provided with Typing Tutor 5, you can create your own tests
+and store them on the disk (refer to the users manual for further
+instructions). @
+Keypad - gives you a test tallying several columns of numbers with the
+numeric keypad. @
+Help - displays this screen. ^
+The features of the Reports Menu are: @
+Progress - is a tabular summary of your tests and lessons.  For tests
+the type of test (Practice, All-keys, Disk, or Keypad) is recorded with the
+date taken.  The name of the file used on disk tests is also shown. There
+are separate sections for practice lessons on the keyboard and for numeric
+keypad lessons.  Each of the lesson sections gives session and history
+information. "Session" includes everything you have done since starting
+Typing Tutor 5 this time, and "history" summarizes all the work that
+you have saved in previous sessions. @
+For each lesson and test there is information about the number of keys that
+are faster than your goal.  This shows your progress in learning
+new keys.  The average speed and accuracy is also shown. For non-keypad
+items there is a speed breakdown by key type.  The three breakdowns are:
+Letter (alphabet and punctuation keys), Number, and Symbol. @
+Speed - shows a WPM graph for each key, so you can analyze your strengths
+and weaknesses in detail.  At the bottom of the screen, beginning with
+'*', are all the keys in the order of presentation.  Each vertical
+bar displays
+your performance on that key in this session and historically.  One pattern
+(or color) is used for this session, another for history, and a third when
+they overlap. @
+Accuracy - is a graph with the same layout as the speed graph, but it
+portrays your accuracy percentage for each key instead of its speed. @
+Print - prints out a progress report, and speed and accuracy graphs. @
+Help - displays this screen. ^
+The features of the Options Menu are: @
+Time - allows you to change your planned practice schedule to a different
+number of hours per week. @
+Drills - changes the number of drills in a lesson.  This number is originally
+set to ten drills in a lesson, but you can make it higher or lower to fit
+the way you like to practice. @
+Sound - turns the sound on or off. @
+Name - allows you to edit your name if it was entered incorrectly. @
+Intro - lets you reread the Typing Tutor 5 introduction. @
+Help - displays this screen. ^
+The features of the Main Menu are: @
+Encrypt - allows encryption of a disk test.  Once a test is encrypted,
+it can no longer be understood except when taking a disk test.  There is
+no way to return an encrypted file to its previous state, so if you need
+the original file, make a copy of it first. @
+Reports - is a menu that allows you to view a composite progress report of all
+students, see the progress of individual students, or print out all student
+reports. @
+Password - lets you change the code required to get into instructor mode
+or create a code for an individual student. @
+Delete - allows you to delete a student record. @
+Help - displays this screen. @
+Quit - exits this program.  ^
+The features of the Main Menu are: @
+Lessons - is a menu that lets you select drills on the keyboard or the
+numeric keypad.  It also includes a fingering review option with drills for
+correct finger positioning on the keyboard. @
+Tests - allows you to measure your progress by selecting one of four
+different types of tests. @
+Reports - gives you a choice of a tabular report that summarizes your
+progress, or two graphs that give detailed information on each key. @
+Options - contains choices for customizing the Typing Tutor 5 program.
+Under options you can change your goals, adjust the number of drills in a 
+lesson, turn sound on or off, and read the Typing Tutor 5 introduction. @
+Game - allows you to play the Letter Invaders game or review the 
+all-time high scores. @
+Help - displays this screen. @
+Quit - allows you to exit the Typing Tutor 5 program and save
+the results of this session to your history file. ^
+The features of the Game Menu are: @
+Play - starts the Letter Invaders typing instruction game. @
+Scores - displays the all-time highest scores of Letter Invaders. @
+Print - prints the all-time highest scores of Letter Invaders. @
+Help - displays this screen. ^
+The features of the Reports Menu are: @
+Composite - gives a summary report of all students. @
+Progress - displays a Progress Report on an individual student. @
+Speed - displays a Speed Graph for an individual student. @
+Accuracy - displays an Accuracy Graph for an individual student. @
+Print - prints all student reports. @
+Help - displays this screen. ^

@@ -1,0 +1,26 @@
+<TablacusExplorer>
+  <General>
+    <Version>1.39</Version>
+    <MinVersion>2022.1.25</MinVersion>
+    <pubDate>Sun, 30 Jan 2022 00:00:00 GMT</pubDate>
+    <Options>Common:0,5,6,7,8,9:0</Options>
+    <Level>2</Level>
+    <Creator>Gaku</Creator>
+    <URL>https://tablacus.github.io/TablacusExplorerAddons/</URL>
+    <License>MIT License</License>
+  </General>
+  <en>
+    <Name>Filter bar</Name>
+    <Description>Filter bar</Description>
+  </en>
+  <fr>
+    <Name>Barre de filtre</Name>
+    <Description>Champ d'entrée de filtre - global.</Description>
+  </fr>
+  <ja>
+    <Name>フィルターバー</Name>
+  </ja>
+  <zh>
+    <Name>篩選列</Name>
+  </zh>
+</TablacusExplorer>

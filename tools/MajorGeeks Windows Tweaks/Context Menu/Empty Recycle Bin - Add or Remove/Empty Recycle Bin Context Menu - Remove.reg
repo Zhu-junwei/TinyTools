@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; MajorGeeks.Com
+; How to Add 'Empty Recycle Bin Context Menu' in Windows 10 & 11
+; https://www.majorgeeks.com/content/page/empty_recycle_bin_context_menu.html
+ 
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\empty]
+

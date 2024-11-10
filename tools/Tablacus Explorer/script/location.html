@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="MSThemeCompatible" content="Yes">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tablacus Explorer</title>
+    <link rel="stylesheet" type="text/css" href="./options.css">
+    <script type="text/javascript" charset="utf-8" src="./consts.js"></script>
+  </head>
+  <body><div id="P">
+    <ul id="tabs" class="tab0 hide"><!--
+    --><li id="tab0"></li><!--
+    --><li id="tab1"></li><!--
+    --><li id="tab2"></li><!--
+    --><li id="tab3"></li><!--
+    --><li id="tab4"></li><!--
+    --><li id="tab5">Icon</li><!--
+    --><li id="tab6">Position</li><!--
+    --><li id="tab7">Menus</li><!--
+    --><li id="tab8">Key</li><!--
+    --><li id="tab9">Mouse</li><!--
+    --></ul>
+
+    <div class="panel hide" id="panel6">
+      <form name="L" onsubmit="return false">
+        <table class="window" id="tewin" border="1" style="width: 100%; border: 2px ridge windowframe">
+          <tr>
+            <th colspan="4" class="activecaption" style="text-align: center">
+              <label>Title bar</label>
+            </th>
+          </tr>
+          <tr>
+            <td class="location">
+              <label><input name="Location" type="radio" value="ToolBar1Left">Tool bar<i> </i>1<i> </i>Left</label>
+              <div id="_ToolBar1Left"></div>
+            </td>
+            <td class="location" colspan="2">
+              <label><input name="Location" type="radio" value="ToolBar1Center">Tool bar<i> </i>1<i> </i>Center</label>
+              <div id="_ToolBar1Center"></div>
+            </td>
+            <td class="location">
+              <label><input name="Location" type="radio" value="ToolBar1Right">Tool bar<i> </i>1<i> </i>Right</label>
+              <div id="_ToolBar1Right"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="location">
+              <label><input name="Location" type="radio" value="ToolBar2Left">Tool bar<i> </i>2<i> </i>Left</label>
+              <div id="_ToolBar2Left"></div>
+            </td>
+            <td class="location" colspan="2">
+              <label><input name="Location" type="radio" value="ToolBar2Center">Tool bar<i> </i>2<i> </i>Center</label>
+              <div id="_ToolBar2Center"></div>
+            </td>
+            <td class="location">
+              <label><input name="Location" type="radio" value="ToolBar2Right">Tool bar<i> </i>2<i> </i>Right</label>
+              <div id="_ToolBar2Right"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="location">
+              <label><input name="Location" type="radio" value="ToolBar3Left">Tool bar<i> </i>3<i> </i>Left</label>
+              <div id="_ToolBar3Left"></div>
+            </td>
+            <td class="location" colspan="2">
+              <label><input name="Location" type="radio" value="ToolBar3Center">Tool bar<i> </i>3<i> </i>Center</label>
+              <div id="_ToolBar3Center"></div>
+            </td>
+            <td class="location">
+              <label><input name="Location" type="radio" value="ToolBar3Right">Tool bar<i> </i>3<i> </i>Right</label>
+              <div id="_ToolBar3Right"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="location">
+              <label><input name="Location" type="radio" value="ToolBar4Left">Tool bar<i> </i>4<i> </i>Left</label>
+              <div id="_ToolBar4Left"></div>
+            </td>
+            <td class="location" colspan="2">
+              <label><input name="Location" type="radio" value="ToolBar4Center">Tool bar<i> </i>4<i> </i>Center</label>
+              <div id="_ToolBar4Center"></div>
+            </td>
+            <td class="location">
+              <label><input name="Location" type="radio" value="ToolBar4Right">Tool bar<i> </i>4<i> </i>Right</label>
+              <div id="_ToolBar4Right"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="location">
+              <label><input name="Location" type="radio" value="ToolBar5Left">Tool bar<i> </i>5<i> </i>Left</label>
+              <div id="_ToolBar5Left"></div>
+            </td>
+            <td class="location" colspan="2">
+              <label><input name="Location" type="radio" value="ToolBar5Center">Tool bar<i> </i>5<i> </i>Center</label>
+              <div id="_ToolBar5Center"></div>
+            </td>
+            <td class="location">
+              <label><input name="Location" type="radio" value="ToolBar5Right">Tool bar<i> </i>5<i> </i>Right</label>
+              <div id="_ToolBar5Right"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="location">
+              <label><input name="Location" type="radio" value="LeftBar1">Left bar<i> </i>1</label>
+              <div id="_LeftBar1"></div>
+            </td>
+            <td class="location">
+              <label alt="Internal Tool bar"><input name="Location" type="radio" value="Inner" id="__Inner" disabled="true">@ifmon.dll,-9010<i> </i>Tool bar</label>
+              <div id="_Inner"></div>
+            </td>
+            <td class="location">
+              <label alt="Internal Tool bar Right"><input name="Location" type="radio" value="InnerRight" id="__InnerRight" disabled="true">@ifmon.dll,-9010<i> </i>Tool bar<i> </i>Right</label>
+              <div id="_InnerRight"></div>
+            </td>
+            <td class="location">
+              <label><input name="Location" type="radio" value="RightBar1">Right bar<i> </i>1</label>
+              <div id="_RightBar1"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="location">
+              <label><input name="Location" type="radio" value="LeftBar2">Left bar<i> </i>2</label>
+              <div id="_LeftBar2"></div>
+            </td>
+            <td class="location oddline" colspan="2">
+              <label><input name="Location" type="radio" value="Background">Background</label>
+            </td>
+            <td class="location">
+              <label><input name="Location" type="radio" value="RightBar2">Right bar<i> </i>2</label>
+              <div id="_RightBar2"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="location">
+              <label><input name="Location" type="radio" value="LeftBar3">Left bar<i> </i>3</label>
+              <div id="_LeftBar3"></div>
+            </td>
+            <td class="location">
+              <label alt="Internal Bottom bar"><input name="Location" type="radio" value="InnerBottom" id="__InnerBottom" disabled="true">@ifmon.dll,-9010<i> </i>Bottom bar</label>
+              <div id="_InnerBottom"></div>
+            </td>
+            <td class="location">
+              <label alt="Internal Bottom bar Right"><input name="Location" type="radio" value="InnerBottomRight" id="__InnerBottomRight" disabled="true">@ifmon.dll,-9010<i> </i>Bottom bar<i> </i>Right</label>
+              <div id="_InnerBottomRight"></div>
+            </td>
+            <td class="location">
+              <label><input name="Location" type="radio" value="RightBar3">Right bar<i> </i>3</label>
+              <div id="_RightBar3"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="location">
+              <label><input name="Location" type="radio" value="BottomBar1Left">Bottom bar<i> </i>1<i> </i>Left</label>
+              <div id="_BottomBar1Left"></div>
+            </td>
+            <td class="location" colspan="2">
+              <label><input name="Location" type="radio" value="BottomBar1Center">Bottom bar<i> </i>1<i> </i>Center</label>
+              <div id="_BottomBar1Center"></div>
+            </td>
+            <td class="location">
+              <label><input name="Location" type="radio" value="BottomBar1Right">Bottom bar<i> </i>1<i> </i>Right</label>
+              <div id="_BottomBar1Right"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="location">
+              <label><input name="Location" type="radio" value="BottomBar2Left">Bottom bar<i> </i>2<i> </i>Left</label>
+              <div id="_BottomBar2Left"></div>
+            </td>
+            <td class="location" colspan="2">
+              <label><input name="Location" type="radio" value="BottomBar2Center">Bottom bar<i> </i>2<i> </i>Center</label>
+              <div id="_BottomBar2Center"></div>
+            </td>
+            <td class="location">
+              <label><input name="Location" type="radio" value="BottomBar2Right">Bottom bar<i> </i>2<i> </i>Right</label>
+              <div id="_BottomBar2Right"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="location">
+              <label><input name="Location" type="radio" value="BottomBar3Left">Bottom bar<i> </i>3<i> </i>Left</label>
+              <div id="_BottomBar3Left"></div>
+            </td>
+            <td class="location" colspan="2">
+              <label><input name="Location" type="radio" value="BottomBar3Center">Bottom bar<i> </i>3<i> </i>Center</label>
+              <div id="_BottomBar3Center"></div>
+            </td>
+            <td class="location">
+              <label><input name="Location" type="radio" value="BottomBar3Right">Bottom bar<i> </i>3<i> </i>Right</label>
+              <div id="_BottomBar3Right"></div>
+            </td>
+          </tr>
+        </table>
+        <div>
+        <label><input name="Location" type="radio" value="None">None</label>
+        <div id="_None"></div>
+      </div>
+    </form>
+    </div>
+    <!--panel_end-->
+
+    <div class="panel hide" id="panel3">
+    </div>
+    <!--panel_end-->
+
+    <div class="panel hide" id="panel4">
+    </div>
+    <!--panel_end-->
+
+    <form name="F" onsubmit="return false">
+      <div class="panel hide" id="panel0">
+      </div>
+      <!--panel_end-->
+
+      <div class="panel hide" id="panel1">
+      </div>
+      <!--panel_end-->
+
+      <div class="panel hide" id="panel2">
+      </div>
+      <!--panel_end-->
+
+      <div class="panel hide" id="panel5">
+        <div id="_Icon"></div>
+        <table style="width: 100%">
+          <tr>
+            <td>
+              <label>Icon</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 100%">
+              <input type="text" name="Icon" onchange="SetImage();" style="width: 100%">
+            </td>
+            <td class="nowrap">
+              <button onclick="PortableX('Icon')">Portable</button>
+              <button onclick="ShowIcon();">Select</button>
+              <button onclick="RefX('Icon', 0, 0, 1);">Browse...</button>
+            </td>
+          </tr>
+        </table>
+        <div id="__IconSize">
+          <label>Size</label><br>
+          <input type="text" name="IconSize" size="4" onchange="SetImage();"><label>@mspaint.exe,-50047[px]</label>
+          <button onclick="SetDefault(document.F.IconSize, '');">Default</button>
+       </div>
+      </div>
+      <!--panel_end-->
+
+      <div class="panel hide" id="panel7">
+        <label><input type="checkbox" id="MenuExec">Exec</label>
+        <br>
+        <select name="Menu"></select>
+        <br>
+        <label>Name</label>
+        <br>
+        <table class="layout">
+          <tr>
+            <td>
+              <input type="text" name="MenuName" style="width: 100%">
+            </td>
+          </tr>
+        </table>
+        <label>Position</label>
+        <br>
+        <input type="text" name="MenuPos" size="2">
+        <select onchange="SelectPos(this, 'MenuPos');" class="translate">
+          <option value="">Select
+          <option value="0">Add before
+          <option value="-1">Add after
+        </select>
+      </div>
+      <!--panel_end-->
+
+      <div class="panel hide" id="panel8">
+        <div id="__KeyExec">
+          <label><input type="checkbox" id="KeyExec">Exec</label>
+          <br>
+          <select name="KeyOn">
+          </select>
+        </div>
+        <label>Key</label>
+        <table style="width: 100%">
+          <tr>
+            <td style="width: 100%">
+              <input type="text" name="Key" onchange="SetKeyShift()" style="width: 100%">
+            </td>
+            <td style="width: 2em">
+              <button onclick="InputKey(document.F.Key);">Input</button>
+            </td>
+          </tr>
+        </table>
+        <span id="_KeyState"></span>
+        <select id="_KeySelect" onchange="KeySelect(this)"></select>
+      </div>
+      <!--panel_end-->
+
+      <div class="panel hide" id="panel9">
+        <div id="__MouseExec">
+          <label><input type="checkbox" id="MouseExec">Exec</label>
+          <br>
+          <select name="MouseOn">
+          </select>
+        </div>
+        <table width="100%" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%" colspan="3">
+              <table width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td>
+                    <label>Mouse</label>
+                  </td>
+                  <td>
+                    <button onclick="InputMouse();">Input</button>
+                  </td>
+                  <td align="right" id="__MOUSEDATA">
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td align="center">
+              <button title="1" onclick="AddMouse(this)">&#9716;</button>
+            </td>
+            <td align="center">
+              <button title="3" onclick="AddMouse(this)">&Theta;</button>
+            </td>
+            <td align="center">
+              <button title="2" onclick="AddMouse(this)">&#9719;</button>
+            </td>
+          </tr>
+          <tr>
+            <td width="100%">
+              <input type="text" name="Mouse" style="width: 100%">
+            </td>
+            <td align="center">
+              <button title="4" onclick="AddMouse(this)">X1</button>
+            </td>
+            <td align="center">
+              <button title="8" onclick="AddMouse(this)">&#9650;</button>
+            </td>
+            <td align="right" rowspan="2" class="middle">
+              <button title="L" onclick="AddMouse(this)">&larr;</button>
+            </td>
+            <td align="center" rowspan="2">
+              <button title="U" onclick="AddMouse(this)">&uarr;</button>
+              <br>
+              <button title="D" onclick="AddMouse(this)" width="100%">&darr;</button>
+            </td>
+            <td align="left" rowspan="2" class="middle">
+              <button title="R" onclick="AddMouse(this)">&rarr;</button>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td align="center">
+              <button title="5" onclick="AddMouse(this)">X2</button>
+            </td>
+            <td align="center">
+              <button title="9" onclick="AddMouse(this)">&#9660;</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!--panel_end-->
+      <input type="hidden" name="Set" value="1">
+    </form>
+
+    <table id="buttons" class="footer">
+      <tr>
+        <td id="toolbar" class="full nowrap">
+        </td>
+        <td class="buttons">
+          <button class="ok" onclick="SetResult(1)" autofocus>OK</button>
+        </td>
+        <td class="buttons">
+          <button class="cancel" onclick="SetResult(2)">Cancel</button>
+        </td>
+      </tr>
+    </table></div>
+    <script type="text/javascript">
+      document.getElementById("P").style.display = "none";
+      ScriptBase = "..";
+      LoadScript(["script/ui.js", "script/common.js"], function () {
+        LoadScripts(["script/sync.js"], ["script/options.js"], function () {
+          InitLocation();
+        });
+      });
+    </script>
+  </body>
+</html>

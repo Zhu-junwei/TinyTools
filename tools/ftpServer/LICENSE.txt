@@ -1,0 +1,107 @@
+
+
+REBEX GENERAL END USER AGREEMENT - FREEWARE APPLICATION
+
+
+The following agreement applies to a Software Product of REBEX CR s.r.o.
+
+This is a legal agreement (hereafter "Agreement") between you, either an
+individual or an entity, as the end user (hereafter "Recipient") and
+Rebex CR s.r.o. (hereafter "Rebex"). By installing or using the software
+and related documentation provided with this agreement (hereafter
+"Software Product"), you agree to be bound by the terms of this
+agreement. If you do not agree to the terms of this agreement, do not
+install or use the software.
+
+LICENSE AGREEMENT FOR A REBEX SOFTWARE
+
+
+1. GRANT OF LICENSE
+
+Rebex grants Recipient a limited, perpetual, non-exclusive,
+nontransferable, royalty-free license to use the Software Product.
+
+Recipient may not distribute the Software Product as a runtime component
+of your Application(s) without explicit permission from Rebex.
+
+Recipient shall not rent, lease, sell, sublicense, assign, or otherwise
+transfer the Software Product, including any accompanying printed
+materials. Recipient may not reverse engineer, decompile or disassemble
+the Software Product.
+
+Rebex shall retain title and all ownership rights to the Software
+Product.
+
+FREE LICENSE
+
+If the Software Product you have obtained is marked as "FREE", you may
+install and use the Software Product for both commercial and
+non-commercial purpose.
+
+
+2. TERM OF AGREEMENT
+
+The term of this Agreement shall commence at the date Recipient
+purchases, installs or otherwise starts using the Software Product.
+
+
+3. SUPPORT SERVICES
+
+Rebex may provide you with support services related to the Software
+Product ("Support Services"). Use of Support Services is governed by
+Rebex policies and programs described in the user manual, in "on line"
+documentation and/or other Rebex provided materials. Any supplemental
+Software Product provided to you as part of the Support Services shall
+be considered part of the Software Product and subject to the terms and
+conditions of this EULA. With respect to technical information you
+provide to Rebex as part of the Support Services, Rebex may use such
+information for its business purposes, including for Software Product
+support and development. Rebex will not utilize such technical
+information in a form that personally identifies you.
+
+
+4. DISCLAIMER OF WARRANTIES
+
+To the maximum extent permitted by applicable law, the Software Product
+is provided "as is" and without warranties of any kind, whether
+expressed or implied, including but not limited to the implied
+warranties of merchantability or fitness for a particular purpose. The
+entire risk arising out of the use or installation of the Software
+Product, if any, remains with Recipient.
+
+
+5. EXCLUSION OF INCIDENTAL, CONSEQUENTIAL AND CERTAIN OTHER DAMAGES
+
+To the maximum extent permitted by applicable law, in no event shall
+Rebex, or its principals, shareholders, officers, employees, affiliates,
+contractors, subsidiaries, or parent organisations be liable for any
+special, incidental, indirect, consequential or punitive damages
+whatsoever arising out of or in any way related to the use of or the
+inability to use the Software Product.
+
+
+6. LIMITATION OF LIABILITY AND REMEDIES
+
+To the maximum extent permitted by applicable law, any liability of
+Rebex will be limited exclusively to a refund of the purchase price.
+
+
+7. GOVERNING LAW
+
+This Agreement shall be construed and controlled by the laws of the
+Czech Republic. Exclusive jurisdiction and venue for all matters
+relating to this Agreement shall be in courts located in the Czech
+Republic. The Recipient consents to such jurisdiction and venue.
+
+
+8. ENTIRE AGREEMENT
+
+This Agreement constitutes the complete and exclusive agreement between
+Rebex and Recipient with respect to the subject matter hereof and
+supersedes all prior oral or written understandings, communications or
+agreements not specifically incorporated herein. This Agreement may not
+be modified except in a writing fully signed by an authorised
+representative of Rebex and Recipient.
+
+Should you have any questions concerning this Agreement, please contact
+Rebex.

@@ -1,0 +1,19 @@
+<input type="text" id="Path" style="width: 100%">
+<table>
+  <tr>
+    <td>
+      <button onclick="RefX('Path', false, this)">Browse...</button>
+    </td>
+    <td>
+      <button onclick="SetDefault(document.F.Path, '')">Default</button>
+    </td>
+    <td>
+      <button onclick="PortableX('Path')">Portable</button>
+    </td>
+    <td>
+      <button title="7-Zip\7zG.exe x %src% -o%dest% -aoa" onclick="SetExe(this)">7-Zip</button>
+    </td>
+  </tr>
+</table>
+<br>
+<button title="http://www.7-zip.org/" onclick="wsh.Run(this.title)">Get 7-Zip...</button>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TablacusExplorer>
+  <General>
+    <Version>1.26</Version>
+    <MinVersion>2021.11.1</MinVersion>
+    <pubDate>Sat, 04 Dec 2021 00:00:00 GMT</pubDate>
+    <Options>Common:4:4</Options>
+    <Level>2</Level>
+    <Creator>Gaku</Creator>
+    <URL>https://tablacus.github.io/TablacusExplorerAddons/</URL>
+    <License>MIT License</License>
+  </General>
+  <en>
+    <Name>Key</Name>
+    <Description>Definition of keyboard shortcuts</Description>
+  </en>
+  <fr>
+    <Name>Raccourci clavier</Name>
+    <Description>Définition de raccourci(s) clavier</Description>
+  </fr>
+  <ja>
+    <Name>キー</Name>
+  </ja>
+  <zh>
+    <Name>按鍵</Name>
+  </zh>
+</TablacusExplorer>
