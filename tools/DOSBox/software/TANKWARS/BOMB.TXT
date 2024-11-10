@@ -1,0 +1,312 @@
+               Tank Wars
+               Release 3.2
+               Copyright 1990, 1991, 1992 Kenneth Morse
+               All Rights Reserved
+               -----------------------------------------------
+
+     NOTE: This game requires a VGA or MCGA video system to
+     operate.  Your computer must be capable of 320x200
+     resolution with 256 simultaneous colors.
+
+DESCRIPTION:  This is a game for 1 to 10 players.  Opponents
+     attempt to destroy each others tanks by firing various
+     weapons at them.  There are also 7 computer intelligences
+     available to compete against.
+
+FILE NAMES:  This program was written under the working title of
+     BOMB, as the files are still called.  However, due to the
+     fact that there was already a game of that name, I have
+     changed the name to Tank Wars.  Since Tank Wars has been out
+     for over a year with no complaints, Tank Wars will remain
+     named Tank Wars.  The files will continue to be named BOMB
+     for convenience of previous users.
+
+REQUIREMENTS:  This program runs in 320x200x256 color mode.  It
+     requires that a VGA or MCGA monitor is connected, and is
+     running as the current monitor.  A mouse is not required,
+     but utilized if present and 100% Microsoft compatible. (I
+     have had some troubles with Genius Mice.)
+
+SHAREWARE:  TANK WARS is distributed as Shareware.  You are free
+     to try the game and make copies for others.  If you continue
+     to use the game, however, you are required to pay the author
+     a registration fee of $10. Please include any comments you
+     have.  Registered users will be added to my mailing list,
+     and will be notified of major new releases of this program.
+
+FILES:  The following files are included in this package:
+
+     BOMB.EXE:      Main File
+     BOMB.OVR:      Overlay Code
+     BOMB.TXT:      This File
+     BOMB.DOC:      Documentation
+     REVISION.HST:  List of changes
+     BOMB1.RAW:     Graphics file
+     BOMB2.RAW:     Graphics file
+     BOMBCFG.EXE:   Configuration Program
+     BOMB.ICO:      Icon file for Windows 3.0 users.
+     BOMBCFG.ICO:   Icon file for Windows 3.0 users.
+     BOMB.ICP:      Icon file for OS/2 users.
+     BOMBCFG.ICP:   Icon file for OS/2 users.
+     BOMBCFG.HLP:   On-line Configuration Help
+
+     All previously listed files are Copyrighted and may not be
+     modified in any way for any purpose without the author's
+     written consent.
+
+          If the file BOMB.CFG was included with the package you
+     received I suggest you erase it immediately.  This will
+     prevent you from starting up with somebody else's options,
+     which may not be optimum for your system.
+
+SUPPORT:  Currently electronic support will be provided to
+     everybody.  I can be reached on Prodigy at TGTM35B, and on
+     Compuserve at 76427,3305.  Internet users can reach me at my
+     CompuServe address.  My mailbox address is listed at the end
+     of this file.  Written (non electronic) questions will be
+     answered for all registered users, and currently for non
+     registered users who provide a self addressed stamped
+     envelope or CIS or Prodigy ID so that I can respond at
+     minimum cost.  Policy regarding non registered users is
+     subject to change at any time without notification. (Just a
+     legal precaution, I don't expect to.)
+
+TECHNICAL INFO:  This program has been tested on very few
+     machines.  It was designed on a 16Mhz PS/2 65SX, with 12MB
+     of memory.  Thus it is almost sure to work on another 65SX. 
+     Previous versions have become widespread, with few or no
+     problems, and I expect this to continue with V3.0. I have
+     had some problems with Genius Mice, and Tandy Keyboards, and
+     I am looking into the cause. 
+
+GRAPHICS FILES:  It is not necessary to have BOMB1.RAW and
+     BOMB2.RAW to play the game.  If you need the disk space,
+     delete BOMB1.RAW.  This will cause the program to only load
+     BOMB2.RAW and the title screen will be less spectacular. 
+     Deleting BOMB2.RAW causes the title screen to be skipped
+     altogether.
+
+MICROSOFT WINDOWS & OS/2:  Currently Tank Wars will run
+     adequately under Microsoft Windows 3.0, 3.1, and OS/2 GA
+     release.  Under these environments the game may appear slow
+     and sluggish, and the background may jerk along instead of
+     scrolling smoothly.  If you can, I advise you run Tank Wars
+     in straight DOS, not in a multitasking environment.  If you
+     feel you must run under Windows, you MUST set it up to run
+     Full Screen, and Exclusive is highly recommended.  You may
+     also have to set BOSS screen memory to 63K in order to use
+     the boss screen function.  Also you may wish to disable
+     background palette rotation to smooth things out (on slower
+     computers).  As to OS/2, I have been told that it will run,
+     but nothing more.  If you have problems, disable background
+     execution (from DOS Settings) and run it with as few other
+     applications open as possible. You also may wish to disable
+     background movement, as I am not sure how OS/2 handles
+     Vertical Retrace and Palette interrupts.
+
+EXTERNAL SOUND SUPPORT:  I am currently working on support for
+     MIDI compatible systems.  In fact, I did have my MIDI code
+     in Tank Wars, and it did work on my system.  The problem is
+     that this code crashed every other system it was tested on. 
+     I have currently commented out that code to decrease the
+     code size for version 3.0.  As soon as I get the code
+     bulletproofed I will uncomment it for the next version.  As
+     there are many different MIDI systems available, I would
+     appreciate your help in making Tank Wars as universally
+     compatible as possible. I currently have the specs for only
+     two systems, my IBM PS/2 with a Roland MPU-IMC card
+     connected to a SC-55 SoundCanvas, and thanks to Ronald
+     Lepper I have info on the Roland LAPC-1.  These two will
+     definitely be supported.  For any other system I will need
+     more information about the device.  I would greatly
+     appreciate it if anyone could provide to me, either over
+     CompuServe or through the US Mail information on the device
+     they have.  This is the only way to guarantee that Tank Wars
+     will in the future support your card. 
+          As to the ever popular Sound Blaster, I will consider
+     supporting it as soon as Creative Labs gets its act together
+     and comes out with its promised MCA Sound Blaster Pro so I
+     can test it on my system.  I will support the Adlib portion
+     of the SBP if someone will provide me with the necessary
+     information.
+
+
+VIDEO CARD ACCESS:  The background palette movements you (should)
+     see during the game may require some fine tuning.  You only
+     need to read this if the background does not move, its
+     movement slows down the rest of the system, or the movement
+     causes fuzz or black bars on the screen.  There are various
+     options in BOMBCFG for adjusting the way which Tank Wars
+     interfaces with your video card, and the description of each
+     option can be found in BOMBCFG by pressing F1 on the
+     appropriate menu.  In general, (less technically) this is
+     what each option will do.
+
+     The following three options are mutually exclusive:
+
+     Video Retrace Interrupt - Tank Wars will work with your
+          video card to move the background.  When the video card
+          begins a vertical retrace, it will tell Tank Wars, and
+          Tank Wars will change the background.  This option is
+          the fastest and smoothest of the two, and tends to keep
+          all interference off the screen.  One possible problem
+          is that many computers do not have a Vertical Retrace
+          Interrupt.  Also, a few mice use IRQ2, the same one
+          that the vertical retrace signal is sent on, this can
+          cause the mouse to lock up when this option is
+          selected.
+     Timer Interrupt - Tank Wars will work with your system timer
+          to move the background.  Every 18.2 seconds the timer
+          will signal Tank Wars to move the background.  When
+          this is set the interference could happen anywhere on
+          the screen, and the palette will move more slowly.  On
+          some computers selecting this may cause your system
+          clock to be off when you exit Tank Wars.
+     Not Active - The backgrounds will not move.  Select this if
+          your computer does not have a Vertical Interrupt, and
+          if selecting Time Interrupt unbearably messes up your
+          system clock.
+
+     The remaining options are On/Off toggles:
+
+     Direct Video Port Manipulation - This tells Tank Wars
+          whether to use its own routines to move the background,
+          or your computer's.  When unchecked Tank Wars will use
+          BIOS which is usually slower, and tends to create
+          moving black bars across the screen.  When checked Tank
+          Wars will use its own routines, which tend to be much
+          faster, and cause less interference, at most only a bit
+          of roaming snow.
+
+     Crude Palette I/O - This tells Tank Wars whether or not to
+          let any interference fall where it may, or try to lock
+          it at the top of the screen.  When this option is
+          unchecked, Tank Wars will lock any interference at the
+          top of the screen, significantly slowing down the game.
+          When this option is checked, the interference will roam
+          the screen.
+
+     Note: Unless you completely understand what I have just
+          said, or you have a problem, you should leave the above
+          two options checked, and Interface set to Vertical
+          Retrace.
+
+MEMORY:  The memory requirements of Tank Wars vary.  Different
+     systems require different amounts of memory to save the Boss
+     Screen, so different amounts a memory will be set aside for
+     that purpose.  The remaining memory will be allocated for
+     the overlay manager, and the more the better.  If available
+     Tank Wars will load the overlay file into EMS, removing the
+     need to swap to disk, but not the need to have free
+     conventional memory for overlays.  Tank Wars can get by on
+     very little memory, but may preform poorly under low memory
+     conditions.
+
+ACKNOWLEDGEMENTS:  I would like to thank Borland, for without
+     Turbo Pascal, this program could never have been written.  I
+     believe that Borland has the best technical support of any
+     company in existence.  They continue to help, even when you
+     get on their nerves.  I would also like to thank Microsoft,
+     for I could not have written this so easily without a multi-
+     tasking environment.  I also would like to thank WordPerfect
+     Corp. for WordPerfect with which I wrote these files.  I
+     would like to thank Chris Sparks and Brett Moseley for their
+     endless hours of beta testing and contributed ideas.  Also I
+     would like to thank all the users who have contributed
+     ideas, and helped in testing Tank Wars.  Special thanks to
+     Aaron Johnson who aided in solving the ATI bug and Robin
+     Rudge who provided the equations for Wind Master.
+
+
+          This program is distributed as Shareware. It is not
+     free software.  You are free to try the game and make copies
+     for others.  If you continue to use this game beyond a
+     reasonable trial period, you are required to register it
+     with the author.  In return you will be notified of all
+     major releases, and will own a legal copy of the program.
+     Send Registrations to:
+
+               KENNY MORSE
+               11800 SILENT VALLEY LANE
+               GAITHERSBURG, MD 20878
+
+          Please include your registration fee of $10, and if you
+     have one, a Compuserve or Prodigy ID at which I can contact
+     you.  Also tell me what version you have, and where you got
+     it from. I don't require it, but I would also like to know
+     your age, and what kind of system you are running on. I will
+     currently answer questions from anyone via CIS or Prodigy. 
+     I can be reached at TGTM35B on Prodigy, or 76427,3305 on
+     Compuserve. (Internet users can reach me at my Compuserve
+     Address.)  I will currently answer written (non electronic)
+     questions to the above address only if the asker includes a
+     method of reply, such as a self addressed stamped envelope,
+     or Prodigy or Compuserve ID. 
+          If you reside outside the United States please pay the
+     registration fee with a cashier's check or money order
+     payable IN US FUNDS.  Canadian residents may send personal
+     checks but please adjust for the difference between US and
+     Canadian currencies.
+          After registering you will become the legal owner of
+     your copy of Tank Wars, and will be placed on my mailing
+     list.  Whenever a new version is released, you will be
+     notified of its release, its new features, and how to obtain
+     it.  In addition to your $10 registration fee you may
+     include at the time of registration an extra $3 to obtain
+     the current version of Tank Wars at that time.  (Please
+     specify disk size, 360KB, 720KB, or 1.44MB.)  If you prefer
+     you can replace the $3 with a self addressed, stamped,
+     floppy disk mailer containing a blank disk and I will place
+     the current version of Tank Wars on it and drop it back in
+     the mail to you.
+          Once registered, you are to treat this software exactly
+     as a commercial package that you had purchased.  The
+     software and the disks on which it is contained are licensed
+     to you, for your own use.  This is copyrighted software. 
+     You are not obtaining title to the software or any copyright
+     rights.  You may not sublicense, rent, lease, convey,
+     modify, translate, convert to another programming language,
+     decompile, or disassemble the software for any purpose.  Any
+     copy made of this program for any person other than the
+     registered user this copy is licensed to is to be treated as
+     a shareware copy, and should be evaluated and registered
+     accordingly. 
+
+          I apologize for the capitalization, but the Uniform
+     Commercial Code [UCC] states that implied warranties cannot
+     be disclaimed unless the disclaimer conspicuously uses
+     specific words.  All capital letters is commonly accepted as
+     conspicuous (and rude, but that's another matter).
+
+                This software is provided as-is.
+         There are no warranties, expressed or implied.
+
+     KENNETH MORSE DISCLAIMS ALL WARRANTIES RELATING TO THIS
+     SOFTWARE, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT
+     LIMITED TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY
+     AND FITNESS FOR A PARTICULAR PURPOSE, AND ALL SUCH
+     WARRANTIES ARE EXPRESSLY AND SPECIFICALLY DISCLAIMED.
+     NEITHER KENNETH MORSE NOR ANYONE ELSE WHO HAS BEEN
+     INVOLVED IN THE CREATION, PRODUCTION, OR DELIVERY OF
+     THIS SOFTWARE SHALL BE LIABLE FOR ANY INDIRECT,
+     CONSEQUENTIAL, OR INCIDENTAL DAMAGES ARISING OUT OF THE
+     USE OR INABILITY TO USE SUCH SOFTWARE EVEN IF KENNETH
+     MORSE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+     DAMAGES OR CLAIMS.  IN NO EVENT SHALL KENNETH MORSE'S
+     LIABILITY FOR ANY DAMAGES EVER EXCEED THE PRICE PAID
+     FOR THE LICENSE TO USE THE SOFTWARE, REGARDLESS OF THE
+     FORM OF CLAIM.  THE PERSON USING THE SOFTWARE BEARS ALL
+     RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE.
+          Some states do not allow the exclusion of the
+     limit of liability for consequential or incidental
+     damages, so the above limitation may not apply to you.
+          This agreement shall be governed by the laws of
+     the State of Maryland and shall inure to the benefit of
+     Kenneth Morse and any successors, administrators, heirs
+     and assigns.  Any action or proceeding brought by
+     either party against the other arising out of or
+     related to this agreement shall be brought only in a
+     STATE or FEDERAL COURT of the competent jurisdiction
+     located in Montgomery County, Maryland.  The parties
+     hereby consent to in personam jurisdiction of said
+     courts.

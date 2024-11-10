@@ -1,0 +1,727 @@
+               Tank Wars
+               Release 3.2
+               Copyright 1990, 1991, 1992 Kenneth Morse
+               All Rights Reserved
+               -----------------------------------------------
+
+     NOTE: This game requires a VGA or MCGA video system to
+     operate.  Your computer must be capable of 320x200
+     resolution with 256 simultaneous colors.
+     If you do not wish to read the entire manual (and who
+     does) please at least read Quick Start section.  While
+     in BombCFG you may at any time press F1 to obtain case
+     sensitive help.
+
+
+QUICK START:  The problem with most program instructions is that
+     you can't truly envision what they're talking about until
+     you've played the game.  I occasionally have to play the
+     game once or twice before I can understand the
+     documentation.  So now I suggest that you play this game
+     once or twice before reading the rest of this document.  To
+     do so, follow these simple instructions:
+
+     Load the Configuration program BOMBCFG.  Click on the OK
+          button to remove the About Box.  BOMBCFG will then
+          inform you that no valid configuration file was found.
+          Select OK to clear this box.  Select Setup|Restore
+          Defaults to reset all settings to their defaults.
+          Then select Done|Save & Exit.
+
+     Now load Tank Wars by typing "BOMB /NEW".  This will load
+          Tank Wars, bypassing the Main Menu and player
+          selection, and bring you right to the game.  It will
+          also disable some of the more complicated options, set
+          the wind speed to Low, select the easiest opponent, and
+          set the number of games to five.
+
+     To play, use Cursor Right/Left to aim your turret, and
+          Cursor Up/Down to increase/decrease firing power.  The
+          object is of course to eliminate your opponent.  When
+          you do so (or when he eliminates you) you will see a
+          status screen.  If you have accumulated enough points
+          you will then be brought to a weapons purchasing
+          screen.  For now, just click on Done or press 'D' to
+          proceed to the next round.
+
+MAIN MENU:  Now that you have some idea of the basics, I will go
+     into more detail.  The main menu has numerous options that
+     determine the play of the game.  You can use the mouse or
+     keyboard to change the options.  Pressing up or down moves
+     the cursor from option to option.  Pressing cursor right or
+     left changes the setting for that option.  When using a
+     mouse just click with the right or left button on the option
+     you wish to change.
+     SOUND OPTIONS:
+
+     Sound Effects:  (Default Yes) Turns sound on or off.  Sound
+          adds to the overall effect of the game, but there may
+          be times when you don't want it.
+
+     Fly Sound Effects:  (Default No) In the very first version
+          of this program, each weapon would make a screeching
+          sound while flying through the air.  However, after
+          playing two or three times this gets extremely
+          annoying, thus the creation of this option.
+
+     GAME OPTIONS:
+
+     Crumbling Hills:  (Default 50%) The major flaw in most games
+          like this is that you can blow the ground out from
+          under somebody and he'll hover there like Road-Runner
+          in a cartoon.  This variable can be set between 0% and
+          100%, and controls how often loose ground will fall.
+          At 100% all loose ground will crumble after every shot.
+          At 0%, the ground never falls, as in most cartoons.
+
+     Walls:  (Default Random) This allows you to change the
+          effect the border around the screen has on the current
+          shot.  There are six settings for this option:
+
+          Non Existent - When this option is selected any
+               projectile or laser will leave the screen when it
+               reaches the border.  If the wind level or gravity
+               deems it should return to the screen, it will.  If
+               there is absolutely no chance of returning the
+               shot will abort then and there.   [Previously NOT
+               BOUNCY in <2.5]
+
+          Sticky - When this option is selected any projectile or
+               laser will bounce off of the four border walls
+               back into the playing field.  Any material weapon
+               (ie, not a laser) will loose 50% of its velocity
+               during the bounce.
+
+          Elastic - When this option is selected any projectile
+               or laser will bounce off of the four border walls
+               back into the playing field with no loss of
+               velocity.  Computers tend to shoot more wildly
+               when this option is on.  They know that no matter
+               what happens, they're going to hit something.
+               [Previously BOUNCY]
+
+          Accelerating - When this option is selected any
+               projectile or laser will bounce off of the four
+               border walls back into the playing field with an
+               increase in velocity.  (Anybody out there remember
+               flubber? If so then you've got the idea.)
+
+          WARNING: If a projectile reaches too great a speed air
+               friction will become high enough to detonate it in
+               midair.
+
+          Warping - When this option is selected the top and
+               bottom walls will act exactly as if Non Existent,
+               but the projection will wrap around from left to
+               right (or right to left).
+
+          Random - When this option is selected the form of wall
+               will be randomly determined each round. The kind
+               of wall you are dealing with will be written down
+               the left side of the playing field.
+
+     Shot Visible:  (Default Yes) When turned off, your shot is
+          invisible while in the air.  This can speed up the
+          game, but not by much.  Its main purpose is confusion
+          and it works quite well, especially with rebounding
+          walls because you never know just how many times the
+          shot bounced before it landed.  Invisible shots just
+          make the game more interesting.
+
+     Trail Visible:  (Default Yes) When on, your shot will leave
+     a trail while flying through the air.  It can make it easier
+     to determine what adjustments are needed to hit your enemy.
+     It also helps you determine whether you are in danger of
+     being hit by your enemy.
+
+     Background:  (Default Random) There are several backgrounds
+          in front of which the game can take place.  These are
+          each labeled with their own name.  There is also a RND
+          setting which will include all backgrounds, and a USER
+          setting which will include only preselected backgrounds
+          (See the online help in BOMBCFG).  Backgrounds can hide
+          tanks and make CRI's look extremely impressive.
+
+     Games:  (Default 10) This determines how many rounds will be
+          played before the game ends.  In a short game your main
+          objective is just to destroy as fast as possible.  In a
+          long game you want to rack up points so that you can
+          buy weapons that help you destroy.
+
+     Tanks Fall:  (Default Yes) This determines whether tanks
+          fall when the ground is blown out from under them.
+          When set to No, tanks just hover there.  When set to
+          Yes, they fall and sustain damage.
+
+     Number of Players:  (Default 2) Here you select how many
+          tanks will play.  This includes computer intelligences.
+          From two to ten tanks can participate.  Remember, the
+          more tanks present, the closer they are together, and
+          the better the chances that you'll get blown away
+          before getting a shot off.
+
+     Computers Can Buy:  (Default Yes) This allows the computer
+          intelligences to buy weapons to enhance their arsenals.
+          It is recommended that beginners set this to NO.
+
+     Palette Speed:  (Default 0) This controls the speed at which
+          the background moves (0 is fastest).  If the usage  of
+          this effect slows down your game too much set this
+          number to a higher value.
+
+     Wind Force:  (Default Normal) This controls the speed of the
+          wind during the game.  There are 5 settings ranging
+          from None to Gale.  Also available is a RND which will
+          cause Tank Wars to select a different wind setting each
+          round.
+
+     Team Play:  (Default Off) This enables Team Play mode, in
+          which multiple players are allowed to fight together.
+          Computers on the same team will not shoot at each
+          other, and you are penalized for killing a teammate.
+
+     Start:  This starts the game, bringing you to the player
+          selection screen.
+
+     PLAYER SELECTION:  Here is where you select who plays.  For
+          each player playing you will be asked what will be
+          controlling him.  Press 'K' for Keyboard, 'M' for Mouse
+          or 'C' for computer, or simply click on the appropriate
+          word.  Pressing Space or clicking on the name window
+          will prompt you for the player's name.  If you selected
+          'M' or 'K' you will then be asked to enter your name.
+          If you selected 'C' you will then be asked which of the
+          available computers you wish to play against.  The
+          available computers are as follows.
+
+          Mr.  Stupid - No Threat.
+          Lobber - A threat if rebound is off.
+          Rifleman - A threat if below you.
+          Windless Wit - A threat if there is little wind.
+          Lob & Shoot - Almost always a threat.
+          Twanger - Very dangerous if reflect is on, otherwise
+               identical to Rifleman.
+          Wind Master - Very dangerous if rebound is off.
+
+     TEAM PLAY:  If Team Play has been turned on, you will be
+          presented with the Team Play setup screen.   Each
+          player will be positioned on the left side of the
+          screen, and the teams will be listed across the top.
+          Press cursor Right/Left to move a player from one team
+          to another, or press the right/left mouse button on a
+          the player you wish to move.  After this menu you will
+          be given an opportunity to name each team (Teams
+          consisting of all computers will name themselves).
+
+     PLAYING THE GAME:  Now the game begins.  First the terrain
+          is drawn.  Then each of your tanks will fall from the
+          sky and land somewhere on the ground.  The tanks are
+          placed in random order, so that no person gets the same
+          position every game.  A random player is then selected
+          to go first.  Each player takes his turn in order from
+          left to right, until only one player, the winner,
+          remains.  Then the status screen is displayed, showing
+          who is currently winning, the rankings, and other
+          important information.  After that, those who have
+          enough points stored up will be given the option of
+          buying extra weapons to supplement their arsenal.
+
+     CONTROLS:  At the top of the screen is information critical
+          in planning your attack.  Next to POWER, ANGLE, and
+          DIRECTION are the current values of how hard you will
+          shoot, at what elevation, and in what direction.  Next
+          to MEN is the number of men you currently have in your
+          tank.  Your power is limited to 100*MEN.  WIND shows
+          the current direction and strength of the wind.  A
+          number between 0 and 100 is typical.  Occasionally
+          however there will be gusts up to 4000 mph, which can
+          have an enormous impact on your shot.  Between this
+          panel and the playing field is your equipment list.  It
+          consists of 20 boxes.  If a box is black, fuzzy, and
+          hard to see, you don't have that item.  If a box is
+          white you have that item but it is not loaded.  If a
+          box is red it is loaded and armed.  Mouse and Keyboard
+          commands are listed below.
+
+     Raising/Lowering Elevation:  Pressing cursor left or right
+          tilts the gun left or right respectively.  Clicking the
+          left/right mouse buttons on the yellow number next to
+          ANGLE has the same effect.  The gun has a full 180
+          degree range, and if lowered below 0 will wrap around
+          and begin climbing the other side.  Remember to look at
+          your cannon direction itself, just the ANGLE number can
+          be deceptive.
+
+     Raising/Lowering Power:  Pressing cursor up or down raises
+          or lowers the power respectively, by increments of 1.
+          Pressing PgUp and PgDn change power by increments of
+          100.  Clicking the right or left mouse buttons on the
+          number next to POWER has the same effect as cursor up
+          or down.  Clicking on POWER has the same effect as PgUp
+          and PgDn.
+
+     Changing Direction:  If you simply wish to reverse direction
+          without changing ANGLE you can simply press 'I', or
+          click on the yellow arrow next to DIRECTION with the
+          mouse.
+
+     Firing:  Pressing SPACE or RETURN will fire the gun.  It can
+          be fired with the mouse by pressing both buttons at the
+          same time.
+     Status Information:  To obtain information on any player
+          press the number key corresponding to their number.
+          Press '1' for player 1, '0' for player 10, etc..  With
+          the mouse simply click the left button on whomever you
+          wish to obtain information about.  Press any key or
+          button to put away the information screen.
+
+     Changing Weapon:  To change the active weapon, press TAB or
+          SHIFT-TAB.  These keys will cycle through all the
+          weapons you currently have.  Clicking right and left
+          mouse buttons on the strip of weapons above the playing
+          field has the same effect.  What each weapon does is
+          listed later.
+
+     Guidance Systems:  Later in the game you may acquire
+          guidance systems.  To toggle a system on or off simply
+          press 'H' or 'V', or click on the white 'H' or 'V',
+          depending on which system you bought.  (The reason for
+          choosing H and V will become apparent later.)  When
+          asked what target to aim for press cursor right/left to
+          rotate through the possible targets, or simply click on
+          the target with the mouse.
+
+     Keyboard Users:  If these commands change angle and power
+          too fast for you, you may hold down ALT while pressing
+          the appropriate key.  This will slow down the rate of
+          change to one unit per keypress.
+
+     CONTROL KEYS:  The following is a list of keys that can be
+          pressed at any time during game play, (while the
+          playing field is up, not during the main menu or while
+          purchasing weapons).  I realize some of the key
+          combinations are a tad esoteric, and I really do intend
+          to do something about it.
+
+     Sound Toggle:  Pressing CTRL-S will toggle sound on or off.
+
+     Status:  Pressing CTRL-P will pause the game and bring up a
+          status screen indicating the current game and other
+          helpful information.
+
+     Mass Kill:  Pressing CTRL-M will kill all the players on the
+          screen.  Use this when a group of computers are
+          involved in a fight that looks like it will go on
+          forever.  All players will die after the current
+          player's turn is over.  However, if the computer feels
+          a game is dragging on, it will start taking pot shots
+          at tanks with lightning bolts to end the game quicker.
+
+     Quit:  Pressing CTRL-Q will abort the game.
+
+     Palette Speed:  Pressing F3 and F4 will increase/decrease
+          the speed at which the background moves.
+
+     Change Colors:  If the background colors are not to your
+          liking, press CTRL-R to get a new set.
+
+
+     Boss Key:  This is the one exception to the statement made
+          above.  This key, F10, will work AT ANY TIME while the
+          game is running.  It will bring up a fake DOS prompt,
+          which does nothing.  Pressing the space bar will return
+          you to your game.  If the boss will not go away, press
+          ESC.  You will be dropped into real DOS.  Tank Wars
+          will remove itself from memory and attempt to save your
+          game under the title 'BOSS'.
+
+     STATUS SCREENS:  Between rounds you will be presented with
+          two status screens (only one if you are not in Team
+          Play).  These screens rank the players and teams
+          competing, display their scores, and number of wins.
+          On these screens are three buttons, OK, ADD, and SAVE.
+          Pressing OK will close the current screen and go to the
+          next one.  Pressing ADD allows you to add more games to
+          the current battle.  Pressing SAVE will bring you to
+          the save menu.  You can also click on any player or
+          team name and get more in depth statistics such as
+          average accuracy and kill rate.
+
+     SAVE MENU:  After clicking on SAVE from a status screen you
+          are brought to this menu.  A default game name will be
+          selected for you (Such as GAME1), and you will be
+          presented with five options:
+
+          Cancel - Will exit the save menu without acting.
+          New Name - Will allow you to change the name of the
+               current game.
+          Save - Will save the game and exit the save menu.
+          Save & Quit - Will save the game and exit to DOS.
+          AutoSave - This is a toggle switch.  When on, the game
+               will be saved after every round under the current
+               game name.
+
+     LOAD MENU:  This menu can be accessed by clicking on the
+          LOAD button available on the main menu screen.  Within
+          the grey box will be the name of a saved game.  Click
+          on the right or left arrows to select a different game,
+          and select OK to load that game.
+
+     BUYING EQUIPMENT:  After each round you may be brought to
+          the equipment screen.  Here you are presented with a
+          list of what items you can buy with your current money
+          supply.  (Money is directly related to score.)  Press +
+          or - on an item to increment/decrement the number you
+          wish to buy.  With the mouse simply click on the item
+          with the right button to select, left to deselect.
+          Press 'P' or click on 'Purchase' to buy those items
+          selected.  Press 'D' or click on 'Done' to buy selected
+          items and exit the screen.  The list of items is
+          vaguely described later.
+
+     COMPUTERS:  There are currently 7 computers to challenge
+          you.  I hope to add more, and if you have any ideas for
+          other algorithms please send them to me.
+
+          Mr.  Stupid:  A complete idiot.  He just picks a random
+               power and angle, and shoots.  There's no guarantee
+               that he'll even shoot in the right direction.  A
+               good opponent for your first game.
+
+          Lobber:  This computer uses fairly decent logic.  He
+               shoots 2 random powered shots at 75 degrees.  The
+               closest person to his second shot is then dubbed
+               his target.  He calculates how much his power
+               needs to be altered to hit his target.  His third
+               shot usually misses, but his fourth is usually
+               pretty accurate.  Strong wind (150+) can throw his
+               shots off, lessening him as a threat.  Rebound
+               completely confuses him.  He just can't comprehend
+               why his shots aren't following nice parabolic
+               paths.
+
+          Rifleman:  This computer uses one of the simplest, and
+               possibly most effective strategies.  If he's below
+               you he simply points his turret at you, sets it at
+               full power and fires.  If there are no targets
+               above him, he'll just shoot randomly.
+
+          Windless Wit:  This computer uses physics to hit his
+               target.  However, he has not yet figured out how
+               to compensate for wind.  In low wind (0-20), you
+               could be in trouble.  The higher the wind, the
+               longer you'll live.
+
+          Lob & Shoot:  If there is no rebound, he fights as
+               lobber.  If there is rebound he fights as
+               rifleman.  This can be very effective when rebound
+               is set to Random.
+
+          Twanger:  If rebound is not on, will fight just like
+               Rifleman.  However, if reflect is on he will
+               attempt to bounce his shot off the ceiling and
+               nail you.  This is surprisingly effective.
+               (Better than I expected.)
+
+          Wind Master:  The newest of the computer intelligences.
+               He is a Windless Wit who can compensate for wind.
+               When rebound is on he gets confused.  When the
+               walls are non reflective, you can see some
+               incredible shots.  About 90% accurate in wind up
+               to 2000 mph.
+
+          WEAPONS:  There are currently 18 weapons, 2 guidance
+               systems, and 3 defenses available for purchase.
+               The descriptions that follow are intentionally
+               vague, it is up to you to determine what each
+               group of weapons will do, and what their best use
+               is.
+
+          The first three are available when the game begins.
+
+          Lead Ball:  Useless, completely useless (almost).  They
+               do only 5 men worth of damage.  It is up to you to
+               figure out the best use for these.
+
+          Hand Grenade:  This is a wimpy little bomb.  It has a
+               very small blast range.  It can only kill a tank
+               if it hits it directly.
+
+          Standard Incinerator:  These are your normal weapons.
+               They have a reasonable blast radius, and can kill
+               fairly easily.
+
+          Mark II Incinerator:  Twice the size of Standard
+               Incinerators.
+
+          Nukes:  20K and 5M Nukes explode the same as
+               Incinerators, but with MUCH bigger blast radii.  5
+               Meg's have been known to take out up to 7 tanks in
+               one explosion.
+
+          MIRVs:  Fire one of these little beauties and it will
+               split into 5 Mark II's when its arc reaches its
+               peak.
+
+          Chain Reaction Inducers (CRI's):  These start a chain
+               reaction in the ground.  Depending on the strength
+               of the CRI it can do little damage, or can destroy
+               almost all the ground on the screen.  CRI's are
+               identified with a number followed by a 'D' or
+               'ND'.  The number determines how radioactive the
+               reaction is.  'D's are much more 'fluent' than
+               'ND's.  It's quite hard to explain, but you should
+               be able to figure it out after using a few.
+
+          Sonic Blaster:  These are only helpful in games when
+               Crumble is set to a low percentage.  When these
+               hit the ground they emit a high pitched sonic
+               whine, causing all loose ground to collapse.
+               These are especially helpful after a CRI has been
+               released and there are tanks hanging in mid air on
+               only a few pixels of ground.  This will take those
+               precious pixels out from under them and send them
+               careening to their death.
+
+          Balls 'o' Dirt:  These are fairly self explanatory.
+               When they explode, instead of a big ball of fire,
+               a big ball  of dirt is created.  I'll leave it up
+               to you to determine the best use for these.
+
+          Explosive Dirt:  When this hits, it spews dirt up into
+               the air.  It may just stay there, or it may fall
+               back down depending on what you set crumble to.
+
+          Lasers:  These work a little differently than the other
+               weapons.  Purchasing one of these gives you 1000
+               units of laser energy.  The power value you select
+               is how much of this energy you wish to use.  If
+               you have less than 100 units the laser cannot
+               fire.
+
+          Guidance Systems:  I'll leave it up to you to figure
+               out how to use these.  They're very powerful,
+               effective, and easy to misuse.
+
+          Defense Systems:  The three defense systems are fairly
+               self explanatory.  One will protect you from
+               explosions, one will protect you from falling, and
+               one will repel enemy fire.
+
+     COMMAND LINE PARAMETERS:  You can override all of the
+          defaults on the command line.  The format is:
+
+     BOMB command1 command2 command3 ....etc.
+
+     The commands are as follows:
+
+     Game Options:
+          S+|-  Sound - On or Off
+          F+|-  Flysound - On or Off
+          Gnn   Where nn=The Number of Games you Wish to Play
+          BKx   Background Selection
+                BKN - None
+                BKR - Random
+                BKU - User Selected
+                BKn - Use only Background n
+          Wn    Wind Control (0..5)
+                0 - None
+                1 - Low
+                2 - Normal
+                3 - High
+                4 - Gale
+                5 - Random
+          Rn    Wall Reflectivity (0..5)
+                0 - None
+                1 - Sticky
+                2 - Elastic
+                3 - Accel
+                4 - Warp
+                5 - Random
+          Cnnn  Crumble Percentage (0..100)
+          I+|-  Invisible Ball - On or Off
+          T+|-  Shot Trace - On or Off
+          D+|-  Tanks Fall Down - On or Off
+          B+|-  Computers Can Buy Weapons - On or Off
+          TEAM  Activate Team Play Mode
+
+     Hardware Options:
+          M+|-  Enable|Disable Mouse
+          DV+|- Direct Video Port Access - Active or Inactive
+          CV+|- Crude Video Manipulation - Active or Inactive
+          P+|-  Palette Rotation - Active or Inactive
+          PV    Palette Rotation uses Video Retrace Interrupt
+          PT    Palette Rotation uses Timer Interrupt
+
+     Speed Options:
+          SKIP  Skip Title Screen
+          ESnn  Explosion Speed
+          FSnn  Fall Speed
+          PSnn  Projectile Speed
+          SSnn  Shot Speed
+
+          It is preferable to set these options in BOMBCFG, as
+     they will be saved and you will not need to re-enter them
+     every time you run Tank Wars.  Keep in mind that any options
+     specified on the command line will override the options
+     stored in BOMB.CFG.
+
+     EXAMPLE:
+
+     To play a 30 game set, with crumble set at 75%, random
+     walls, and shot trails you would enter the  following.
+
+     BOMB G30 C75 R5 T+
+
+     There is no required order.  If contradictory commands are
+     issued, all but the last one will be ignored.
+
+     Users from previous versions will note changes in some
+     commands.  The old version of each command still exists, for
+     example 'RR' will select a random wall, and 'NOCRUDE' will
+     still disable the Crude Palette Interface.
+
+     The Speed Parameters require special explanation.  Three of
+     the four, TS (Turret Speed), ES (Explosion Speed) and FS
+     (Fall Speed) are microsecond delays inserted into the proper
+     event.  For example, setting FS to 10 will create a ten
+     microsecond delay every time a tank falls one pixel.  Turret
+     Speed controls the rate at which a turret will turn.  Change
+     this if the turret is moving too fast to aim accurately.
+     Explosion Speed is the speed at which Explosions occur.
+     Change this to fine tune the rate at which things explode,
+     in case they were happening too fast to see or too slow to
+     bear.  Remember that smaller numbers are faster speeds.
+          Shot Speed operates uniquely.  It is not a strict
+     delay, but a measure of accuracy.  The number you set here
+     is used as the number of times the shot's position is
+     calculated for each movement.  For example, setting this to
+     20 will divide each projectile movement into twenty finer
+     movements, improving the smoothness of the path.  Setting
+     this to 1 will cause fewer calculations, and a jerky path,
+     but faster speed.  Also with fewer calculations and higher
+     powers the ball will appear to jump from place to place,
+     possibly passing through tanks or past walls.  If this
+     happens increase this setting to solve the problem.  This
+     option is placed under speed because it has a direct effect
+     on the game's speed.  The higher the number, the higher the
+     accuracy, the slower the game. It is a tradeoff between
+     speed and accuracy.
+
+          If the program is detecting a mouse, when there is not
+     one or is not detecting a mouse you have, use the M
+     parameter.  M+ will force a mouse to be detected.  M- will
+     prohibit use of the mouse.
+
+     BOMBCFG.EXE:  New with Version 2.5 is the configuration
+          program BOMBCFG.  This can be used to set the defaults
+          for most of the options available.  It is a fairly
+          simple program with standard drop down menus, and cases
+          sensitive help.  Just press F1 at any time to bring up
+          a help window for the set of options you are currently
+          looking at.
+
+     INTENDED ADDITIONS:  I've been working on this program for
+          quite a while, and it is by no means complete.  I
+          intend to add more weapons, and to develop more
+          computer intelligences.  Also, I hope to find even more
+          ways to speed up the program without sacrificing any
+          graphical effects.  As noted I am working on MIDI
+          support, and possibly other external sound systems.  I
+          am also looking into the possibilities of a modem or
+          network version of Tank Wars.
+
+
+          This program is distributed as Shareware. It is not
+     free software.  You are free to try the game and make copies
+     for others.  If you continue to use this game beyond a
+     reasonable trial period, you are required to register it
+     with the author.  In return you will be notified of all
+     major releases, and will own a legal copy of the program.
+     Send Registrations to:
+
+               KENNY MORSE
+               11800 SILENT VALLEY LANE
+               GAITHERSBURG, MD 20878
+
+          Please include your registration fee of $10, and if you
+     have one, a Compuserve or Prodigy ID at which I can contact
+     you.  Also tell me what version you have, and where you got
+     it from. I don't require it, but I would also like to know
+     your age, and what kind of system you are running on. I will
+     currently answer questions from anyone via CIS or Prodigy.
+     I can be reached at TGTM35B on Prodigy, or 76427,3305 on
+     Compuserve. (Internet users can reach me at my Compuserve
+     Address.)  I will currently answer written (non electronic)
+     questions to the above address only if the asker includes a
+     method of reply, such as a self addressed stamped envelope,
+     or Prodigy or Compuserve ID.
+          If you reside outside the United States please pay the
+     registration fee with a cashier's check or money order
+     payable IN US FUNDS.  Canadian residents may send personal
+     checks but please adjust for the difference between US and
+     Canadian currencies.
+          After registering you will become the legal owner of
+     your copy of Tank Wars, and will be placed on my mailing
+     list.  Whenever a new version is released, you will be
+     notified of its release, its new features, and how to obtain
+     it.  In addition to your $10 registration fee you may
+     include at the time of registration an extra $3 to obtain
+     the current version of Tank Wars at that time.  (Please
+     specify disk size, 360KB, 720KB, or 1.44MB.)  If you prefer
+     you can replace the $3 with a self addressed, stamped,
+     floppy disk mailer containing a blank disk and I will place
+     the current version of Tank Wars on it and drop it back in
+     the mail to you.
+          Once registered, you are to treat this software exactly
+     as a commercial package that you had purchased.  The
+     software and the disks on which it is contained are licensed
+     to you, for your own use.  This is copyrighted software.
+     You are not obtaining title to the software or any copyright
+     rights.  You may not sublicense, rent, lease, convey,
+     modify, translate, convert to another programming language,
+     decompile, or disassemble the software for any purpose.  Any
+     copy made of this program for any person other than the
+     registered user this copy is licensed to is to be treated as
+     a shareware copy, and should be evaluated and registered
+     accordingly.
+
+          I apologize for the capitalization, but the Uniform
+     Commercial Code [UCC] states that implied warranties cannot
+     be disclaimed unless the disclaimer conspicuously uses
+     specific words.  All capital letters is commonly accepted as
+     conspicuous (and rude, but that's another matter).
+
+                This software is provided as-is.
+         There are no warranties, expressed or implied.
+
+     KENNETH MORSE DISCLAIMS ALL WARRANTIES RELATING TO THIS
+     SOFTWARE, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT
+     LIMITED TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY
+     AND FITNESS FOR A PARTICULAR PURPOSE, AND ALL SUCH
+     WARRANTIES ARE EXPRESSLY AND SPECIFICALLY DISCLAIMED.
+     NEITHER KENNETH MORSE NOR ANYONE ELSE WHO HAS BEEN
+     INVOLVED IN THE CREATION, PRODUCTION, OR DELIVERY OF
+     THIS SOFTWARE SHALL BE LIABLE FOR ANY INDIRECT,
+     CONSEQUENTIAL, OR INCIDENTAL DAMAGES ARISING OUT OF THE
+     USE OR INABILITY TO USE SUCH SOFTWARE EVEN IF KENNETH
+     MORSE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+     DAMAGES OR CLAIMS.  IN NO EVENT SHALL KENNETH MORSE'S
+     LIABILITY FOR ANY DAMAGES EVER EXCEED THE PRICE PAID
+     FOR THE LICENSE TO USE THE SOFTWARE, REGARDLESS OF THE
+     FORM OF CLAIM.  THE PERSON USING THE SOFTWARE BEARS ALL
+     RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE.
+          Some states do not allow the exclusion of the
+     limit of liability for consequential or incidental
+     damages, so the above limitation may not apply to you.
+          This agreement shall be governed by the laws of
+     the State of Maryland and shall inure to the benefit of
+     Kenneth Morse and any successors, administrators, heirs
+     and assigns.  Any action or proceeding brought by
+     either party against the other arising out of or
+     related to this agreement shall be brought only in a
+     STATE or FEDERAL COURT of the competent jurisdiction
+     located in Montgomery County, Maryland.  The parties
+     hereby consent to in personam jurisdiction of said
+     courts.
+

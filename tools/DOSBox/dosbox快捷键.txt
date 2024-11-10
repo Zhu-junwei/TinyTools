@@ -1,0 +1,14 @@
+Alt+Enter       //切换全屏
+Alt+Pause       //暂停模拟
+Ctrl+F1         //改变键盘映射
+Ctrl+Alt+F5     //开始/停止录制视频
+Ctrl+F4         //交换挂载的磁盘映像，也就是更新磁盘文件
+Ctrl+F5         //截图
+Ctrl+F6         //开始/停止录制声音
+Ctrl+F7         //减少跳帧
+Ctrl+F8         //增加跳帧
+Ctrl+F9         //关闭DOSBOX
+Ctrl+F10        //捕捉/释放鼠标
+Ctrl+F11        //模拟减速
+Ctrl+F12        //加速模拟
+Alt+F12         //不锁定速度
