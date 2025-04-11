@@ -1,3 +1,4 @@
+[dosbox快捷键]
 Alt+Enter       //切换全屏
 Alt+Pause       //暂停模拟
 Ctrl+F1         //改变键盘映射

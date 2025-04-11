@@ -1,4 +1,5 @@
-@ECHO OFF
+@ECHO OFF & chcp 65001>nul
+setlocal enabledelayedexpansion
 cd DOSBOX
 
 :: 检查是否传入了配置文件参数
@@ -35,5 +36,22 @@ ECHO D: >> "%TEMP_CONFIG_FILE%"
 ECHO NESTICLE.EXE %2 >> "%TEMP_CONFIG_FILE%"
 ECHO EXIT >> "%TEMP_CONFIG_FILE%"
 
+
+set /p option=是否打开dosbox快捷键说明[y/N]: 
+if /i "%option%"=="y"  call :open_shortcut
+set /p "nesticle_option=是否NESticle教学说明[y/N]:" 
+if /i "%nesticle_option%"=="y" call :nesticle_readme
+call :start_dosbox
+exit
+
+:open_shortcut
+START notepad "..\dosbox快捷键.txt"
+exit /b
+
+:nesticle_readme
+START notepad "..\software\nesticle\NESticle教学说明.txt"
+exit /b
+
+:start_dosbox
 :: 运行 DOSBox 并使用动态生成的配置文件
 start dosbox -CONF "%TEMP_CONFIG_FILE%" -NOCONSOLE
