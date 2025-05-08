@@ -1,6 +1,19 @@
 # TinyTools - 小而美的工具集
 
-**TinyTools** 集多个小巧实用的工具于一身，装机必备的工具集。基于 [CLaunch](https://ss1.xrea.com/pyonkichi.g1.xrea.com/en/)，在[th_sjy](http://www.th-sjy.com/?p=1973)汉化基础上收集的各种小工具。
+**[TinyTools](https://github.com/Zhu-junwei/TinyTools)** 集多个小巧实用的工具于一身，装机必备的工具集。基于 [CLaunch](https://ss1.xrea.com/pyonkichi.g1.xrea.com/en/)，在[th_sjy](http://www.th-sjy.com/?p=1973)汉化基础上收集的各种小工具。
+
+## 下载与安装
+
+1. 你可以通过以下方式进行下载：
+   - [GitHub](https://github.com/Zhu-junwei/TinyTools/releases) 
+   - [蓝奏云](https://wwqn.lanzoul.com/b0foo88di) 密码:`fnv2`
+2. 解压缩到任意目录。
+3. 首次运行点击`首次使用先点我.bat`进行初始化配置并会默认开启工具，你可以在系统的任务栏找到显示的图标。
+4. 下次使用可以直接双击`CLaunch.exe`或`ClAdmin.exe`以管理员身份运行。
+5. 默认提供三种唤醒方式，可以根据自己的喜好选择或在设置中进行更改：
+    - Ctrl + Shift + q
+    - 桌面左键双击空白处
+    - 单击鼠标中键
 
 ## 特性
 
@@ -162,17 +175,6 @@ TinyTools 目前集成了以下工具分类：
 | **赤影战士**     | 一款高质量忍者动作游戏                                       |
 | **爆笑三国**     | 根据三国历史改编，画风偏向Q版卡通                            |
 | **中东战争**     | 无脑选飞机                                                   |
-
-## 下载与安装
-
-1. 下载 **TinyTools** 压缩包。
-2. 解压缩到任意目录。
-3. 首次运行点击`首次使用先点我.bat`进行初始化配置并会默认开启工具，你可以在系统的任务栏找到显示的图标。
-4. 下次使用可以直接双击`CLaunch.exe`或`ClAdmin.exe`以管理员身份运行。
-5. 默认提供三种唤醒方式，可以根据自己的喜好选择或在选项中进行更改：
-    - Ctrl + Shift + q
-    - 桌面左键双击空白处
-    - 单击鼠标中键
 
 ## 声明
 
