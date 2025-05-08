@@ -1,0 +1,3 @@
+In modo predefinito verrà creato il file ClassicDesktopClock.ini  nella cartella %APPDATA%/ClassicDesktopClock
+Per un uso portatile, crea o copia il file ClassicDesktopClock.ini  nella cartella di lavoro di ClassicDesktopClock.
+

@@ -1,7 +1,0 @@
-Because we're using a custom name, you must open the Registry file with Notepad or any text editor. 
-
-Look for My New Folder and change that to the folder name you want.
-
-You can use any name for the default folder, but \ / ? : * " > < | ' are not allowed. 
-
-Or, see the Tutorial Link to manually edit the registry.

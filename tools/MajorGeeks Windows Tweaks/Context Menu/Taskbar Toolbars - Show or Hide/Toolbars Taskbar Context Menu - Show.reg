@@ -1,8 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; MajorGeeks.Com
-; How to Hide the Toolbars Context Menu in Windows 10
-; https://www.majorgeeks.com/content/page/hide_toolbars_context_menu.html
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
-"NoToolbarsOnTaskbar"=dword:00000000

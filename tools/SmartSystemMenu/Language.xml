@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<language>
+  <items>
+    <zh_cn>
+      <item name="separator" value="分隔线" />
+      <item name="information" value="详细信息" />
+      <item name="hide" value="隐藏" />
+      <item name="roll_up" value="卷起窗口" />
+      <item name="aero_glass" value="毛玻璃效果" />
+      <item name="always_on_top" value="窗口始终置顶" />
+      <item name="change_icon" value="更改图标" />
+      <item name="change_title" value="更改标题" />
+      <item name="send_to_bottom" value="窗口置底" />
+      <item name="save_screenshot" value="保存窗口截图" />
+      <item name="open_file_in_explorer" value="在资源管理器中进入程序路径" />
+      <item name="clipboard" value="剪贴板操作" />
+      <item name="copy_screenshot" value="复制窗口截图" />
+      <item name="copy_window_text" value="复制窗口文本" />
+      <item name="copy_window_title" value="复制窗口标题" />
+      <item name="copy_full_process_path" value="复制完整程序路径" />
+      <item name="clear_clipboard" value="清除剪贴板" />
+      <item name="drag_by_mouse" value="通过鼠标拖动" />
+      <item name="hide_for_alt_tab" value="在 Alt+Tab 列表中隐藏" />
+      <item name="click_through" value="点击时透过窗口" />
+      <item name="size" value="调整窗口大小为" />
+      <item name="size_resizable" value="可调整大小" />
+      <item name="size_default" value="默认" />
+      <item name="size_custom" value="自定义..." />
+      <item name="move_to" value="移动到" />
+      <item name="monitor" value="显示器" />
+      <item name="alignment" value="对齐窗口到" />
+      <item name="align_top_left" value="左上角" />
+      <item name="align_top_center" value="中间上侧" />
+      <item name="align_top_right" value="右上角" />
+      <item name="align_middle_left" value="中间左侧" />
+      <item name="align_middle_center" value="正中央" />
+      <item name="align_middle_right" value="中间右侧" />
+      <item name="align_bottom_left" value="左下角" />
+      <item name="align_bottom_center" value="中间下侧" />
+      <item name="align_bottom_right" value="右下角" />
+      <item name="align_center_horizontally" value="水平居中" />
+      <item name="align_center_vertically" value="垂直居中" />
+      <item name="align_default" value="默认" />
+      <item name="align_custom" value="自定义..." />
+      <item name="transparency" value="透明度" />
+      <item name="trans_opaque" value=" (不透明)" />
+      <item name="trans_invisible" value=" (不可见)" />
+      <item name="trans_default" value="默认" />
+      <item name="trans_custom" value="自定义..." />
+      <item name="priority" value="优先级" />
+      <item name="priority_real_time" value="实时: 24" />
+      <item name="priority_high" value="高: 13" />
+      <item name="priority_above_normal" value="高于标准: 10" />
+      <item name="priority_normal" value="标准: 8" />
+      <item name="priority_below_normal" value="低于标准: 6" />
+      <item name="priority_idle" value="闲置: 4" />
+      <item name="system_tray" value="系统托盘" />
+      <item name="minimize_to_systemtray" value="最小化到托盘" />
+      <item name="minimize_always_to_systemtray" value="始终最小化到托盘" />
+      <item name="suspend_to_systemtray" value="挂起并最小化到托盘" />
+      <item name="other_windows" value="其他窗口操作" />
+      <item name="minimize_other_windows" value="最小化" />
+      <item name="close_other_windows" value="关闭" />
+      <item name="start_program" value="启动" />
+      <item name="save_selected_items" value="保存设置" />
+      <item name="dimmer" value="突出窗口操作" />
+      <item name="dimmer_on" value="开" />
+      <item name="dimmer_off" value="关" />
+      <item name="buttons" value="按钮操作" />
+      <item name="disable_minimize_button" value="禁用&quot;最小化&quot;按钮" />
+      <item name="disable_maximize_button" value="禁用&quot;最大化&quot;按钮" />
+      <item name="disable_close_button" value="禁用&quot;关闭&quot;按钮" />
+      <item name="grp_window" value="窗口" />
+      <item name="grp_process" value="进程" />
+      <item name="lbl_get_window_text" value="窗口标题:" />
+      <item name="lbl_wm_gettext" value="窗口文本:" />
+      <item name="lbl_get_class_name" value="窗口类名:" />
+      <item name="lbl_real_get_window_class" value="窗口真类名:" />
+      <item name="lbl_font_name" value="字体名称:" />
+      <item name="lbl_window_handle" value="窗口句柄:" />
+      <item name="lbl_parent_window_handle" value="父窗口句柄:" />
+      <item name="lbl_window_size" value="窗口大小:" />
+      <item name="lbl_window_position" value="窗口位置:" />
+      <item name="lbl_extended_frame_bounds" value="扩展帧界:" />
+      <item name="lbl_instance" value="实例:" />
+      <item name="lbl_process_id" value="进程ID:" />
+      <item name="lbl_thread_id" value="线程ID:" />
+      <item name="lbl_gcl_wnd_proc" value="GCL_WNDPROC:" />
+      <item name="lbl_dwl_dlg_proc" value="DWL_DLGPROC:" />
+      <item name="lbl_gwl_style" value="GWL_STYLE:" />
+      <item name="lbl_gcl_style" value="GCL_STYLE:" />
+      <item name="lbl_gwl_exstyle" value="GWL_EXSTYLE:" />
+      <item name="lbl_windowinfo_exstyle" value="WindowInfo.ExStyle:" />
+      <item name="lbl_lwa_alpha" value="LWA_ALPHA:" />
+      <item name="lbl_lwa_colorkey" value="LWA_COLORKEY:" />
+      <item name="lbl_gwl_userdata" value="GWL_USERDATA:" />
+      <item name="lbl_dwl_user" value="DWL_USER:" />
+      <item name="lbl_full_path" value="完整路径:" />
+      <item name="lbl_command_line" value="命令行:" />
+      <item name="lbl_started_at" value="开始于:" />
+      <item name="lbl_owner" value="所有者:" />
+      <item name="lbl_threads" value="线程:" />
+      <item name="lbl_working_set_size" value="工作集大小:" />
+      <item name="lbl_parent" value="父级:" />
+      <item name="lbl_priority" value="优先级:" />
+      <item name="lbl_handles" value="句柄:" />
+      <item name="lbl_virtual_size" value="虚拟大小:" />
+      <item name="lbl_product_name" value="产品名称:" />
+      <item name="lbl_copyright" value="版权所有:" />
+      <item name="lbl_file_version" value="文件版本:" />
+      <item name="lbl_product_version" value="产品版本:" />
+      <item name="information_btn_apply" value="确定" />
+      <item name="save_screenshot_title" value="保存窗口截图" />
+      <item name="save_screenshot_filename" value="WindowScreenshot" />
+      <item name="save_screenshot_default_ext" value="bmp" />
+      <item name="save_screenshot_filter" value="位图图像 (*.bmp)|*.bmp|Gif 图像 (*.gif)|*.gif|JPEG 图像 (*.jpeg)|*.jpeg|Png 图像 (*.png)|*.png|Tiff 图像 (*.tiff)|*.tiff|Wmf 图像 (*.wmf)|*.wmf" />
+      <item name="icon_default_ext" value="ico" />
+      <item name="icon_filter" value="Icon (*.ico)|*.ico|位图图像 (*.bmp)|*.bmp|Gif 图像 (*.gif)|*.gif|JPEG 图像 (*.jpeg)|*.jpeg|Png 图像 (*.png)|*.png|Tiff 图像 (*.tiff)|*.tiff|Wmf 图像 (*.wmf)|*.wmf" />
+      <item name="size_form" value="设置尺寸" />
+      <item name="size_btn_apply" value="应用" />
+      <item name="lbl_size_form_height" value="高度:" />
+      <item name="lbl_size_form_width" value="宽度:" />
+      <item name="lbl_size_form_top" value="顶部:" />
+      <item name="lbl_size_form_left" value="左侧:" />
+      <item name="trans_form" value="设置透明度" />
+      <item name="trans_btn_apply" value="应用" />
+      <item name="align_form" value="设置位置" />
+      <item name="align_btn_apply" value="应用" />
+      <item name="lbl_top" value="顶部:" />
+      <item name="lbl_left" value="左侧:" />
+      <item name="mi_restore" value="恢复" />
+      <item name="mi_restore_windows" value="恢复" />
+      <item name="mi_close" value="关闭" />
+      <item name="mi_auto_start" value="自动启动程序" />
+      <item name="mi_settings" value="设置..." />
+      <item name="mi_about" value="关于" />
+      <item name="mi_exit" value="退出" />
+      <item name="about_form" value="关于 " />
+      <item name="about_btn_ok" value="确定" />
+      <item name="settings_form" value="设置" />
+      <item name="tab_settings_general" value="常规" />
+      <item name="grpb_process_exclusions" value="进程排除" />
+      <item name="clm_process_exclusion_name" value="文件名称" />
+      <item name="clm_process_exclusion_edit" value="编辑" />
+      <item name="clm_process_exclusion_delete" value="删除" />
+      <item name="btn_process_exclusion_up" value="将进程上移" />
+      <item name="btn_process_exclusion_down" value="将进程下移" />
+      <item name="btn_add_process_exclusion" value="添加进程名称" />
+      <item name="tab_settings_menu" value="菜单" />
+      <item name="grpb_start_program" value="启动程序菜单项" />
+      <item name="clm_start_program_title" value="标题" />
+      <item name="clm_start_program_path" value="文件名称" />
+      <item name="clm_start_program_arguments" value="参数" />
+      <item name="clm_start_program_edit" value="编辑" />
+      <item name="clm_start_program_delete" value="删除" />
+      <item name="btn_start_program_up" value="将程序上移" />
+      <item name="btn_start_program_down" value="将程序下移" />
+      <item name="btn_add_start_program" value="添加启动程序" />
+      <item name="settings_btn_apply" value="确定" />
+      <item name="settings_btn_cancel" value="取消" />
+      <item name="grpb_window_size" value="窗口大小菜单项" />
+      <item name="window_size_form" value="窗口大小" />
+      <item name="window_size_btn_apply" value="确定" />
+      <item name="window_size_btn_cancel" value="取消" />
+      <item name="clm_window_size_title" value="标题" />
+      <item name="clm_window_size_width" value="宽度" />
+      <item name="clm_window_size_height" value="高度" />
+      <item name="clm_window_size_top" value="顶部" />
+      <item name="clm_window_size_left" value="左侧" />
+      <item name="clm_window_size_edit" value="编辑" />
+      <item name="clm_window_size_delete" value="删除" />
+      <item name="lbl_window_size_title" value="标题:" />
+      <item name="lbl_window_size_width" value="宽度:" />
+      <item name="lbl_window_size_height" value="高度:" />
+      <item name="lbl_window_size_key1" value="键 1:" />
+      <item name="lbl_window_size_key2" value="键 2:" />
+      <item name="lbl_window_size_key3" value="键 3:" />
+      <item name="lbl_window_size_top" value="顶部:" />
+      <item name="lbl_window_size_left" value="左侧:" />
+      <item name="btn_window_size_up" value="将菜单项上移" />
+      <item name="btn_window_size_down" value="将菜单项下移" />
+      <item name="btn_add_window_size" value="添加" />
+      <item name="btn_menu_item_up" value="将菜单项上移" />
+      <item name="btn_menu_item_down" value="将菜单项下移" />
+      <item name="process_name_form" value="进程排除" />
+      <item name="process_lbl_file_name" value="文件名称:" />
+      <item name="process_btn_apply" value="确定" />
+      <item name="process_btn_cancel" value="取消" />
+      <item name="process_browse_file_filter" value="可执行文件 (*.exe)|*.exe|所有文件 (*.*)|*.*" />
+      <item name="start_program_form" value="启动程序" />
+      <item name="start_program_lbl_title" value="标题:" />
+      <item name="start_program_lbl_file_name" value="文件名称:" />
+      <item name="start_program_lbl_arguments" value="参数:" />
+      <item name="start_program_lbl_runas" value="运行方式:" />
+      <item name="start_program_lbl_begin" value="开始:" />
+      <item name="start_program_lbl_end" value="结尾:" />
+      <item name="start_program_show_window" value="显示窗口" />
+      <item name="start_program_use_window_working_directory" value="使用窗口工作目录" />
+      <item name="start_program_parameter" value="范围" />
+      <item name="start_program_normal" value="以普通账户运行" />
+      <item name="start_program_administrator" value="以管理员账户运行" />
+      <item name="start_program_btn_apply" value="确定" />
+      <item name="start_program_btn_cancel" value="取消" />
+      <item name="start_program_browse_file_filter" value="可执行文件 (*.exe)|*.exe|所有文件 (*.*)|*.*" />
+      <item name="grpb_language" value="语言" />
+      <item name="message_box_attention_title" value="注意" />
+      <item name="message_box_attention_content" value="您应该手动重启应用程序以使设置生效。" />
+      <item name="hotkeys_form" value="热键" />
+      <item name="hotkeys_lbl_key1" value="键 1" />
+      <item name="hotkeys_lbl_key2" value="键 2" />
+      <item name="hotkeys_lbl_key3" value="键 3" />
+      <item name="hotkeys_btn_apply" value="确定" />
+      <item name="hotkeys_btn_cancel" value="取消" />
+      <item name="tab_settings_hotkeys" value="热键" />
+      <item name="clm_hotkeys_name" value="名称" />
+      <item name="clm_hotkeys_show_tooltip" value="显示菜单项" />
+      <item name="tab_settings_menu_start" value="菜单 (启动程序)" />
+      <item name="tab_settings_menu_size" value="菜单 (调整窗口大小)" />
+      <item name="tab_settings_menu_save" value="菜单 (保存)" />
+      <item name="tab_settings_menu_dimmer" value="菜单 (窗户调光器)" />
+      <item name="grpb_dimmer_color" value="颜色" />
+      <item name="grpb_dimmer_transparency" value="透明度" />
+      <item name="grpb_closer" value="通过鼠标单击关闭窗口" />
+      <item name="closer_button_name" value="设置..." />
+      <item name="closer_form" value="设置." />
+      <item name="closer_btn_apply" value="确定" />
+      <item name="closer_btn_cancel" value="取消" />
+      <item name="closer_lbl_key1" value="键 1" />
+      <item name="closer_lbl_key2" value="键 2" />
+      <item name="closer_lbl_mouse_button" value="鼠标按钮" />
+      <item name="closer_lbl_action" value="动作" />
+      <item name="closer_close_window" value="关闭窗口" />
+      <item name="closer_kill_process" value="结束进程" />
+      <item name="closer_close_foreground_window" value="关闭前台窗口" />
+      <item name="closer_close_window_under_cursor" value="关闭光标下的窗口" />
+      <item name="closer_kill_process_with_foreground_window" value="终止带有前台窗口的进程" />
+      <item name="closer_kill_process_with_window_under_cursor" value="终止光标下窗口的进程" />
+      <item name="grpb_sizer" value="如何设置窗口大小" />
+      <item name="grpb_display" value="显示" />
+      <item name="chk_enable_high_dpi" value="启用高 DPI 显示" />
+      <item name="sizer_window_with_margins" value="有边距的窗口" />
+      <item name="sizer_window_without_margins" value="没有边距的窗口" />
+      <item name="sizer_window_client_area" value="窗口工作区" />
+      <item name="parameter_btn_apply" value="确定" />
+      <item name="parameter_form" value="输入参数" />
+      <item name="change_title_btn_apply" value="确定" />
+      <item name="change_title_btn_cancel" value="取消" />
+      <item name="change_title_form" value="更改标题" />
+    </zh_cn>
+  </items>
+</language>

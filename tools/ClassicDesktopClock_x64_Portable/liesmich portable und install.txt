@@ -1,0 +1,4 @@
+Standardmäßig wird die ClassicDesktopClock.ini im Ordner %APPDATA%/ClassicDesktopClock erstellt.
+
+Für den mobilen ergo portablen Einsatz erstellen Sie im ClassicDesktopClock Arbeitsverzeichnis die ClassicDesktopClock.ini.
+

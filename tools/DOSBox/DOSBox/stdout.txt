@@ -1,6 +1,5 @@
 DOSBox version 0.74
 Copyright 2002-2010 DOSBox Team, published under GNU GPL.
 ---
-CONFIG:Loading primary settings from config file ..\config\temp\temp_nesticle.conf
-MIDI:Opened device:win32
-DOSBox switched to max cycles, because of the setting: cycles=auto. If the game runs too fast try a fixed cycles amount in DOSBox's options.
+CONFIG:Loading primary settings from config file ..\config\Debug.conf
+MIDI:Opened device:none

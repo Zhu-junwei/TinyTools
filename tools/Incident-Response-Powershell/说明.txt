@@ -1,4 +1,0 @@
-Powershell Digital Forensics & Incident Response (DFIR) 是一组用于数字取证和事件响应的 PowerShell 脚本，适用于 Windows 环境。
-它可以帮助你快速收集系统信息、日志和潜在的入侵迹象。
-
-irm https://raw.githubusercontent.com/Bert-JanP/Incident-Response-Powershell/main/DFIR-Script.ps1 | iex
