@@ -8,7 +8,7 @@
    - [GitHub](https://github.com/Zhu-junwei/TinyTools/releases) 
    - [蓝奏云](https://wwqn.lanzoul.com/b0foo88di) 密码:`fnv2`
 2. 解压缩到任意目录。
-3. 首次运行点击**`首次使用先点我.bat`**进行初始化配置并会默认开启工具，你可以在系统的任务栏找到显示的图标。
+3. 首次运行点击 **`首次使用先点我.bat`** 进行初始化配置并会默认开启工具，你可以在系统的任务栏找到显示的图标。
 4. 如何使用？
 	程序启动后默认提供三种唤醒方式，可以根据自己的喜好选择或在设置中进行更改：
 	 - Ctrl + Shift + q
@@ -122,10 +122,10 @@ TinyTools 目前集成了以下工具分类：
 | **[微信多开](https://github.com/afaa1991/BetterWX-UI)**      | 允许用户同时打开多个微信实例的工具。                         |
 | **[桌面时钟](http://www.softwareok.com/?seite=Microsoft/ClassicDesktopClock/History)** | 一个简单的桌面时钟                                           |
 | **[bat to exe](https://99fk.github.io/toolbox-deluxe/)**     | 把批处理bat文件转成可执行文件exe                             |
-| **[ps1 to exe](ps1 to exe)**                                 | 把脚本ps1文件转成可执行文件exe                               |
+| **[ps1 to exe](https://99fk.github.io/toolbox-deluxe/)**     | 把脚本ps1文件转成可执行文件exe                               |
 | **Mouse**                                                    | 使用键盘来模拟鼠标的移动操作                                 |
 | **[WinHex](https://www.x-ways.net/winhex/index-m.html)**     | 一款功能强大的十六进制编辑器和磁盘编辑工具，主要用于数据恢复、取证分析、低级数据处理等领域 |
-| **[AutoClicker](https://sourceforge.net/projects/orphamielautoclicker/) ** | 鼠标点击器                                                   |
+| **[AutoClicker](https://sourceforge.net/projects/orphamielautoclicker/)** | 鼠标点击器                                                   |
 | **[ZoomIt](https://learn.microsoft.com/zh-cn/sysinternals/downloads/zoomit)** | 屏幕缩放、注释和录制工具，汉化[大眼仔旭](https://www.dayanzai.me/zoomit.html) |
 
 
