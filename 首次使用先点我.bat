@@ -12,4 +12,3 @@ echo TinyTools已运行，双击桌面空白处即可使用
 
 ping -n 5 127.0.0.1>nul
 exit
-pause

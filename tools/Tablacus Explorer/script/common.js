@@ -29,7 +29,15 @@ importScript = async function (fn) {
 		if (/\.vbs$/i.test(fn)) {
 			hr = ExecScriptEx(window.Ctrl, s, "VBScript", await $.pt, await $.dataObj, await $.grfKeyState, await $.pdwEffect, await $.bDrop);
 		} else {
-			await new AsyncFunction(s)();
+			try {
+				await new AsyncFunction(s)();
+			} catch (e) {
+				if (await g_.ShowError == null) {
+					g_.arError.push([e.stack || e.message, fn].join("\n"));
+				} else {
+					ShowError(e.stack || e.message || e.toString(), fn);
+				}
+			}
 			hr = S_OK;
 		}
 	}
@@ -208,7 +216,7 @@ GetImgTag = async function (o, h) {
 			ExtractAttr(o, ar, /src/i);
 			ar.push('>');
 			if (res = /(<svg)([\w\W]*?>)([\w\W]*?<\/svg[^>]*>)/i.exec(await ReadTextFile(o.src))) {
-				ar.push(res[1], ' style="max-width:' + h + ';height:' + h + '" ', res[2].replace(/\s+width="[^"]*"|\s+height="[^"]*"/ig, ""), res[3]);
+				ar.push(res[1], ' focusable="false" style="max-width:' + h + ';height:' + h + '" ', res[2].replace(/\s+width="[^"]*"|\s+height="[^"]*"/ig, ""), res[3]);
 			}
 			ar.push("</span>");
 			return ar.join("");
@@ -227,7 +235,7 @@ GetImgTag = async function (o, h) {
 		return ar.join("");
 	}
 	const ar = ['<span'];
-	await ExtractAttr(o, ar, /title/i);
+	ExtractAttr(o, ar, /title/i);
 	ar.push('>', EncodeSC(o.title || ""), '</span>');
 	return ar.join("");
 }
@@ -357,12 +365,14 @@ LoadImgDll = async function (icon, index) {
 }
 
 DeleteItem = async function (path, fFlags) {
-	if (/\0/.test(path)) {
-		path = path.split("\0");
+	if ("string" === typeof path) {
+		if (/\0/.test(path)) {
+			path = path.split("\0");
+		} else if (!await IsExists(path)) {
+			return;
+		}
 	}
-	if ("string" !== typeof path || await IsExists(path)) {
-		return await api.SHFileOperation(FO_DELETE, path, null, fFlags || FOF_SILENT | FOF_NOCONFIRMATION | FOF_NOERRORUI, false);
-	}
+	return await api.SHFileOperation(FO_DELETE, path, null, fFlags || FOF_SILENT | FOF_NOCONFIRMATION | FOF_NOERRORUI, false);
 }
 
 amp2ul = function (s) {

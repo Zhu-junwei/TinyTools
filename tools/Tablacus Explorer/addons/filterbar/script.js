@@ -31,6 +31,9 @@ if (window.Addon == 1) {
 		},
 
 		KeyUp: function (ev) {
+			if (ev.isComposing || !window.chrome) {
+				return;
+			}
 			const k = ev.keyCode;
 			if (k == VK_UP || k == VK_DOWN) {
 				(async function () {
@@ -55,9 +58,11 @@ if (window.Addon == 1) {
 					} else {
 						CancelFilterView(FV);
 					}
-					setTimeout(function (o) {
-						WebBrowser.Focus();
-						o.focus();
+					setTimeout(function (el) {
+						if (el == document.activeElement) {
+							WebBrowser.Focus();
+							el.focus();
+						}
 					}, 999, document.F.filter);
 				}
 				return;
@@ -100,6 +105,7 @@ if (window.Addon == 1) {
 			if (flag) {
 				SetFilterView(await GetFolderView());
 			}
+			document.F.filter.focus();
 		},
 
 		ShowButton: function () {

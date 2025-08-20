@@ -685,7 +685,7 @@ g_basic = {
 				},
 				Search: function (Ctrl, pt) {
 					const FV = GetFolderView(Ctrl, pt);
-					if (FV) {
+					if (FV && FV.FolderItem && FV.FolderItem.IsFolder) {
 						const res = IsSearchPath(FV.FolderItem, true);
 						InputDialog("Search", res ? unescape(res[1]) : "", function (r) {
 							if (r) {
@@ -1105,7 +1105,7 @@ LoadConfig = function (bDog) {
 			let path = items[0].getAttribute("Path");
 			if (path) {
 				path = ExtractMacro(te, path);
-				if (fso.FolderExists(BuildPath(path, "config"))) {
+				if (api.PathIsDirectory(BuildPath(path, "config"))) {
 					te.Data.DataFolder = path;
 					LoadConfig(true);
 					return;
@@ -1138,7 +1138,7 @@ LoadConfig = function (bDog) {
 }
 
 LoadWindowSettings = function (xml) {
-	if (fso.FileExists(te.Data.WindowSetting)) {
+	if (api.PathFileExists(te.Data.WindowSetting)) {
 		xml = api.CreateObject("Msxml2.DOMDocument");
 		xml.async = false;
 		xml.load(te.Data.WindowSetting);
@@ -1241,11 +1241,11 @@ SaveAddons = function (Addons, bLoading) {
 			let Enabled = Addons[Id];
 			if (Enabled) {
 				const AddonFolder = BuildPath(te.Data.Installed, "addons", Id);
-				Enabled = fso.FolderExists(AddonFolder + "\\lang") ? 2 : 0;
-				if (fso.FileExists(AddonFolder + "\\script.vbs")) {
+				Enabled = api.PathIsDirectory(AddonFolder + "\\lang") ? 2 : 0;
+				if (api.PathFileExists(AddonFolder + "\\script.vbs")) {
 					Enabled |= 8;
 				}
-				if (fso.FileExists(AddonFolder + "\\script.js")) {
+				if (api.PathFileExists(AddonFolder + "\\script.js")) {
 					Enabled |= 1;
 				}
 				Enabled = (Enabled & 9) ? Enabled : 4;
@@ -1310,7 +1310,7 @@ AddFavorite = function (FolderItem) {
 				if ("string" === typeof path) {
 					path = FolderItem.Path;
 				}
-				if (!FolderItem.Enum && fso.FileExists(path)) {
+				if (!FolderItem.Enum && api.PathFileExists(path) && !api.PathIsDirectory(path)) {
 					path = PathQuoteSpaces(path);
 					item.setAttribute("Type", "Exec");
 				} else {
@@ -1404,20 +1404,17 @@ OpenSelected = function (Ctrl, NewTab, pt) {
 	const FV = ar[2];
 	if (Selected) {
 		const Exec = [];
-		for (let i in Selected) {
-			const Item = Selected.Item(i);
-			let bFolder = Item.IsFolder || (!Item.IsFileSystem && Item.IsBrowsable);
-			if (!bFolder) {
-				const path = Item.ExtendedProperty("linktarget");
-				if (path) {
-					bFolder = api.PathIsDirectory(path) === true;
-				}
+		if (Selected.Count > 1 && (NewTab & g_.OpenReverse)) {
+			const n = api.ILIsEqual(FV, "about:blank") ? 1 : 0;
+			if (n) {
+				OpenSelected1(FV, Selected, 0, SBSP_SAMEBROWSER, Exec);
 			}
-			if (bFolder) {
-				FV.Navigate(Item, NewTab);
-				NewTab |= SBSP_NEWBROWSER;
-			} else {
-				Exec.push(Item);
+			for (let i = Selected.Count; i-- > n;) {
+				OpenSelected1(FV, Selected, i, NewTab, Exec);
+			}
+		} else {
+			for (let i = 0; i < Selected.Count; ++i) {
+				OpenSelected1(FV, Selected, i, NewTab, Exec);
 			}
 		}
 		if (Exec.length) {
@@ -1431,6 +1428,27 @@ OpenSelected = function (Ctrl, NewTab, pt) {
 		}
 	}
 	return S_OK;
+}
+
+OpenSelected1 = function (FV, Selected, i, NewTab, Exec) {
+	const Item = Selected.Item(i);
+	let bFolder = Item.IsFolder || (!Item.IsFileSystem && Item.IsBrowsable);
+	if (!bFolder) {
+		const path = Item.ExtendedProperty("linktarget");
+		if (path) {
+			bFolder = api.PathIsDirectory(path) === true;
+		}
+	}
+	if (bFolder) {
+		FV.Navigate(Item, NewTab);
+		NewTab |= SBSP_NEWBROWSER;
+	} else {
+		if (NewTab & g_.OpenReverse) {
+			Exec.unshift(Item);
+		} else {
+			Exec.push(Item);
+		}
+	}
 }
 
 SendCommand = function (Ctrl, nVerb) {
@@ -1465,7 +1483,7 @@ GetDropTargetItem = function (Ctrl, hList, pt) {
 			}
 			return Ctrl.FolderItem;
 		}
-		if (!fso.FolderExists(Dest.Path)) {
+		if (!api.PathIsDirectory(Dest.Path)) {
 			if (api.DropTarget(Dest)) {
 				return;
 			}
@@ -1593,7 +1611,7 @@ te.OnBeforeNavigate = function (Ctrl, fs, wFlags, Prev) {
 		return E_FAIL;
 	}
 	if (GetLock(Ctrl) || api.GetKeyState(VK_MBUTTON) < 0 || api.GetKeyState(VK_CONTROL) < 0) {
-		if ((wFlags & SBSP_NEWBROWSER) == 0 && !api.ILIsEqual(Prev, "about:blank") && !api.ILIsEqual(Ctrl.FolderItem, Prev)) {
+		if ((wFlags & SBSP_NEWBROWSER) == 0 && !api.ILIsEqual(Prev, "about:blank") && !api.ILIsEqual(Ctrl.FolderItem, "about:blank")  && !api.ILIsEqual(Ctrl.FolderItem, Prev)) {
 			hr = E_ACCESSDENIED;
 		}
 	}
@@ -1724,7 +1742,7 @@ te.OnKeyMessage = function (Ctrl, hwnd, msg, key, keydata) {
 				}
 				break;
 		}
-		if (Ctrl.Type != CTRL_TE) {
+		if (Ctrl.Type != CTRL_TE && Ctrl.Type != CTRL_WB) {
 			if (KeyExecEx(Ctrl, "All", nKey, hwnd) === S_OK) {
 				return S_OK;
 			}
@@ -1762,6 +1780,11 @@ te.OnMouseMessage = function (Ctrl, hwnd, msg, wParam, pt) {
 	}
 	if (msg != WM_MOUSEMOVE) {
 		te.Data.cmdKeyF = false;
+		if (!/^Chrome|^Internet/i.test(api.GetClassName(hwnd))) {
+			if (/^Chrome|^Internet/i.test(api.GetClassName(api.GetFocus()))) {
+				InvokeUI("FocusElement");
+			}
+		}
 	}
 	const hr = RunEvent3("MouseMessage", Ctrl, hwnd, msg, wParam, pt);
 	if (isFinite(hr)) {
@@ -2259,14 +2282,13 @@ te.OnShowContextMenu = function (Ctrl, hwnd, msg, wParam, pt, ContextMenu) {
 			break;
 		case CTRL_TE:
 			api.GetSystemMenu(te.hwnd, true);
-			const hMenu = api.GetSystemMenu(te.hwnd, false);
 			const menus = te.Data.xmlMenus.getElementsByTagName("System");
 			if (menus && menus.length) {
+				const hMenu = api.GetSystemMenu(te.hwnd, false);
 				const items = menus[0].getElementsByTagName("Item");
 				const arMenu = OpenMenu(items, null);
 				MakeMenus(hMenu, menus, arMenu, items, Ctrl, pt, 0, null, true);
 			}
-			api.DestroyMenu(hMenu);
 			break;
 	}
 	return S_FALSE;
@@ -2285,14 +2307,18 @@ te.OnDefaultCommand = function (Ctrl) {
 	if (ExecMenu(Ctrl, "Default", null, 2) == S_OK) {
 		return S_OK;
 	}
-	if (Selected.Count == 1) {
-		const pid = api.ILCreateFromPath(api.GetDisplayNameOf(Selected.Item(0), SHGDN_FORPARSING | SHGDN_FORADDRESSBAR));
-		if (pid.Enum) {
-			Ctrl.Navigate(pid, GetNavigateFlags(Ctrl));
-			return S_OK;
+	if (Selected.Count) {
+		let path = api.GetDisplayNameOf(Selected.Item(0), SHGDN_FORPARSING | SHGDN_FORADDRESSBAR);
+		if (Selected.Count == 1) {
+			const pid = api.ILCreateFromPath(path);
+			if (pid.Enum) {
+				Ctrl.Navigate(pid, GetNavigateFlags(Ctrl));
+				return S_OK;
+			}
 		}
+		return InvokeCommand(Selected, 0, te.hwnd, null, null, (Selected.Item(-1) || {}).Path, SW_SHOWNORMAL, 0, 0, Ctrl, CMF_DEFAULTONLY);
 	}
-	return InvokeCommand(Selected, 0, te.hwnd, null, null, null, SW_SHOWNORMAL, 0, 0, Ctrl, CMF_DEFAULTONLY);
+	return S_FALSE;
 }
 
 te.OnSystemMessage = function (Ctrl, hwnd, msg, wParam, lParam) {
@@ -2336,6 +2362,10 @@ te.OnSystemMessage = function (Ctrl, hwnd, msg, wParam, lParam) {
 					break;
 				case WM_ACTIVATE:
 					g_.focused = void 0;
+					if (g_.hwndTooltip) {
+						api.ShowWindow(g_.hwndTooltip, SW_HIDE);
+						g_.hwndTooltip = void 0;
+					}
 					if (te.Data.bSaveMenus) {
 						te.Data.bSaveMenus = false;
 						SaveXmlEx("menus.xml", te.Data.xmlMenus);
@@ -2633,7 +2663,7 @@ te.OnAppMessage = function (Ctrl, hwnd, msg, wParam, lParam) {
 					}
 					const lEvent = pidls.lEvent;
 					const key = lEvent + ":" + path;
-					if (!g_.Notify[key]) {
+					if (!g_.Notify[key] && !(lEvent == SHCNE_RENAMEFOLDER && api.ILIsEqual(pidls[0], pidls[1]))) {
 						g_.Notify[key] = new Date().getTime() + 999;
 						ChangeNotifyFV(lEvent, pidls[0], pidls[1]);
 						RunEvent1("ChangeNotify", Ctrl, pidls, wParam, lParam);
@@ -2750,6 +2780,14 @@ te.OnColumnClick = function (Ctrl, iItem) {
 te.OnEndThread = function () {
 	FocusFV();
 	return RunEvent1("EndThread", api.GetThreadCount());
+}
+
+te.OnShowError = function (e, s) {
+	let hr = RunEvent3("ShowError", Ctrl, iItem);
+	if (isFinite(hr)) {
+		return hr;
+	}
+	return ShowError(e, s);
 }
 
 ShowStatusText = function (Ctrl, Text, iPart, tm) {
@@ -3231,6 +3269,12 @@ AddEvent("ReplacePath", function (FolderItem, Path) {
 	}
 });
 
+AddEvent("ToolTip", function (Ctrl, Index, hwnd) {
+	if (Index == WM_PAINT && Ctrl.Type == CTRL_TE) {
+		g_.hwndTooltip = hwnd;
+	}
+});
+
 AddEvent("AddType", function (arFunc) {
 	for (let i in g_basic.Func) {
 		arFunc.push(i);
@@ -3326,7 +3370,7 @@ AddEvent("BeginNavigate", function (Ctrl) {
 });
 
 AddEvent("UseExplorer", function (pid) {
-	if (pid && pid.Path && !/^ftp:|^https?:/i.test(pid.Path) && !pid.Unavailable && !api.GetAttributesOf(pid.Alt || pid, SFGAO_FILESYSTEM | SFGAO_FILESYSANCESTOR | SFGAO_STORAGEANCESTOR | SFGAO_NONENUMERATED | SFGAO_DROPTARGET) && !api.ILIsParent(1, pid, false) && !IsSearchPath(pid) && api.GetDisplayNameOf(pid, SHGDN_FORPARSING) != "::{F874310E-B6B7-47DC-BC84-B9E6B38F5903}") {
+	if (pid && pid.Path && !/^ftp:|^https?:/i.test(pid.Path) && !pid.Unavailable && !api.GetAttributesOf(pid.Alt || pid, SFGAO_FILESYSTEM | SFGAO_FILESYSANCESTOR | SFGAO_STORAGEANCESTOR | SFGAO_NONENUMERATED | SFGAO_DROPTARGET | SFGAO_STORAGE) && !api.ILIsParent(1, pid, false) && !IsSearchPath(pid) && api.GetDisplayNameOf(pid, SHGDN_FORPARSING) != "::{F874310E-B6B7-47DC-BC84-B9E6B38F5903}") {
 		return true;
 	}
 });
@@ -3414,7 +3458,7 @@ AddEnv("MenuSelected", function (Ctrl) {
 	return g_.MenuSelected ? PathQuoteSpaces(g_.MenuSelected.Path) : "";
 });
 
-AddEnv("Installed", fso.GetDriveName(api.GetModuleFileName(null)));
+AddEnv("Installed", GetDriveName(api.GetModuleFileName(null)));
 
 AddEnv("TE_Config", function (Ctrl) {
 	return BuildPath(te.Data.DataFolder, "config");
@@ -3423,14 +3467,14 @@ AddEnv("TE_Config", function (Ctrl) {
 CreateUpdater = function (arg) {
 	let te_new = BuildPath(arg.temp, "te64.exe");
 	let nDog = 300;
-	while (!fso.FileExists(te_new)) {
+	while (!api.PathFileExists(te_new)) {
 		if (wsh.Popup(GetText("Please wait."), 1, TITLE, MB_OKCANCEL) == IDCANCEL || nDog-- == 0) {
 			return;
 		}
 	}
 	const arDel = [];
 	const addons = BuildPath(arg.temp, "addons");
-	if (fso.FolderExists(BuildPath(arg.temp, "config"))) {
+	if (api.PathIsDirectory(BuildPath(arg.temp, "config"))) {
 		arDel.push(BuildPath(arg.temp, "config"));
 	}
 	const wfd = api.Memory("WIN32_FIND_DATA");
@@ -3438,32 +3482,43 @@ CreateUpdater = function (arg) {
 		te_new = BuildPath(arg.temp, "te" + i + ".exe");
 		let te_old = BuildPath(te.Data.Installed, "te" + i + ".exe");
 		const hFind = api.FindFirstFile(BuildPath(arg.temp, "lib", "*" + i + ".dll"), wfd);
-		if (!fso.FileExists(te_old)) {
+		if (!api.PathFileExists(te_old)) {
 			arDel.push(te_new);
 			for (let bFind = hFind != INVALID_HANDLE_VALUE; bFind; bFind = api.FindNextFile(hFind, wfd)) {
 				arDel.push(BuildPath(arg.temp, "lib", wfd.cFileName));
 			}
 		} else {
-			if (fso.GetFileVersion(te_new) == fso.GetFileVersion(te_old)) {
+			if (api.GetFileVersionInfo(te_new) == api.GetFileVersionInfo(te_old)) {
 				arDel.push(te_new);
 			}
 			for (let bFind = hFind != INVALID_HANDLE_VALUE; bFind; bFind = api.FindNextFile(hFind, wfd)) {
-				te_new = BuildPath(arg.temp, "lib", wfd.cFileName);
-				te_old = BuildPath(te.Data.Installed, "lib", wfd.cFileName);
-				if (fso.FileExists(te_old) && fso.GetFileVersion(te_new) == fso.GetFileVersion(te_old)) {
-					arDel.push(te_new);
+				const n = wfd.cFileName;
+				if (!/^\.$|^\.\.$/i.test(n)) {
+					te_new = BuildPath(arg.temp, "lib", n);
+					te_old = BuildPath(te.Data.Installed, "lib", n);
+					if (api.PathFileExists(te_old) && api.GetFileVersionInfo(te_new) == api.GetFileVersionInfo(te_old)) {
+						arDel.push(te_new);
+					}
 				}
 			}
 		}
 		api.FindClose(hFind);
 	}
-	for (let list = api.CreateObject("Enum", fso.GetFolder(addons).SubFolders); !list.atEnd(); list.moveNext()) {
-		const n = list.item().Name;
-		const items = te.Data.Addons.getElementsByTagName(n);
-		if (!items || items.length == 0) {
-			arDel.push(BuildPath(addons, n));
+
+	const hFind = api.FindFirstFile(BuildPath(addons, "*"), wfd);
+	for (let bFind = hFind != INVALID_HANDLE_VALUE; bFind; bFind = api.FindNextFile(hFind, wfd)) {
+		if (wfd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) {
+			const n = wfd.cFileName;
+			if (!/^\.$|^\.\.$/i.test(n)) {
+				const items = te.Data.Addons.getElementsByTagName(n);
+				if (!items || items.length == 0) {
+					arDel.push(BuildPath(addons, n));
+				}
+			}
 		}
 	}
+	api.FindClose(hFind);
+
 	if (arDel.length) {
 		api.SHFileOperation(FO_DELETE, arDel, null, FOF_SILENT | FOF_NOCONFIRMATION, false);
 	}
@@ -3501,12 +3556,14 @@ UpdateAndReload = function (arg) {
 		}
 	}
 	let update = BuildPath(arg.temp, "script\\update.js");
-	if (!fso.FileExists(update)) {
+	if (!api.PathFileExists(update)) {
 		update = BuildPath(te.Data.Installed, "script\\update.js");
 	}
 	g_.strUpdate = [PathQuoteSpaces(BuildPath(api.IsWow64Process(api.GetCurrentProcess()) ? GetWindowsPath("Sysnative") : system32, "wscript.exe")), '/E:JScript', PathQuoteSpaces(update), PathQuoteSpaces(api.GetModuleFileName(null)), PathQuoteSpaces(arg.temp), PathQuoteSpaces(api.LoadString(hShell32, 12612)), PathQuoteSpaces(api.LoadString(hShell32, 12852))].join(" ");
 	WmiProcess("WHERE ExecutablePath='" + (api.GetModuleFileName(null).split("\\").join("\\\\")) + "' AND ProcessId!=" + arg.pid, function (item) {
-		item.Terminate();
+		if (!/\/run/i.test(item.CommandLine)) {
+			item.Terminate();
+		}
 	});
 	api.PostMessage(te.hwnd, WM_CLOSE, 0, 0);
 }
@@ -3530,7 +3587,11 @@ IsHeader = function (Ctrl, pt, hwnd, strClass) {
 AutocompleteThread = function () {
 	let pid = api.ILCreateFromPath(path);
 	if (!pid.IsFolder) {
-		pid = api.ILCreateFromPath(api.CreateObject("fso").GetParentFolderName(path));
+		var res = /^(.*)([\\\/])/.exec(path);
+		var d = res && /^[A-Z]:/i.test(res[1]) ? 3 : 1;
+		var r = res ? res[1].length < d ? res[1] + res[2] : res[1] : "";
+		var s = r != path && r != "\\" && r.length >= d ? r : "";
+		pid = api.ILCreateFromPath(s);
 	}
 	if (pid.IsFolder && pid.Path != Autocomplete.Path) {
 		Autocomplete.Path = pid.Path;
@@ -3923,9 +3984,9 @@ if (!te.Data) {
 	let fn = function () {
 		te.Data.DataFolder = BuildPath(api.GetDisplayNameOf(ssfAPPDATA, SHGDN_FORADDRESSBAR | SHGDN_FORPARSING), "Tablacus\\Explorer");
 		const ParentFolder = GetParentFolderName(te.Data.DataFolder);
-		if (!fso.FolderExists(ParentFolder)) {
+		if (!api.PathIsDirectory(ParentFolder)) {
 			try {
-				if (fso.CreateFolder(ParentFolder)) {
+				if (api.CreateDirectory(ParentFolder)) {
 					CreateFolder2(te.Data.DataFolder);
 				}
 			} catch (e) { }
@@ -3944,9 +4005,9 @@ if (!te.Data) {
 	}
 	let s = BuildPath(te.Data.DataFolder, "config");
 	try {
-		fso.CreateFolder(s);
+		api.CreateDirectory(s);
 	} catch (e) { }
-	if (!fso.FolderExists(s)) {
+	if (!api.PathIsDirectory(s)) {
 		fn();
 		CreateFolder2(BuildPath(te.Data.DataFolder, "config"));
 	}

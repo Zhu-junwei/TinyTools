@@ -1,33 +1,18 @@
-@echo off
-:start
+@echo off & chcp 65001>nul
 echo.
 echo.
 echo.
-echo ************************************************************************************
-echo              Microsoft Activation Scripts (MAS)
-echo  ¿ªÔ´ Windows ºÍ Office ¼¤»îÆ÷£¬¾ßÓÐ HWID¡¢Ohook¡¢KMS38
-echo ºÍÔÚÏß KMS ¼¤»î·½·¨£¬ÒÔ¼°¸ß¼¶¹ÊÕÏÅÅ³ý¹¦ÄÜ¡£
+echo =========================================================================
 echo.
-echo ¹ÙÍø£ºhttps://massgrave.dev/
-echo GitHub£ºhttps://github.com/massgravel/Microsoft-Activation-Scripts
+echo                      Microsoft Activation Scripts (MAS)
 echo.
+echo    å¼€æº Windows å’Œ Office æ¿€æ´»å™¨ï¼Œå…·æœ‰ HWIDã€Ohookã€KMS38
+echo  å’Œåœ¨çº¿ KMS æ¿€æ´»æ–¹æ³•ï¼Œä»¥åŠé«˜çº§æ•…éšœæŽ’é™¤åŠŸèƒ½ã€‚
 echo.
+echo    å®˜ç½‘ï¼šhttps://massgrave.dev/
+echo    GitHubï¼šhttps://github.com/massgravel/Microsoft-Activation-Scripts
 echo.
+echo =========================================================================
 echo.
-echo  1.  PowerShell·½Ê½£¨Windows 8 ¼°¸ü¸ß°æ±¾£¬ÐèÁªÍø£©
-echo  2.  ´«Í³·½Ê½£¨Windows 7 ¼°¸ü¸ß°æ±¾£©
-echo  3.  ÍË³ö   
-echo *************************************************************************************
-echo.
-set /p option=ÇëÊäÈëÄãµÄÑ¡Ôñ:
-if "%option%"=="1" (
-    start powershell -Command "irm https://get.activated.win | iex"
-) else if "%option%"=="2" (
-    call "MAS_AIO.cmd"
-) else if "%option%"=="3" (
-    exit
-)else (
-    cls
-    set option=null
-    goto start
-)
+echo æŒ‰ä»»æ„é”®ä¸‹è½½ä½¿ç”¨ & pause>nul
+start powershell -Command "irm https://get.activated.win | iex"

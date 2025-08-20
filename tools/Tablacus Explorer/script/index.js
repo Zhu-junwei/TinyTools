@@ -67,12 +67,18 @@ PanelCreated = async function (Ctrl, Id) {
 }
 
 Activate = async function (el, id) {
-	const TC = await te.Ctrl(CTRL_TC);
-	if (TC && await TC.Id != id) {
-		const FV = await GetInnerFV(id);
-		if (FV) {
-			FV.Focus();
-			setTimeout(FocusElement, 9, el);
+	if (await HitTest(el, await api.GetCursorPos())) {
+		const TC = await te.Ctrl(CTRL_TC);
+		if (TC && await TC.Id != id) {
+			const FV = await GetInnerFV(id);
+			if (FV) {
+				FV.Focus();
+				if (ui_.tmActivate) {
+					clearTimeout(ui_.tmActivate);
+					delete ui_.tmActivate;
+				}
+				ui_.tmActivate = setTimeout(FocusElement, 99, el);
+			}
 		}
 	}
 }
@@ -188,18 +194,23 @@ StartGestureTimer = async function () {
 	}
 }
 
-FocusFV1 = function (Id) {
-	let el;
-	if (document.activeElement) {
-		if (/input|textarea/i.test(document.activeElement.tagName)) {
+FocusFV1 = async function (Id) {
+	if (await api.GetClassName(await api.GetFocus()) != WC_LISTVIEW) {
+		let el;
+		if (document.activeElement) {
+			if (/input|textarea/i.test(document.activeElement.tagName)) {
+				FocusWebBrowser();
+				return;
+			}
+			const rc = document.activeElement.getBoundingClientRect();
+			el = document.elementFromPoint((rc.left + rc.right) / 2, (rc.top + rc.bottom) / 2);
+		}
+		if (el && /input|textarea/i.test(el.tagName)) {
+			FocusWebBrowser();
 			return;
 		}
-		const rc = document.activeElement.getBoundingClientRect();
-		el = document.elementFromPoint((rc.left + rc.right) / 2, (rc.top + rc.bottom) / 2);
 	}
-	if (!el || !/input|textarea/i.test(el.tagName)) {
-		FocusFV2("number" === typeof Id ? Id : null);
-	}
+	FocusFV2("number" === typeof Id ? Id : null);
 }
 
 FocusFV = function (Id) {
@@ -338,7 +349,7 @@ OnArrange = async function (Ctrl, rc, Type, Id, FV) {
 }
 
 ArrangeAddons = async function () {
-	let r = await Promise.all([InitAddonsXML(), api.CreateObject("Object"), api.GetKeyState(VK_SHIFT), api.GetKeyState(VK_CONTROL), GetLangId(), api.CreateObject("Array")]);
+	let r = await Promise.all([InitAddonsXML(), api.CreateObject("Object"), api.GetKeyState(VK_SHIFT), api.GetKeyState(VK_CONTROL), GetLangId(), g_.arError]);
 	const xml = window.chrome ? new DOMParser().parseFromString(r[0], "application/xml") : te.Data.Addons;
 	ui_.Addons = xml;
 	g_.Locations = r[1];
@@ -362,7 +373,7 @@ ArrangeAddons = async function () {
 				const Id = item.nodeName;
 				g_.Error_source = Id;
 				if (!AddonId[Id]) {
-					const Enabled = GetNum(item.getAttribute("Enabled"));
+					const Enabled = /function|unknown|object/i.test(typeof item.getAttribute) && GetNum(item.getAttribute("Enabled"));
 					if (Enabled) {
 						if (Enabled & 6) {
 							LoadLang2(BuildPath(ui_.Installed, "addons", Id, "lang", LangId + ".xml"));
@@ -448,9 +459,13 @@ window.addEventListener("mouseup", FocusFV);
 window.addEventListener("mousedown", function (ev) {
 	ui_.tmDown = new Date().getTime();
 	if (window.chrome) {
-		g_.mouse.ptDown.x = ev.screenX * ui_.Zoom;
-		g_.mouse.ptDown.y = ev.screenY * ui_.Zoom;
+		g_.mouse.ptDown.x = ev.screenX;
+		g_.mouse.ptDown.y = ev.screenY;
 		g_.mouse.CancelContextMenu = false;
+	}
+	if (ui_.tmActivate) {
+		clearTimeout(ui_.tmActivate);
+		delete ui_.tmActivate;
 	}
 });
 
