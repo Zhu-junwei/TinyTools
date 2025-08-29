@@ -119,7 +119,7 @@ TinyTools 目前集成了以下工具分类：
 | **[ScriptCryptor](https://www.abyssmedia.com/scriptcryptor/)** | 用于加密和编译批处理脚本、VBScript、JScript 的工具。汉化[大眼仔旭](https://www.dayanzai.me/scriptcryptor.html) |
 | **关机酷XP**                                                 | 用于设置系统关机时间的工具，支持自定义关机时间。             |
 | **[密码工具](https://www.chinapyg.com/thread-72459-1-1.html)** | P.Y.G密码学综合工具，用于进行不同类型密码加密的工具。        |
-| **[微信多开](https://github.com/afaa1991/BetterWX-UI)**      | 允许用户同时打开多个微信实例的工具。                         |
+| **[微信多开](https://github.com/afaa1991/BetterWX-Mutex)**      | 允许用户同时打开多个微信实例的工具。                         |
 | **[桌面时钟](http://www.softwareok.com/?seite=Microsoft/ClassicDesktopClock/History)** | 一个简单的桌面时钟                                           |
 | **[bat to exe](https://99fk.github.io/toolbox-deluxe/)**     | 把批处理bat文件转成可执行文件exe                             |
 | **[ps1 to exe](https://99fk.github.io/toolbox-deluxe/)**     | 把脚本ps1文件转成可执行文件exe                               |
