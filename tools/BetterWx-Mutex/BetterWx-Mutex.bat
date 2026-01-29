@@ -11,7 +11,8 @@ echo               微信多开工具 BetterWX-Mutex
 echo.
 echo   使用前请先关闭所有微信 
 echo   使用前请先关闭所有微信 
-echo   项目地址: https://github.com/afaa1991/BetterWX-UI
+echo.
+echo   项目地址: https://github.com/afaa1991/BetterWX-Mutex
 echo.   
 echo   1. 开启多开 
 echo   2. 关闭多开 

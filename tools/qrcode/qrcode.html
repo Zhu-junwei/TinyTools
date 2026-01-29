@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="./js/qrcode.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        .container {
+            max-width: 400px;
+            margin-top: 50px;
+        }
+
+        .qrcode-container {
+            display: flex;
+            /* justify-content: center; */
+            margin-top: 20px;
+        }
+
+        #qrcode {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">生成二维码</h2>
+        <div class="form-group">
+            <input type="text" class="form-control" id="urlInput" placeholder="输入文本">
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" onclick="generateQRCode()">生成二维码</button>
+        </div>
+        <div class="qrcode-container">
+            <div id="qrcode"></div>
+        </div>
+    </div>
+    <script>
+        function generateQRCode() {
+            // 获取用户输入的URL
+            var text = document.getElementById("urlInput").value;
+
+            // 获取包含二维码的div元素
+            var qrcodeDiv = document.getElementById("qrcode");
+            qrcodeDiv.innerHTML = "";
+            
+            // 创建二维码
+            var qrcode = new QRCode(qrcodeDiv, {
+                text: text,
+                width: 256, // 二维码的宽度
+                height: 256 // 二维码的高度
+            });
+        }
+    </script>
+</body>
+</html>

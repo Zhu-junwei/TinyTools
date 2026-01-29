@@ -55,7 +55,7 @@ TinyTools 目前集成了以下工具分类：
 - 记事本
 - 上帝模式
 - 系统信息
-- 命令提示符cmd
+- 命令提示符
 - 服务
 - 计算机管理
 - 高级安全
@@ -116,17 +116,19 @@ TinyTools 目前集成了以下工具分类：
 | **[rufus](https://rufus.ie/zh/)**                            | 用于创建启动 U 盘的工具，支持制作各种启动盘。                |
 | **[UltraISO](https://www.ultraiso.com/)**                    | ISO 文件制作和编辑工具，支持创建、编辑和转换 ISO 文件。      |
 | **VirtualDrive**                                             | 用于虚拟化硬盘驱动器的工具，支持挂载虚拟磁盘。               |
+| **[bat to exe](https://99fk.github.io/toolbox-deluxe/)**     | 把批处理bat文件转成可执行文件exe                             |
+| **[ps1 to exe](https://99fk.github.io/toolbox-deluxe/)**     | 把脚本ps1文件转成可执行文件exe                               |
 | **[ScriptCryptor](https://www.abyssmedia.com/scriptcryptor/)** | 用于加密和编译批处理脚本、VBScript、JScript 的工具。汉化[大眼仔旭](https://www.dayanzai.me/scriptcryptor.html) |
 | **关机酷XP**                                                 | 用于设置系统关机时间的工具，支持自定义关机时间。             |
 | **[密码工具](https://www.chinapyg.com/thread-72459-1-1.html)** | P.Y.G密码学综合工具，用于进行不同类型密码加密的工具。        |
-| **[微信多开](https://github.com/afaa1991/BetterWX-Mutex)**      | 允许用户同时打开多个微信实例的工具。                         |
+| **[微信多开](https://github.com/afaa1991/BetterWX-Mutex)**   | 允许用户同时打开多个微信实例的工具。                         |
 | **[桌面时钟](http://www.softwareok.com/?seite=Microsoft/ClassicDesktopClock/History)** | 一个简单的桌面时钟                                           |
-| **[bat to exe](https://99fk.github.io/toolbox-deluxe/)**     | 把批处理bat文件转成可执行文件exe                             |
-| **[ps1 to exe](https://99fk.github.io/toolbox-deluxe/)**     | 把脚本ps1文件转成可执行文件exe                               |
 | **Mouse**                                                    | 使用键盘来模拟鼠标的移动操作                                 |
 | **[WinHex](https://www.x-ways.net/winhex/index-m.html)**     | 一款功能强大的十六进制编辑器和磁盘编辑工具，主要用于数据恢复、取证分析、低级数据处理等领域 |
 | **[AutoClicker](https://sourceforge.net/projects/orphamielautoclicker/)** | 鼠标点击器                                                   |
 | **[ZoomIt](https://learn.microsoft.com/zh-cn/sysinternals/downloads/zoomit)** | 屏幕缩放、注释和录制工具，汉化[大眼仔旭](https://www.dayanzai.me/zoomit.html) |
+| **画图**                                                     | Windows早期画图工具                                          |
+| **[qrcode](https://www.52pojie.cn/thread-1848906-1-1.html)** | 离线二维码生成工具                                           |
 
 
 ### 系统优化
@@ -143,6 +145,8 @@ TinyTools 目前集成了以下工具分类：
 | **[Defender开关](https://github.com/AveYo/LeanAndMean)**     | 启用或禁用Windows防病毒功能的工具。                          |
 | **[CRU](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU)** | CRU 是一款显示器分辨率调整工具，允许用户自定义显示器的分辨率和刷新率设置。 |
 | **[noMeiyroUI](https://github.com/Tatsu-syo/noMeiryoUI)**    | 设置系统字体工具。                                           |
+| **[IME-Indicator](https://github.com/HaujetZhao/IME_Indicator)** | 输入法中英状态实时提示工具                                   |
+| **[NumLock](https://www.52pojie.cn/thread-1278941-1-1.html)** | 托盘区显示Caps Lock、Num指示灯状态                           |
 | **[ClickShow](https://github.com/cuiliang/ClickShow)**       | 鼠标波纹特效。                                               |
 | **[桌面宠物羊](https://github.com/Adrianotiger/desktopPet)** | 在桌面上显示可爱的宠物羊。                                   |
 | **桌面蝴蝶**                                                 | 在桌面上显示可爱的蝴蝶。汉化[th_sjy](http://www.th-sjy.com/?p=10138) |
@@ -178,6 +182,11 @@ TinyTools 目前集成了以下工具分类：
 | **赤影战士**                                           | 一款高质量忍者动作游戏                                       |
 | **爆笑三国**                                           | 根据三国历史改编，画风偏向Q版卡通                            |
 | **中东战争**                                           | 无脑选飞机                                                   |
+| **扫雷**                                               | 通过数字提示推理地雷位置，避免点到炸弹的逻辑游戏。           |
+| **蜘蛛**                                               | 整理并按顺序叠放纸牌，最终清空牌面                           |
+| **纸牌（接龙）**                                       | 按规则移动纸牌，将所有牌整理到基础区                         |
+| **网上红心大战**                                       | 四人在线对战，尽量少吃红心和黑桃Q                            |
+| **空当接龙**                                           | 利用空位和单张移动，考验规划能力的纸牌游戏                   |
 
 ## 声明
 
