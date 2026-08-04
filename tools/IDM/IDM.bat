@@ -20,7 +20,8 @@ if errorlevel 1 call :open_download_url & goto main_menu
 :open_download_url
 echo 正在获取下载地址... 
 set "URL_SOURCE=https://idm.ckk.ir/"
-set "Download_URL=https://workupload.com/file/dgJcubkNwYU"
+:: 20.6  exe MD5: 99e93f400964b6c8bab5a18e0e216500
+set "Download_URL=https://workupload.com/file/S8bHJWYjbkD"
 for /f "tokens=2 delims=<>" %%a in ('curl.exe -s "%URL_SOURCE%" ^| findstr /i "Download_URL"') do (
     set "Download_URL=%%a"
 )
